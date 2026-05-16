@@ -104,7 +104,7 @@ export function Hero() {
           <p className="text-[#888888] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Alvará de Construção, Habite-se, Regularização de Obras e Projetos de
             Engenharia em{" "}
-            <span className="text-[#fafafa] font-semibold">Goiânia e Aparecida de Goiânia</span>.
+            <span className="text-[#fafafa] font-semibold">Goiânia, Aparecida de Goiânia, Anápolis e região</span>.
           </p>
         </div>
 
