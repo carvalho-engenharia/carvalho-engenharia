@@ -9,49 +9,51 @@ import { WhatsAppFloat } from "@/components/whatsapp-float"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nexusti.tec.br"),
+  metadataBase: new URL("https://www.carvalho-engenharia.com"),
   title: {
-    default: "Nexus TI | Suporte e Infraestrutura de TI em Goiânia",
-    template: "%s | Nexus TI",
+    default: "Carvalho Engenharia | Alvará, Habite-se e Regularização de Imóveis em Goiânia",
+    template: "%s | Carvalho Engenharia",
   },
   description:
-    "Empresa especializada em suporte de TI, redes, segurança da informação e infraestrutura em Goiânia. Atendimento 24h, firewall, Wi-Fi corporativo, cloud e muito mais.",
+    "Especialistas em Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia e Aparecida de Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO.",
   keywords: [
-    "suporte TI Goiânia",
-    "infraestrutura de TI",
-    "segurança da informação",
-    "redes corporativas Goiânia",
-    "firewall empresarial",
-    "Wi-Fi corporativo",
-    "Microsoft 365",
-    "cloud computing",
-    "Nexus TI",
-    "terceirização de TI",
+    "alvará de construção Goiânia",
+    "habite-se Goiânia",
+    "regularização de imóveis Goiânia",
+    "regularização de obras Goiânia",
+    "projetos de engenharia Goiânia",
+    "carta de ocupação Goiânia",
+    "averbação de construção",
+    "INSS de obras",
+    "engenheiro civil Goiânia",
+    "Carvalho Engenharia",
+    "Caio Maracaípe",
+    "CREA Goiânia",
   ],
-  authors: [{ name: "Caio Maracaipe", url: "https://nexusti.tec.br" }],
-  creator: "Nexus TI",
+  authors: [{ name: "Caio Maracaípe", url: "https://www.carvalho-engenharia.com" }],
+  creator: "Carvalho Engenharia",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://nexusti.tec.br",
-    siteName: "Nexus TI",
-    title: "Nexus TI | Suporte e Infraestrutura de TI em Goiânia",
+    url: "https://www.carvalho-engenharia.com",
+    siteName: "Carvalho Engenharia",
+    title: "Carvalho Engenharia | Alvará, Habite-se e Regularização de Imóveis em Goiânia",
     description:
-      "Suporte de TI 24h em Goiânia. Redes, segurança, cloud e infraestrutura gerenciada por quem vive isso há mais de 20 anos.",
+      "Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Nexus TI — Suporte e Infraestrutura de TI em Goiânia",
+        alt: "Carvalho Engenharia — Alvará, Habite-se e Regularização de Imóveis em Goiânia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nexus TI | Suporte e Infraestrutura de TI em Goiânia",
+    title: "Carvalho Engenharia | Alvará, Habite-se e Regularização de Imóveis em Goiânia",
     description:
-      "Suporte de TI 24h em Goiânia. Redes, segurança, cloud e infraestrutura gerenciada por quem vive isso há mais de 20 anos.",
+      "Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -66,12 +68,10 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://nexusti.tec.br",
+    canonical: "https://www.carvalho-engenharia.com",
   },
   verification: {
-    other: {
-      "msvalidate.01": "89CD1EFAA07AE37EBDA26D78463312F3",
-    },
+    google: "_8llKmEMAfxglCw0iqE8xCEWcsVpN4-4UpJ6FBIZt1o",
   },
 }
 
