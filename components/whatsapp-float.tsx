@@ -1,12 +1,10 @@
 'use client'
-
 import { useState } from "react"
 
-const WA_URL = "https://wa.me/5562998062169?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20da%20Nexus%20Ti%2C%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os"
+const WA_URL = "https://wa.me/5562998062169?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20da%20Carvalho%20Engenharia%2C%20gostaria%20de%20saber%20mais%20sobre%20seus%20servi%C3%A7os"
 
 export function WhatsAppFloat() {
   const [hovered, setHovered] = useState(false)
-
   return (
     <a
       href={WA_URL}
@@ -29,7 +27,6 @@ export function WhatsAppFloat() {
       >
         Falar no WhatsApp
       </span>
-
       {/* Button circle */}
       <div
         className="
@@ -40,8 +37,7 @@ export function WhatsAppFloat() {
       >
         {/* Pulse ring */}
         <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-30" />
-
-        {/* WhatsApp SVG icon inline (no external file dependency) */}
+        {/* WhatsApp SVG icon inline */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 48 48"
