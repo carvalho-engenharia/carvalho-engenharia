@@ -21,11 +21,11 @@ export function CTASection() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#fafafa] mb-6 text-balance">
-            Pronto para ter uma{" "}
-            <span className="text-[#00aaff]">infraestrutura de verdade?</span>
+            Pronto para{" "}
+            <span className="text-[#00aaff]">regularizar seu imóvel?</span>
           </h2>
           <p className="text-lg text-[#888888] max-w-2xl mx-auto text-balance">
-            Entre em contato e descubra como podemos transformar a TI da sua empresa
+            Entre em contato e descubra como podemos resolver a situação do seu imóvel com agilidade e segurança
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export function CTASection() {
               size="lg"
               className="border-[#1a1a1a] bg-transparent text-[#fafafa] hover:bg-[#151515] hover:border-[#00aaff] px-8 py-7 text-lg transition-all duration-300"
             >
-              <a href="mailto:contato@nexusti.tec.br">
+              <a href="mailto:carvalhoeng@outlook.com.br">
                 <Mail className="mr-2 h-5 w-5" />
                 ou envie um e-mail
               </a>
@@ -135,11 +135,11 @@ export function CTASection() {
 
                   <div className="space-y-1.5">
                     <label className="text-xs font-medium text-[#666666] uppercase tracking-wider">
-                      Empresa
+                      Tipo de imóvel
                     </label>
                     <input
-                      name="company"
-                      placeholder="Nome da empresa"
+                      name="property_type"
+                      placeholder="Residencial, Comercial..."
                       className="w-full bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#444444] text-sm focus:outline-none focus:border-[#00aaff] transition-colors"
                     />
                   </div>
@@ -153,7 +153,7 @@ export function CTASection() {
                     required
                     name="message"
                     rows={4}
-                    placeholder="Descreva brevemente o que sua empresa precisa..."
+                    placeholder="Descreva brevemente o que precisa (alvará, regularização, projeto, habite-se...)..."
                     className="w-full bg-[#111111] border border-[#1a1a1a] rounded-lg px-4 py-3 text-[#fafafa] placeholder-[#444444] text-sm focus:outline-none focus:border-[#00aaff] transition-colors resize-none"
                   />
                   <ValidationError field="message" errors={state.errors} className="text-red-400 text-xs mt-1" />
@@ -180,7 +180,7 @@ export function CTASection() {
         )}
 
         <p className="text-sm text-[#666666] text-center mt-8">
-          Atendimento em Goiânia, Aparecida de Goiânia e região
+          Atendimento em Goiânia, Aparecida de Goiânia e região · Seg–Sex das 8h às 18h (por agendamento)
         </p>
       </div>
     </section>
