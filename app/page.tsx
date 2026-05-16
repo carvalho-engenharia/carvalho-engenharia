@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
 import { PainPoints } from "@/components/pain-points"
 import { WhyUs } from "@/components/why-us"
-import { PricingPlans } from "@/components/pricing-plans"
 import { Sobre } from "@/components/sobre"
 import { Testimonials } from "@/components/terminal"
 import { CTASection } from "@/components/cta-section"
@@ -19,7 +18,6 @@ export default function Home() {
       <Services />
       <PainPoints />
       <WhyUs />
-      <PricingPlans />
       <Sobre />
       <Testimonials />
       <CTASection />
