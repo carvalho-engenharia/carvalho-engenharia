@@ -2,8 +2,6 @@ import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { Services } from "@/components/services"
 import { PainPoints } from "@/components/pain-points"
-import { TechStack } from "@/components/tech-stack"
-import MarqueeLogos from "@/components/marquee-logos"
 import { WhyUs } from "@/components/why-us"
 import { PricingPlans } from "@/components/pricing-plans"
 import { Sobre } from "@/components/sobre"
@@ -20,8 +18,6 @@ export default function Home() {
       <Hero />
       <Services />
       <PainPoints />
-      <TechStack />
-      <MarqueeLogos />
       <WhyUs />
       <PricingPlans />
       <Sobre />
