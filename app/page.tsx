@@ -7,7 +7,6 @@ import { Sobre } from "@/components/sobre"
 import { Testimonials } from "@/components/terminal"
 import { CTASection } from "@/components/cta-section"
 import GoogleReviews from "@/components/google-reviews"
-import ClientLogos from "@/components/client-logos"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
       <Sobre />
       <Testimonials />
       <CTASection />
-      <ClientLogos />
       <GoogleReviews />
       <Footer />
     </main>
