@@ -1,33 +1,33 @@
 "use client"
 
-import { UserCheck, Award, BadgeCheck, MapPin } from "lucide-react"
+import { TrendingUp, Landmark, FileText, ShieldCheck } from "lucide-react"
 
 const features = [
   {
-    icon: UserCheck,
-    title: "Suporte TI direto com o especialista",
-    description: "Sem terceiros, sem call center. Você fala direto com quem resolve — atendimento presencial e remoto em Goiânia.",
+    icon: TrendingUp,
+    title: "Valorização e venda facilitada do imóvel",
+    description: "Imóvel regularizado vale mais e pode ser vendido, financiado ou refinanciado junto à Caixa e demais bancos sem impedimentos.",
   },
   {
-    icon: Award,
-    title: "Mais de 20 anos em infraestrutura de TI",
-    description: "Profissional sênior com vivência real em terceirização de TI, redes corporativas e projetos complexos.",
+    icon: Landmark,
+    title: "Mais de 10 anos regularizando imóveis em Goiânia",
+    description: "Engenheiro Civil com registro ativo no CREA (1017786453D-GO), responsabilidade técnica em projetos e processos junto às prefeituras.",
   },
   {
-    icon: BadgeCheck,
-    title: "Certificado CREA",
-    description: "Engenharia aplicada à TI. Projetos de infraestrutura e redes com responsabilidade técnica.",
+    icon: FileText,
+    title: "Acompanhamento completo junto à prefeitura",
+    description: "Cuidamos de todo o processo: alvará de construção, habite-se, carta de ocupação, desmembramento, averbação e INSS de obras.",
   },
   {
-    icon: MapPin,
+    icon: ShieldCheck,
     title: "Atendimento presencial em Goiânia",
-    description: "Suporte técnico presencial em Goiânia, Aparecida de Goiânia e região. Estamos perto quando você precisa.",
+    description: "Suporte técnico presencial em Goiânia, Aparecida de Goiânia e região. Atendemos por agendamento de segunda a sexta das 8h às 18h.",
   },
 ]
 
 export function WhyUs() {
   return (
-    <section className="py-24 sm:py-32 bg-[#080808] relative overflow-hidden">
+    <section id="vantagens" className="py-24 sm:py-32 bg-[#080808] relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[500px] h-[500px] rounded-full bg-[#33bbff]/5 blur-[120px]" />
@@ -38,17 +38,41 @@ export function WhyUs() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#33bbff]/30 bg-[#33bbff]/5 backdrop-blur-md mb-6">
             <div className="w-2 h-2 rounded-full bg-[#33bbff] animate-pulse" />
-            <span className="text-[10px] uppercase tracking-widest text-[#33bbff] font-semibold">Por que nós</span>
+            <span className="text-[10px] uppercase tracking-widest text-[#33bbff] font-semibold">Vantagens</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl font-bold text-[#fafafa] mb-4 text-balance">
-            Por que contratar a{" "}
-            <span className="text-[#33bbff]">Nexus TI em Goiânia</span>
+            Por que regularizar com a{" "}
+            <span className="text-[#33bbff]">Carvalho Engenharia</span>
           </h2>
 
           <p className="text-[#888888] text-lg max-w-xl mx-auto">
-            Terceirização de TI com atendimento humano, suporte técnico especializado e comprometimento com o resultado da sua empresa.
+            Regularização de imóveis com responsabilidade técnica, agilidade e acompanhamento completo do início ao fim.
           </p>
+        </div>
+
+        {/* Benefícios da regularização — lista destacada */}
+        <div className="mb-12 bg-[#0f0f0f] border border-[#1a1a1a] rounded-2xl p-8 sm:p-10">
+          <h3 className="text-lg font-semibold text-[#fafafa] mb-6">
+            Benefícios da regularização imobiliária
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              "Facilidade na compra ou venda do imóvel",
+              "Possibilidade de financiamento junto à Caixa e bancos",
+              "Averbação da construção na escritura, valorizando o imóvel",
+              "Viabilidade na renovação do Alvará de Funcionamento para empresas",
+              "Viabiliza inventário, partilha e processos jurídicos",
+              "Obtenção da Carta de Ocupação e Habite-se",
+              "Desmembramento (desdobro) e retificação de áreas",
+              "Acompanhamento completo junto à prefeitura",
+            ].map((item) => (
+              <div key={item} className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#33bbff] mt-2 flex-shrink-0" />
+                <span className="text-sm text-[#888888]">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Bento grid */}
