@@ -18,6 +18,7 @@ export function Navbar() {
   }, [])
 
   const navLinks = [
+    { href: "#como-funciona", label: "Como Funciona" },
     { href: "#servicos", label: "Serviços" },
     { href: "#vantagens", label: "Vantagens" },
     { href: "#sobre", label: "Quem Somos" },
