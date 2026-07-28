@@ -11,12 +11,6 @@ import {
 
 const services = [
   {
-    title: "Perícias e Vistorias Técnicas",
-    description:
-      "Laudos técnicos detalhados para avaliar a segurança e conformidade do seu imóvel. Relatórios assinados por Engenheiro Civil com registro CREA.",
-    icon: Search,
-  },
-  {
     title: "Projetos de Engenharia",
     description:
       "Projetos Estruturais, Elétricos e Hidrossanitários completos para residências e comércios. Do croqui ao projeto executivo aprovado.",
@@ -39,6 +33,12 @@ const services = [
     description:
       "Regularização de obras construídas sem alvará, ampliações e reformas não documentadas. INSS de obras e conformidade com a legislação vigente.",
     icon: ClipboardList,
+  },
+  {
+    title: "Perícias e Vistorias Técnicas",
+    description:
+      "Laudos técnicos detalhados para avaliar a segurança e conformidade do seu imóvel. Relatórios assinados por Engenheiro Civil com registro CREA.",
+    icon: Search,
   },
   {
     title: "Acompanhamento de Obras",
