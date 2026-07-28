@@ -4,6 +4,7 @@ import { PaymentProcess } from "@/components/payment-process"
 import { Services } from "@/components/services"
 import { PainPoints } from "@/components/pain-points"
 import { WhyUs } from "@/components/why-us"
+import { Gallery } from "@/components/gallery"
 import { Sobre } from "@/components/sobre"
 import { CTASection } from "@/components/cta-section"
 import GoogleReviews from "@/components/google-reviews"
@@ -18,6 +19,7 @@ export default function Home() {
       <Services />
       <PainPoints />
       <WhyUs />
+      <Gallery />
       <Sobre />
       <CTASection />
       <GoogleReviews />
