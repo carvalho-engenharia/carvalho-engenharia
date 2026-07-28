@@ -4,6 +4,270 @@ import { useState, useEffect, useCallback } from "react";
 
 const reviews = [
   {
+    name: "Douglas Arizote Arantes",
+    initials: "DA",
+    color: "#4285F4",
+    rating: 5,
+    time: "Há 4 dias",
+    text: "",
+  },
+  {
+    name: "Deise Maria",
+    initials: "DM",
+    color: "#EA4335",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "",
+  },
+  {
+    name: "Mulheres Que Amaram A Deus",
+    initials: "MD",
+    color: "#34A853",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "",
+  },
+  {
+    name: "Juracy Soares",
+    initials: "JS",
+    color: "#FBBC04",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "",
+  },
+  {
+    name: "Dennis Santiago",
+    initials: "DS",
+    color: "#9C27B0",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "",
+  },
+  {
+    name: "So Artes Gráficas Lagoa",
+    initials: "SA",
+    color: "#4285F4",
+    rating: 5,
+    time: "Há 4 dias",
+    text: "Excelente profissional.",
+  },
+  {
+    name: "Luana Cristina",
+    initials: "LC",
+    color: "#EA4335",
+    rating: 5,
+    time: "Há 4 dias",
+    text: "Quero registrar minha satisfação com a Carvalho Engenharia. O atendimento do engenheiro Caio tem sido muito atencioso e profissional desde o início. Sempre esclarece minhas dúvidas e transmite segurança durante todo o processo de regularização do imóvel. Recomendo pelo comprometimento, organização e excelente atendimento. Parabéns pelo trabalho!",
+  },
+  {
+    name: "Marilene Silva",
+    initials: "MS",
+    color: "#34A853",
+    rating: 5,
+    time: "Há 1 semana",
+    text: "Excelente profissional, sempre muito prestativo!",
+  },
+  {
+    name: "Francielle França",
+    initials: "FF",
+    color: "#FBBC04",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Conheço o profissionalismo e a dedicação do trabalho desenvolvido. É uma pessoa comprometida, responsável e muito...",
+  },
+  {
+    name: "Cleone",
+    initials: "CL",
+    color: "#9C27B0",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Excelente atendimento, muito profissionalismo e qualidade no serviço prestado. Recomendo!",
+  },
+  {
+    name: "Cris Maracaipe",
+    initials: "CM",
+    color: "#00BCD4",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Excelente prestação de serviço, entregou resultado de qualidade conforme prazo acordado. Recomendo.",
+  },
+  {
+    name: "Simone Si",
+    initials: "SS",
+    color: "#FF5722",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Excelente profissional.",
+  },
+  {
+    name: "Fátima Regina Costa de Oliveira",
+    initials: "FR",
+    color: "#607D8B",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Ótima experiência, recomendo muito! Sem sombra de dúvidas, o melhor!",
+  },
+  {
+    name: "Jessivaldo Leão",
+    initials: "JL",
+    color: "#FF7043",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Empresa extremamente qualificada e profissional. Equipe técnica preparada, atendimento transparente e entrega...",
+  },
+  {
+    name: "Gervásio Kuerten",
+    initials: "GK",
+    color: "#26A69A",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "A equipe da Carvalho fez todo o combinado com êxito. Cumpre todas as obrigações e deveres contratados. Agradeço muito pelo apoio no projeto elaborado.",
+  },
+  {
+    name: "Adalberto Jaime",
+    initials: "AJ",
+    color: "#5C6BC0",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Super recomendo. Pode confiar. Compromisso e qualidade. 100%",
+  },
+  {
+    name: "Lindomar Stein",
+    initials: "LS",
+    color: "#E91E63",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Resolveu prontamente todas minhas pendências nos dois empreendimentos, e prestou toda consultoria necessária até finalizar o processo. Recomendo!",
+  },
+  {
+    name: "Cleiton Limirio",
+    initials: "CL",
+    color: "#795548",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Trabalho sério e transparente, fiz a regularização do meu imóvel com eles. Investimento justo, serviço prestado com...",
+  },
+  {
+    name: "Rogivan Barbosa",
+    initials: "RB",
+    color: "#F57C00",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Um ótimo trabalho bem feito. Uma profissional excelente e super indico.",
+  },
+  {
+    name: "Marcos Oliveira",
+    initials: "MO",
+    color: "#4285F4",
+    rating: 5,
+    time: "Há 2 semanas",
+    text: "Empresa muito séria e comprometida, trabalho nota 10.",
+  },
+  {
+    name: "Lucas Maracaipe",
+    initials: "LM",
+    color: "#EA4335",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Empresa muito boa, com excelentes profissionais. Gostei muito do empenho e do atendimento prestados.",
+  },
+  {
+    name: "Victor Corrêa",
+    initials: "VC",
+    color: "#34A853",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Profissional muito competente, atencioso e comprometido com resultados. A qualidade do trabalho e o conhecimento técnico...",
+  },
+  {
+    name: "Leo Amoral",
+    initials: "LA",
+    color: "#FBBC04",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Muito bom!!",
+  },
+  {
+    name: "Ana Luiza Machado Cardoso",
+    initials: "AL",
+    color: "#9C27B0",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "O atendimento foi rápido, explicaram todo o processo em linguagem simples e me mantiveram informada em cada etapa junto à prefeitura. Recomendo!",
+  },
+  {
+    name: "Diego Moura",
+    initials: "DM",
+    color: "#00BCD4",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Fui muito bem atendido pelo Caio. O serviço foi feito com bastante atenção, clareza e profissionalismo. Ele me orientou...",
+  },
+  {
+    name: "Grazi Martins",
+    initials: "GM",
+    color: "#FF5722",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Muito profissionalismo e muita dedicação. Eu super recomendo...",
+  },
+  {
+    name: "Eliane Santos",
+    initials: "ES",
+    color: "#607D8B",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Excelente profissional, cumpre os prazos, dá toda assistência que precisa na regularização do imóvel.",
+  },
+  {
+    name: "Felipe Rodrigues Duarte",
+    initials: "FD",
+    color: "#FF7043",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Excelente atendimento.",
+  },
+  {
+    name: "Agueda Lima",
+    initials: "AL",
+    color: "#26A69A",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "O Caio é um excelente profissional! Muito competente, atencioso e pontual. Explicou tudo com clareza, realizou o serviço...",
+  },
+  {
+    name: "Maristela Rodrigues",
+    initials: "MR",
+    color: "#5C6BC0",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Quero deixar registrado o meu sincero agradecimento pelo excelente trabalho realizado. Desde o primeiro contato, o...",
+  },
+  {
+    name: "Idelma Alves",
+    initials: "IA",
+    color: "#E91E63",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Excelente profissional, comprometido, pontual, recomendo o serviço.",
+  },
+  {
+    name: "Daniel Correa",
+    initials: "DC",
+    color: "#795548",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Atendimento sempre com excelência!",
+  },
+  {
+    name: "Jonathan Matheus",
+    initials: "JM",
+    color: "#F57C00",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Uma empresa extremamente competente, com atendimento ágil, atencioso e muito profissional. Trabalham com processo de...",
+  },
+  {
     name: "Felipe Macedo",
     initials: "FM",
     color: "#4285F4",
@@ -181,7 +445,7 @@ export default function GoogleReviews() {
             <span className="text-5xl font-bold text-white">5,0</span>
             <div className="flex flex-col gap-1">
               <StarRating count={5} />
-              <span className="text-white/50 text-sm">14 avaliações</span>
+              <span className="text-white/50 text-sm">{total} avaliações</span>
             </div>
           </div>
         </div>
@@ -218,9 +482,11 @@ export default function GoogleReviews() {
 
               <StarRating count={review.rating} />
 
-              <p className="text-white/70 text-sm leading-relaxed flex-1 line-clamp-6">
-                {review.text}
-              </p>
+              {review.text && (
+                <p className="text-white/70 text-sm leading-relaxed flex-1 line-clamp-6">
+                  {review.text}
+                </p>
+              )}
             </div>
           ))}
         </div>
