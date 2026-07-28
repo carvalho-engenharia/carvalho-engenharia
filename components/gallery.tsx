@@ -24,6 +24,25 @@ export function Gallery() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section header */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00aaff]/30 bg-[#00aaff]/5 backdrop-blur-md mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#00aaff] animate-pulse" />
+            <span className="text-[10px] uppercase tracking-widest text-[#00aaff] font-semibold">
+              Nosso Trabalho
+            </span>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#fafafa] mb-4 text-balance">
+            Do levantamento em campo ao{" "}
+            <span className="text-[#00aaff]">projeto aprovado</span>
+          </h2>
+
+          <p className="text-[#888888] text-lg max-w-xl mx-auto">
+            Acompanhe de perto como transformamos medição, projeto técnico e aprovação em resultado real.
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           {gallery.map((item) => (
             <div
