@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { PaymentProcess } from "@/components/payment-process"
 import { Services } from "@/components/services"
 import { PainPoints } from "@/components/pain-points"
+import { RequiredDocuments } from "@/components/required-documents"
 import { WhyUs } from "@/components/why-us"
 import { Gallery } from "@/components/gallery"
 import { Sobre } from "@/components/sobre"
@@ -18,6 +19,7 @@ export default function Home() {
       <PaymentProcess />
       <Services />
       <PainPoints />
+      <RequiredDocuments />
       <WhyUs />
       <Gallery />
       <Sobre />
