@@ -2,16 +2,20 @@ import Image from "next/image"
 
 const gallery = [
   {
-    image: "/engenheiro-levantamento-campo.jpg",
-    caption: "Levantamento técnico feito com precisão",
+    image: "/vistoria-telhado.jpg",
+    caption: "Vistoria técnica de cobertura",
   },
   {
-    image: "/hero-residencial.jpg",
-    caption: "Projeto aprovado, obra realizada",
+    image: "/levantamento-vagas-garagem.jpg",
+    caption: "Levantamento de vagas de garagem em condomínio",
   },
   {
-    image: "/projeto-tecnico-aprovado.png",
-    caption: "Projeto técnico pronto para aprovação",
+    image: "/centro-administrativo-municipal.jpg",
+    caption: "Acompanhamento junto à Prefeitura de Goiânia",
+  },
+  {
+    image: "/chafariz-centro-administrativo.jpg",
+    caption: "Protocolo de processos no Centro Administrativo Municipal",
   },
 ]
 
@@ -43,7 +47,7 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {gallery.map((item) => (
             <div
               key={item.caption}
@@ -54,7 +58,7 @@ export function Gallery() {
                 alt={item.caption}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
               <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
