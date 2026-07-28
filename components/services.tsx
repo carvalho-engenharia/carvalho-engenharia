@@ -4,12 +4,19 @@ import {
   Search,
   Wrench,
   FileText,
+  FileCheck2,
   Building2,
   ClipboardList,
   HardHat,
 } from "lucide-react"
 
 const services = [
+  {
+    title: "Aprovação de Projetos",
+    description:
+      "Protocolamos e acompanhamos a aprovação do seu projeto junto à Prefeitura de Goiânia, conforme o Código de Obras e Edificações — a etapa de licenciamento que antecede o Alvará de Construção.",
+    icon: FileCheck2,
+  },
   {
     title: "Projetos de Engenharia",
     description:
@@ -19,7 +26,7 @@ const services = [
   {
     title: "Alvará de Construção",
     description:
-      "Aprovação de projetos e obtenção de Alvará de Construção junto à Prefeitura. Habite-se, Carta de Ocupação e Alvará de Funcionamento para empresas.",
+      "Obtenção do Alvará de Construção, que autoriza o início da obra, além de Habite-se, Carta de Ocupação e Alvará de Funcionamento para empresas.",
     icon: FileText,
   },
   {
