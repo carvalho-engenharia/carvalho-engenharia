@@ -8,6 +8,8 @@ import {
   Building2,
   ClipboardList,
   HardHat,
+  Store,
+  HeartPulse,
 } from "lucide-react"
 
 const services = [
@@ -26,13 +28,13 @@ const services = [
   {
     title: "Alvará de Construção",
     description:
-      "Obtenção do Alvará de Construção, que autoriza o início da obra, além de Habite-se, Carta de Ocupação e Alvará de Funcionamento para empresas.",
+      "Obtenção do Alvará de Construção e de toda a família de licenças da LC nº 364/2023: Alvará de Acréscimo, Autorização de Reforma, Revalidação de Alvará, Autorização para Tapumes e Canteiro de Obras, Alvará de Demolição, além de Habite-se e Carta de Ocupação.",
     icon: FileText,
   },
   {
     title: "Alvarás junto às Prefeituras",
     description:
-      "Assessoria completa para aprovações junto à Prefeitura de Goiânia e Aparecida de Goiânia. Desmembramento, retificação de áreas e averbação em cartório.",
+      "Assessoria completa junto à Prefeitura de Goiânia e Aparecida de Goiânia: Desmembramento, Remembramento, Modificação de Projeto (com ou sem acréscimo, inclusive as built), Licenças Ambientais (Prévia, de Instalação e Única), retificação de áreas e averbação em cartório.",
     icon: Building2,
   },
   {
@@ -52,6 +54,18 @@ const services = [
     description:
       "Gestão e execução de obras residenciais e comerciais do início ao fim. ART (Anotação de Responsabilidade Técnica) e controle de qualidade em cada etapa.",
     icon: HardHat,
+  },
+  {
+    title: "Alvará de Localização e Funcionamento",
+    description:
+      "Nenhum comércio, indústria ou prestação de serviço pode abrir as portas em Goiânia sem esse alvará (art. 111 da LC nº 014/1992). Cuidamos do enquadramento de risco, uso do solo e protocolo junto à SEDEC — inclusive o processo simplificado para MEI e baixo risco.",
+    icon: Store,
+  },
+  {
+    title: "Alvará Sanitário (Vigilância Sanitária)",
+    description:
+      "Obrigatório para estabelecimentos cuja atividade possa impactar a saúde — alimentação, saúde, estética e afins (Lei nº 8.741/2008 e Portaria Municipal SMS 63/2023). Assessoria completa na classificação de risco, documentação e renovação anual junto à Vigilância Sanitária Municipal.",
+    icon: HeartPulse,
   },
 ]
 
