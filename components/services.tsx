@@ -13,6 +13,9 @@ import {
   Footprints,
   MapPin,
   Layers,
+  Users,
+  TrafficCone,
+  Recycle,
 } from "lucide-react"
 
 const services = [
@@ -87,6 +90,24 @@ const services = [
     description:
       "Parcelamento do solo para transformar uma gleba em lotes individuais, conforme a LC nº 363/2023 — do projeto urbanístico à aprovação e registro em cartório.",
     icon: Layers,
+  },
+  {
+    title: "Estudo de Impacto de Vizinhança (EIV)",
+    description:
+      "Exigido para empreendimentos de maior porte conforme a LC nº 349/2022 (arts. 254 e 257) — analisamos os efeitos do projeto na vizinhança e conduzimos a aprovação junto à Prefeitura.",
+    icon: Users,
+  },
+  {
+    title: "Estudo de Impacto de Trânsito (EIT)",
+    description:
+      "Complementar ao EIV para empreendimentos que geram fluxo relevante de veículos, conforme a Lei nº 10.977/2023 — elaboração e protocolo junto aos órgãos competentes.",
+    icon: TrafficCone,
+  },
+  {
+    title: "PGRCC — Plano de Gerenciamento de Resíduos",
+    description:
+      "Documento técnico obrigatório para aprovação de projeto e emissão do Alvará de Construção ou Demolição (Lei Federal nº 12.305/2010 e Resolução CONAMA nº 307/2002), elaborado com ART do responsável técnico.",
+    icon: Recycle,
   },
 ]
 
