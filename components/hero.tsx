@@ -15,17 +15,23 @@ const CYCLING_SUBTITLES = [
   "não tem Habite-se?",
   "banco bloqueou?",
   "Alvará de Funcionamento?",
-  "alvará de obra?",
-  "imóvel agora.",
+  "alvará de construção?",
+  "obra embargada?",
+  "INSS da obra?",
+  "Alvará Sanitário?",
+  "não terminou seu alvará?",
 ]
 
 const CYCLING_PREFIXES = [
   "Obra diferente",
   "Seu imóvel ainda",
-  "Quer vender mas o",
-  "Empresa sem",
+  "Quer vender ou financiar mas o",
+  "Sua empresa está sem",
   "Construiu sem",
-  "Regularize seu",
+  "Recebeu notificação de",
+  "Receita Federal cobrando o",
+  "Precisa do",
+  "Outro profissional começou e",
 ]
 
 function useCyclingTypewriter(phrases: string[], typeSpeed = 55, deleteSpeed = 28, pauseMs = 2600) {
