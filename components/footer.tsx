@@ -12,7 +12,7 @@ const quickLinks = [
 
 const socialLinks = [
   { href: "https://www.instagram.com/carvalho.eng", icon: Instagram, label: "Instagram" },
-  { href: "mailto:carvalhoeng@outlook.com.br", icon: Mail, label: "Email" },
+  { href: "mailto:contato@carvalho-engenharia.com", icon: Mail, label: "Email" },
 ]
 
 export function Footer() {
@@ -82,7 +82,7 @@ export function Footer() {
                 </a>
               ))}
             </div>
-            <p className="text-xs text-[#666666] mt-4">carvalhoeng@outlook.com.br</p>
+            <p className="text-xs text-[#666666] mt-4">contato@carvalho-engenharia.com</p>
             <p className="text-xs text-[#666666] mt-1">
               Resp. Técnico: Engº Civil Caio Maracaípe
             </p>
