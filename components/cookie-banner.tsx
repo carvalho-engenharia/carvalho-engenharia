@@ -7,17 +7,17 @@ export function CookieBanner() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const consent = localStorage.getItem("nexusti_cookie_consent")
+    const consent = localStorage.getItem("carvalho_cookie_consent")
     if (!consent) setVisible(true)
   }, [])
 
   function accept() {
-    localStorage.setItem("nexusti_cookie_consent", "accepted")
+    localStorage.setItem("carvalho_cookie_consent", "accepted")
     setVisible(false)
   }
 
   function decline() {
-    localStorage.setItem("nexusti_cookie_consent", "declined")
+    localStorage.setItem("carvalho_cookie_consent", "declined")
     setVisible(false)
   }
 
