@@ -10,6 +10,9 @@ import {
   HardHat,
   Store,
   HeartPulse,
+  Footprints,
+  MapPin,
+  Layers,
 } from "lucide-react"
 
 const services = [
@@ -66,6 +69,24 @@ const services = [
     description:
       "Obrigatório para estabelecimentos cuja atividade possa impactar a saúde — alimentação, saúde, estética e afins (Lei nº 8.741/2008 e Portaria Municipal SMS 63/2023). Assessoria completa na classificação de risco, documentação e renovação anual junto à Vigilância Sanitária Municipal.",
     icon: HeartPulse,
+  },
+  {
+    title: "Regularização de Calçada",
+    description:
+      "Adequação da calçada conforme a Lei Complementar nº 324/2019 e a Instrução Normativa nº 025/2025 — hoje exigida para emissão do Alvará de Aceite, Alvará de Regularização e Certidão de Conclusão de Obra.",
+    icon: Footprints,
+  },
+  {
+    title: "Regularização de Vazios Urbanos",
+    description:
+      "Terreno parado na Macrozona Construída pode gerar IPTU progressivo e até desapropriação (LC nº 371/2024). Apresentamos projeto de edificação, parcelamento ou aplicamos a Outorga Onerosa de Alteração de Uso para evitar a penalização.",
+    icon: MapPin,
+  },
+  {
+    title: "Aprovação de Loteamento",
+    description:
+      "Parcelamento do solo para transformar uma gleba em lotes individuais, conforme a LC nº 363/2023 — do projeto urbanístico à aprovação e registro em cartório.",
+    icon: Layers,
   },
 ]
 
