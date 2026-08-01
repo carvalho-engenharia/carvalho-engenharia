@@ -4,9 +4,9 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description:
-    "Saiba como a Nexus TI coleta, utiliza e protege seus dados pessoais em conformidade com a LGPD (Lei nº 13.709/2018).",
+    "Saiba como a Carvalho Engenharia coleta, utiliza e protege seus dados pessoais em conformidade com a LGPD (Lei nº 13.709/2018).",
   robots: { index: true, follow: true },
-  alternates: { canonical: "https://nexusti.tec.br/politica-de-privacidade" },
+  alternates: { canonical: "https://www.carvalho-engenharia.com/politica-de-privacidade" },
 }
 
 const sections = [
@@ -16,16 +16,16 @@ const sections = [
     content: (
       <>
         <p>
-          Esta Política de Privacidade descreve como a <strong>Nexus TI</strong>, nome fantasia de Caio
-          Carvalho Maracaipe — MEI, CNPJ 36.075.475/0001-94, com sede na Av. Deputado Jamel Cecilio,
-          3310, Sala 301, Jardim Goiás, Goiânia/GO ("Nexus TI", "nós" ou "nosso"), coleta, utiliza,
+          Esta Política de Privacidade descreve como a <strong>Carvalho Engenharia</strong>, nome fantasia de Caio
+          Carvalho Maracaípe — MEI, CNPJ 36.075.475/0001-94, com sede na Av. Deputado Jamel Cecilio,
+          3310, Sala 301, Jardim Goiás, Goiânia/GO ("Carvalho Engenharia", "nós" ou "nosso"), coleta, utiliza,
           armazena e protege os dados pessoais fornecidos pelos visitantes e clientes do site
-          nexusti.tec.br ("Usuário").
+          carvalho-engenharia.com ("Usuário").
         </p>
         <p className="mt-3">
           Para dúvidas ou solicitações, entre em contato pelo e-mail:{" "}
-          <a href="mailto:contato@nexusti.tec.br" className="text-[#33bbff] hover:underline">
-            contato@nexusti.tec.br
+          <a href="mailto:contato@carvalho-engenharia.com" className="text-[#33bbff] hover:underline">
+            contato@carvalho-engenharia.com
           </a>
         </p>
       </>
@@ -36,7 +36,7 @@ const sections = [
     title: "2. Base Legal (LGPD — Lei nº 13.709/2018)",
     content: (
       <>
-        <p>O tratamento dos dados pessoais realizado pela Nexus TI fundamenta-se nas seguintes bases legais:</p>
+        <p>O tratamento dos dados pessoais realizado pela Carvalho Engenharia fundamenta-se nas seguintes bases legais:</p>
         <ul className="mt-3 space-y-2 list-disc list-inside text-[#aaaaaa]">
           <li><strong className="text-[#dddddd]">Consentimento (art. 7º, I):</strong> quando o Usuário preenche o formulário de contato ou solicita orçamento.</li>
           <li><strong className="text-[#dddddd]">Legítimo interesse (art. 7º, IX):</strong> para envio de comunicações sobre serviços relevantes, com possibilidade de opt-out a qualquer momento.</li>
@@ -79,7 +79,7 @@ const sections = [
     content: (
       <ul className="mt-2 space-y-2 list-disc list-inside text-[#aaaaaa]">
         <li>Responder a solicitações de contato e pedidos de orçamento</li>
-        <li>Prestação dos serviços de TI contratados</li>
+        <li>Prestação dos serviços de engenharia contratados</li>
         <li>Envio de comunicações sobre serviços e novidades (mediante consentimento)</li>
         <li>Melhoria da experiência de navegação no site</li>
         <li>Análise de desempenho e tráfego via ferramentas de analytics</li>
@@ -93,7 +93,7 @@ const sections = [
     title: "5. Compartilhamento de Dados",
     content: (
       <>
-        <p>A Nexus TI <strong>não vende, aluga ou comercializa</strong> dados pessoais. Os dados poderão ser compartilhados somente nas seguintes situações:</p>
+        <p>A Carvalho Engenharia <strong>não vende, aluga ou comercializa</strong> dados pessoais. Os dados poderão ser compartilhados somente nas seguintes situações:</p>
         <ul className="mt-3 space-y-2 list-disc list-inside text-[#aaaaaa]">
           <li>Com prestadores de serviços que atuam como operadores (ex.: hospedagem, e-mail), sempre com obrigações contratuais de confidencialidade.</li>
           <li>Com autoridades públicas ou judiciais, quando exigido por lei ou ordem judicial.</li>
@@ -121,7 +121,7 @@ const sections = [
     title: "7. Cookies e Tecnologias de Rastreamento",
     content: (
       <>
-        <p>O site nexusti.tec.br utiliza cookies para:</p>
+        <p>O site carvalho-engenharia.com utiliza cookies para:</p>
         <ul className="mt-3 space-y-2 list-disc list-inside text-[#aaaaaa]">
           <li><strong className="text-[#dddddd]">Cookies essenciais:</strong> funcionamento correto do site.</li>
           <li><strong className="text-[#dddddd]">Cookies analíticos:</strong> análise de comportamento e melhoria da navegação (ex.: Google Analytics).</li>
@@ -149,8 +149,8 @@ const sections = [
         </ul>
         <p className="mt-3">
           Para exercer seus direitos, envie e-mail para{" "}
-          <a href="mailto:contato@nexusti.tec.br" className="text-[#33bbff] hover:underline">
-            contato@nexusti.tec.br
+          <a href="mailto:contato@carvalho-engenharia.com" className="text-[#33bbff] hover:underline">
+            contato@carvalho-engenharia.com
           </a>{" "}
           com o assunto <strong>"Direitos LGPD"</strong>. Responderemos em até 15 dias úteis.
         </p>
@@ -162,14 +162,14 @@ const sections = [
     title: "9. Segurança da Informação",
     content: (
       <>
-        <p>A Nexus TI adota medidas técnicas e organizacionais para proteger os dados pessoais, incluindo:</p>
+        <p>A Carvalho Engenharia adota medidas técnicas e organizacionais para proteger os dados pessoais, incluindo:</p>
         <ul className="mt-3 space-y-2 list-disc list-inside text-[#aaaaaa]">
           <li>Transmissão via protocolo HTTPS com certificado SSL/TLS</li>
           <li>Controle de acesso restrito aos dados pessoais</li>
           <li>Ferramentas homologadas com políticas compatíveis com a LGPD</li>
           <li>Revisão periódica dos procedimentos de segurança</li>
         </ul>
-        <p className="mt-3">Em caso de incidente de segurança relevante, a Nexus TI notificará a ANPD e os titulares afetados nos termos da lei.</p>
+        <p className="mt-3">Em caso de incidente de segurança relevante, a Carvalho Engenharia notificará a ANPD e os titulares afetados nos termos da lei.</p>
       </>
     ),
   },
@@ -178,7 +178,7 @@ const sections = [
     title: "10. Transferência Internacional de Dados",
     content: (
       <p>
-        Ferramentas utilizadas pela Nexus TI, como Google Analytics e plataformas de hospedagem em nuvem,
+        Ferramentas utilizadas pela Carvalho Engenharia, como Google Analytics e plataformas de hospedagem em nuvem,
         podem processar dados em servidores fora do Brasil. Nesses casos, garantimos que as transferências
         ocorrem apenas para países com nível de proteção adequado ou mediante cláusulas contratuais
         compatíveis com a LGPD (art. 33).
@@ -190,8 +190,8 @@ const sections = [
     title: "11. Links para Sites de Terceiros",
     content: (
       <p>
-        O site nexusti.tec.br pode conter links para sites externos (ex.: LinkedIn, Instagram). Esta política
-        aplica-se exclusivamente ao site da Nexus TI. Recomendamos consultar as políticas de privacidade de
+        O site carvalho-engenharia.com pode conter links para sites externos (ex.: LinkedIn, Instagram). Esta política
+        aplica-se exclusivamente ao site da Carvalho Engenharia. Recomendamos consultar as políticas de privacidade de
         cada site visitado.
       </p>
     ),
@@ -203,7 +203,7 @@ const sections = [
       <p>
         Esta Política de Privacidade pode ser atualizada para refletir mudanças nas práticas de tratamento de
         dados ou na legislação aplicável. A versão mais recente estará sempre disponível em{" "}
-        <span className="text-[#33bbff]">nexusti.tec.br/politica-de-privacidade</span>. Alterações
+        <span className="text-[#33bbff]">carvalho-engenharia.com/politica-de-privacidade</span>. Alterações
         substanciais serão comunicadas pelo próprio site.
       </p>
     ),
@@ -217,8 +217,8 @@ const sections = [
         <ul className="mt-3 space-y-2 list-disc list-inside text-[#aaaaaa]">
           <li>
             E-mail:{" "}
-            <a href="mailto:contato@nexusti.tec.br" className="text-[#33bbff] hover:underline">
-              contato@nexusti.tec.br
+            <a href="mailto:contato@carvalho-engenharia.com" className="text-[#33bbff] hover:underline">
+              contato@carvalho-engenharia.com
             </a>
           </li>
           <li>
@@ -254,7 +254,7 @@ export default function PoliticaDePrivacidade() {
       <header className="border-b border-[#1a1a1a] px-6 py-4">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-1">
-            <span className="font-mono text-lg font-bold text-[#fafafa] tracking-tight">Nexus TI</span>
+            <span className="font-mono text-lg font-bold text-[#fafafa] tracking-tight">Carvalho Engenharia</span>
             <span className="w-2 h-4 bg-[#33bbff] animate-[blink_1s_steps(1)_infinite]" aria-hidden="true" />
           </Link>
           <Link
@@ -314,7 +314,7 @@ export default function PoliticaDePrivacidade() {
         {/* Rodapé da página */}
         <div className="mt-16 pt-8 border-t border-[#1a1a1a] text-center">
           <p className="text-xs text-[#555555]">
-            © {new Date().getFullYear()} Nexus TI — CNPJ 36.075.475/0001-94
+            © {new Date().getFullYear()} Carvalho Engenharia — CNPJ 36.075.475/0001-94
           </p>
           <Link
             href="/"
