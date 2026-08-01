@@ -32,23 +32,21 @@ export function Navbar() {
       {/* Barra de contato superior */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-[#050505] border-b border-[#1a1a1a] hidden lg:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-8 h-9 text-xs text-[#666666]">
+          <div className="flex items-center justify-center gap-3 h-9 text-xs text-[#666666]">
             <a
               href="tel:+556298062169"
-              className="flex items-center gap-1.5 hover:text-[#00aaff] transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#00aaff]/40 bg-[#00aaff]/10 text-[#00aaff] font-semibold tracking-wide shadow-[0_0_12px_rgba(0,170,255,0.25)] hover:bg-[#00aaff]/20 transition-colors"
             >
               <Phone size={12} />
               (62) 9 9806-2169
             </a>
-            <span className="text-[#2a2a2a]">|</span>
             <a
               href="mailto:contato@carvalho-engenharia.com"
-              className="flex items-center gap-1.5 hover:text-[#00aaff] transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#00aaff]/40 bg-[#00aaff]/10 text-[#00aaff] font-semibold tracking-wide shadow-[0_0_12px_rgba(0,170,255,0.25)] hover:bg-[#00aaff]/20 transition-colors"
             >
               <Mail size={12} />
               contato@carvalho-engenharia.com
             </a>
-            <span className="text-[#2a2a2a]">|</span>
             <span className="flex items-center gap-2 px-3 py-1 rounded-full border border-[#00aaff]/40 bg-[#00aaff]/10 text-[#00aaff] font-semibold tracking-wide shadow-[0_0_12px_rgba(0,170,255,0.25)]">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00aaff] opacity-75" />
