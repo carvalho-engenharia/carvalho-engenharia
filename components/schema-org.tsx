@@ -1,43 +1,46 @@
 export function SchemaOrg() {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Nexus TI",
+    "@type": "ProfessionalService",
+    name: "Carvalho Engenharia",
     description:
-      "Empresa especializada em suporte de TI, redes, segurança da informação e infraestrutura em Goiânia. Atendimento 24h.",
-    url: "https://nexusti.tec.br",
+      "Especialistas em Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia e Aparecida de Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO.",
+    url: "https://www.carvalho-engenharia.com",
     telephone: "+55-62-99806-2169",
-    email: "contato@nexusti.tec.br",
-    openingHours: "Mo-Su 00:00-23:59",
+    email: "contato@carvalho-engenharia.com",
+    openingHours: "Mo-Fr 08:00-18:00",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Av. Dep. Jamel Cecílio, 3310, Sala 301 - Edifício Office Flamboyant, Jardim Goiás",
       addressLocality: "Goiânia",
       addressRegion: "GO",
       addressCountry: "BR",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -16.6869,
-      longitude: -49.2648,
+      latitude: -16.6997,
+      longitude: -49.2481,
     },
-    areaServed: {
-      "@type": "City",
-      name: "Goiânia",
-    },
+    areaServed: [
+      { "@type": "City", name: "Goiânia" },
+      { "@type": "City", name: "Aparecida de Goiânia" },
+      { "@type": "City", name: "Anápolis" },
+    ],
     priceRange: "$$",
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
-      reviewCount: "9",
+      reviewCount: "47",
       bestRating: "5",
     },
     founder: {
       "@type": "Person",
-      name: "Caio Maracaipe",
-      jobTitle: "Especialista em TI",
+      name: "Caio Maracaípe",
+      jobTitle: "Engenheiro Civil — CREA 1017786453D-GO",
     },
     sameAs: [
-      "https://www.google.com/search?kgmid=/g/11z5b8qv04",
+      "https://www.instagram.com/carvalho.eng",
+      "https://share.google/XiHUDZzpLsAOmXMyd",
     ],
   }
 
