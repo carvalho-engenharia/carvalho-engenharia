@@ -434,7 +434,7 @@ export default function GoogleReviews() {
   };
 
   return (
-    <section className="w-full py-16 px-4 bg-gray-950">
+    <section id="depoimentos" className="w-full py-16 px-4 bg-gray-950">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center mb-10">
           <div className="flex items-center gap-3 mb-2">
