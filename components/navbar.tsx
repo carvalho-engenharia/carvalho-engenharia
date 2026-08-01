@@ -42,11 +42,11 @@ export function Navbar() {
             </a>
             <span className="text-[#2a2a2a]">|</span>
             <a
-              href="mailto:carvalhoeng@outlook.com.br"
+              href="mailto:contato@carvalho-engenharia.com"
               className="flex items-center gap-1.5 hover:text-[#00aaff] transition-colors"
             >
               <Mail size={12} />
-              carvalhoeng@outlook.com.br
+              contato@carvalho-engenharia.com
             </a>
             <span className="text-[#2a2a2a]">|</span>
             <span className="flex items-center gap-2 px-3 py-1 rounded-full border border-[#00aaff]/40 bg-[#00aaff]/10 text-[#00aaff] font-semibold tracking-wide shadow-[0_0_12px_rgba(0,170,255,0.25)]">
@@ -125,8 +125,8 @@ export function Navbar() {
                   <a href="tel:+556298062169" className="flex items-center gap-2 hover:text-[#00aaff] transition-colors">
                     <Phone size={12} /> (62) 9 9806-2169
                   </a>
-                  <a href="mailto:carvalhoeng@outlook.com.br" className="flex items-center gap-2 hover:text-[#00aaff] transition-colors">
-                    <Mail size={12} /> carvalhoeng@outlook.com.br
+                  <a href="mailto:contato@carvalho-engenharia.com" className="flex items-center gap-2 hover:text-[#00aaff] transition-colors">
+                    <Mail size={12} /> contato@carvalho-engenharia.com
                   </a>
                   <span className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#00aaff]/40 bg-[#00aaff]/10 text-[#00aaff] font-semibold text-xs self-start shadow-[0_0_10px_rgba(0,170,255,0.2)]">
                     <span className="relative flex h-2 w-2">
