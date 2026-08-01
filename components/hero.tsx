@@ -34,6 +34,18 @@ const CYCLING_PREFIXES = [
   "Outro profissional começou e",
 ]
 
+const CYCLING_RESOLUTIONS = [
+  "Regularizamos a documentação e iniciamos em 1 dia útil após o contrato.",
+  "Emitimos o Habite-se — início do processo em 1 dia útil após o contrato.",
+  "Resolvemos a pendência que trava o banco — começamos em 1 dia útil.",
+  "Emitimos o Alvará de Funcionamento — protocolo em 1 dia útil após o contrato.",
+  "Regularizamos com alvará retroativo — início em 1 dia útil após assinar.",
+  "Revertemos o embargo e reabrimos seu processo em 1 dia útil.",
+  "Emitimos CNO, CND e SERO — início em 1 dia útil após o contrato.",
+  "Cuidamos do licenciamento sanitário — protocolo em 1 dia útil.",
+  "Assumimos de onde parou — retomada em 1 dia útil após o contrato.",
+]
+
 function useCyclingTypewriter(phrases: string[], typeSpeed = 55, deleteSpeed = 28, pauseMs = 2600) {
   const [phraseIndex, setPhraseIndex] = useState(0)
   const [displayed, setDisplayed] = useState("")
@@ -104,6 +116,15 @@ export function Hero() {
             aria-hidden="true"
           />
         </h1>
+
+        {/* Resolução rápida */}
+        <p
+          key={phraseIndex}
+          className="flex items-center justify-center gap-2 text-sm md:text-base text-[#4ade80] font-medium mb-6 px-4 animate-[fadeIn_0.6s_ease-out]"
+        >
+          <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
+          {CYCLING_RESOLUTIONS[phraseIndex]}
+        </p>
 
         {/* Subtítulo fixo */}
         <div className="min-h-[3.5rem] md:min-h-[2rem] flex items-center justify-center mb-10">
