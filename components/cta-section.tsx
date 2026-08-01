@@ -73,7 +73,7 @@ export function CTASection() {
               size="lg"
               className="border-[#1a1a1a] bg-transparent text-[#fafafa] hover:bg-[#151515] hover:border-[#00aaff] px-8 py-7 text-lg transition-all duration-300"
             >
-              <a href="contato@carvalho-engenharia.com">
+              <a href="mailto:contato@carvalho-engenharia.com"
                 <Mail className="mr-2 h-5 w-5" />
                 ou envie um e-mail
               </a>
