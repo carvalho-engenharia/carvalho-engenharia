@@ -135,7 +135,7 @@ const modalContent = {
             icon: AlertTriangle,
             heading: "Custas",
             items: [
-              "Como a construção é anterior à legislação vigente, normalmente não há multa por irregularidade em si",
+              "Para construções horizontais, normalmente incidem apenas taxas administrativas. Edificações verticais têm multa formal específica (podendo chegar a 1.000%-1.500% da taxa) — fazemos essa simulação antes de você decidir",
               "Incidem apenas as taxas administrativas do processo junto à Seplanh",
             ],
           },
