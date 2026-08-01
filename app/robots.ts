@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://nexusti.tec.br/sitemap.xml",
+    sitemap: "https://www.carvalho-engenharia.com/sitemap.xml",
   }
 }
