@@ -23,8 +23,8 @@ export function Navbar() {
     { href: "#vantagens", label: "Vantagens" },
     { href: "#sobre", label: "Quem Somos" },
     { href: "#depoimentos", label: "Depoimentos" },
-    { href: "#contato", label: "Contato" },
     { href: "/blog", label: "Blog" },
+    { href: "#contato", label: "Contato" },
   ]
 
   return (
