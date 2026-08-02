@@ -18,7 +18,7 @@ const competencias = [
 
 const credenciais = [
   { label: "Engenheiro Civil", sub: "CREA 1017786453D-GO" },
-  { label: "Pós-graduado em Segurança da Informação", sub: "UFG" },
+  { label: "Pós-graduado em Regularização Imobiliária", sub: "UFG" },
   { label: "Mais de 10 anos no mercado", sub: "Goiânia e região" },
 ]
 
