@@ -57,7 +57,7 @@ export function PaymentProcess() {
           <p className="text-[#888888] max-w-2xl mx-auto text-lg text-balance">
             Dividimos o processo em 3 etapas, com pagamento vinculado a cada entrega. Nada de pagar tudo adiantado e
             torcer para o alvará sair —{" "}
-            <span className="text-[#00aaff] font-semibold">o risco é compartilhado com a gente</span>.
+            <span className="text-[#00aaff] font-semibold">garantimos a conclusão total do processo</span>.
           </p>
         </div>
 
