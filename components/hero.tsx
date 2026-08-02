@@ -88,7 +88,7 @@ export function Hero() {
   const { displayed, phraseIndex } = useCyclingTypewriter(CYCLING_SUBTITLES)
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-[#050505]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 lg:pt-36 overflow-hidden bg-[#050505]">
       <ParticlesBackground />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,170,255,0.08)_0%,transparent_60%)] pointer-events-none z-0" />
 
