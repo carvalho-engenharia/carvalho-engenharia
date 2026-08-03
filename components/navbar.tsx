@@ -30,9 +30,9 @@ export function Navbar() {
   return (
     <>
       {/* Barra de contato superior */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#050505] border-b border-[#1a1a1a] hidden lg:block">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-[#e5e9ef] hidden lg:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center gap-3 h-9 text-xs text-[#666666]">
+          <div className="flex items-center justify-center gap-3 h-9 text-xs text-[#5b6472]">
             <a
               href="tel:+556298062169"
               className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#00aaff]/40 bg-[#00aaff]/10 text-[#00aaff] font-semibold tracking-wide shadow-[0_0_12px_rgba(0,170,255,0.25)] hover:bg-[#00aaff]/20 transition-colors"
@@ -62,7 +62,7 @@ export function Navbar() {
       <nav
         className={`fixed left-0 right-0 z-40 transition-all duration-300 lg:top-9 top-0 ${
           isScrolled
-            ? "bg-[#080808]/80 backdrop-blur-xl border-b border-[#1a1a1a] shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+            ? "bg-white/85 backdrop-blur-xl border-b border-[#e5e9ef] shadow-[0_4px_30px_rgba(15,23,42,0.06)]"
             : "bg-transparent"
         }`}
       >
@@ -75,7 +75,7 @@ export function Navbar() {
               <img
                 src="/logo_carv.png"
                 alt="Carvalho Engenharia"
-                style={{ mixBlendMode: "lighten", width: "280px", height: "auto" }}
+                style={{ width: "280px", height: "auto" }}
               />
             </a>
 
@@ -85,7 +85,7 @@ export function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-[#888888] hover:text-[#fafafa] transition-colors duration-200"
+                  className="text-sm text-[#5b6472] hover:text-[#0b1220] transition-colors duration-200"
                 >
                   {link.label}
                 </a>
@@ -96,7 +96,7 @@ export function Navbar() {
             <div className="hidden lg:block">
               <Button
                 asChild
-                className="bg-[#00aaff] text-[#080808] hover:bg-[#00aaff]/90 font-semibold shadow-[0_0_25px_rgba(0,170,255,0.5)] hover:shadow-[0_0_40px_rgba(0,170,255,0.7)] transition-all duration-300"
+                className="bg-[#00aaff] text-white hover:bg-[#0090dd] font-semibold shadow-[0_4px_20px_rgba(0,170,255,0.35)] hover:shadow-[0_6px_28px_rgba(0,170,255,0.45)] transition-all duration-300"
               >
                 <a href="https://wa.me/5562998062169" target="_blank" rel="noopener noreferrer">
                   Solicitar Orçamento
@@ -106,7 +106,7 @@ export function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 text-[#fafafa]"
+              className="lg:hidden p-2 text-[#0b1220]"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
             >
@@ -116,10 +116,10 @@ export function Navbar() {
 
           {/* Mobile Menu */}
           {isMobileMenuOpen && (
-            <div className="lg:hidden py-4 border-t border-[#222222]">
+            <div className="lg:hidden py-4 border-t border-[#e5e9ef]">
               <div className="flex flex-col gap-4">
                 {/* Contato mobile */}
-                <div className="flex flex-col gap-2 pb-3 border-b border-[#1a1a1a] text-xs text-[#666666]">
+                <div className="flex flex-col gap-2 pb-3 border-b border-[#e5e9ef] text-xs text-[#5b6472]">
                   <a href="tel:+556298062169" className="flex items-center gap-2 hover:text-[#00aaff] transition-colors">
                     <Phone size={12} /> (62) 9 9806-2169
                   </a>
@@ -139,7 +139,7 @@ export function Navbar() {
                   <a
                     key={link.href}
                     href={link.href}
-                    className="text-[#888888] hover:text-[#fafafa] transition-colors py-2"
+                    className="text-[#5b6472] hover:text-[#0b1220] transition-colors py-2"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.label}
@@ -147,7 +147,7 @@ export function Navbar() {
                 ))}
                 <Button
                   asChild
-                  className="bg-[#00aaff] text-[#0a0a0a] hover:bg-[#00aaff]/90 font-medium mt-2 shadow-[0_0_20px_rgba(0,170,255,0.4)]"
+                  className="bg-[#00aaff] text-white hover:bg-[#0090dd] font-medium mt-2 shadow-[0_4px_20px_rgba(0,170,255,0.35)]"
                 >
                   <a
                     href="https://wa.me/5562998062169"
