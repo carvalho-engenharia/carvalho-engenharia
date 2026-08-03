@@ -21,28 +21,28 @@ const gallery = [
 
 export function Gallery() {
   return (
-    <section className="py-24 sm:py-32 bg-[#0a0a0a] relative overflow-hidden border-t border-[#111111]">
+    <section className="py-24 sm:py-32 bg-white relative overflow-hidden border-t border-[#e0e5eb]">
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[600px] h-[400px] rounded-full bg-[#00aaff]/4 blur-[140px]" />
+        <div className="w-[600px] h-[400px] rounded-full bg-[#066bef]/4 blur-[140px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00aaff]/30 bg-[#00aaff]/5 backdrop-blur-md mb-6">
-            <div className="w-2 h-2 rounded-full bg-[#00aaff] animate-pulse" />
-            <span className="text-[10px] uppercase tracking-widest text-[#00aaff] font-semibold">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#066bef]/30 bg-[#066bef]/5 backdrop-blur-md mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#066bef] animate-pulse" />
+            <span className="text-[10px] uppercase tracking-widest text-[#066bef] font-semibold">
               Nosso Trabalho
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#fafafa] mb-4 text-balance">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1d283a] mb-4 text-balance">
             Do levantamento em campo ao{" "}
-            <span className="text-[#00aaff]">projeto aprovado</span>
+            <span className="text-[#066bef]">projeto aprovado</span>
           </h2>
 
-          <p className="text-[#888888] text-lg max-w-xl mx-auto">
+          <p className="text-[#5a687c] text-lg max-w-xl mx-auto">
             Acompanhe de perto como transformamos medição, projeto técnico e aprovação em resultado real.
           </p>
         </div>
@@ -51,7 +51,7 @@ export function Gallery() {
           {gallery.map((item) => (
             <div
               key={item.caption}
-              className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#1a1a1a] hover:border-[#00aaff]/40 transition-all duration-500"
+              className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500"
             >
               <Image
                 src={item.image || "/placeholder.svg"}
