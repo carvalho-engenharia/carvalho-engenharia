@@ -434,18 +434,18 @@ export default function GoogleReviews() {
   };
 
   return (
-    <section id="depoimentos" className="w-full py-16 px-4 bg-gray-950">
+    <section id="depoimentos" className="w-full py-16 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center mb-10">
           <div className="flex items-center gap-3 mb-2">
             <GoogleLogo />
-            <span className="text-white/60 text-sm font-medium">Avaliações</span>
+            <span className="text-[#5a687c] text-sm font-medium">Avaliações</span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-5xl font-bold text-white">5,0</span>
+            <span className="text-5xl font-bold text-[#1d283a]">5,0</span>
             <div className="flex flex-col gap-1">
               <StarRating count={5} />
-              <span className="text-white/50 text-sm">{total} avaliações</span>
+              <span className="text-[#5a687c] text-sm">{total} avaliações</span>
             </div>
           </div>
         </div>
@@ -458,7 +458,7 @@ export default function GoogleReviews() {
           {getVisible().map((review, idx) => (
             <div
               key={`${review.name}-${current}-${idx}`}
-              className="bg-white/5 border border-white/10 rounded-2xl p-5 flex flex-col gap-3 hover:bg-white/8 transition-colors duration-300"
+              className="bg-[#f9fafb] border border-[#e0e5eb] rounded-2xl p-5 flex flex-col gap-3 hover:bg-[#edeff3] transition-colors duration-300"
               style={{
                 animation: "fadeInUp 0.4s ease forwards",
                 animationDelay: `${idx * 80}ms`,
@@ -473,17 +473,17 @@ export default function GoogleReviews() {
                   {review.initials}
                 </div>
                 <div className="min-w-0">
-                  <p className="text-white font-medium text-sm leading-tight truncate">
+                  <p className="text-[#1d283a] font-medium text-sm leading-tight truncate">
                     {review.name}
                   </p>
-                  <span className="text-white/40 text-xs">{review.time}</span>
+                  <span className="text-[#5a687c] text-xs">{review.time}</span>
                 </div>
               </div>
 
               <StarRating count={review.rating} />
 
               {review.text && (
-                <p className="text-white/70 text-sm leading-relaxed flex-1 line-clamp-6">
+                <p className="text-[#3d4c5f] text-sm leading-relaxed flex-1 line-clamp-6">
                   {review.text}
                 </p>
               )}
@@ -494,7 +494,7 @@ export default function GoogleReviews() {
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={prev}
-            className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/40 transition-all"
+            className="w-9 h-9 rounded-full border border-[#e0e5eb] flex items-center justify-center text-[#5a687c] hover:text-[#1d283a] hover:border-[#066bef]/40 transition-all"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M15 18l-6-6 6-6" />
@@ -508,8 +508,8 @@ export default function GoogleReviews() {
                 onClick={() => setCurrent(i)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   i === current
-                    ? "w-6 bg-blue-500"
-                    : "w-1.5 bg-white/20 hover:bg-white/40"
+                    ? "w-6 bg-[#066bef]"
+                    : "w-1.5 bg-[#e0e5eb] hover:bg-[#c7cfd9]"
                 }`}
               />
             ))}
@@ -517,7 +517,7 @@ export default function GoogleReviews() {
 
           <button
             onClick={next}
-            className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/40 transition-all"
+            className="w-9 h-9 rounded-full border border-[#e0e5eb] flex items-center justify-center text-[#5a687c] hover:text-[#1d283a] hover:border-[#066bef]/40 transition-all"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M9 18l6-6-6-6" />
@@ -530,7 +530,7 @@ export default function GoogleReviews() {
             href="https://share.google/XiHUDZzpLsAOmXMyd"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-white/40 hover:text-white/70 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-[#5a687c] hover:text-[#1d283a] transition-colors"
           >
             Ver todas no Google
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
