@@ -88,26 +88,26 @@ export function Hero() {
   const { displayed, phraseIndex } = useCyclingTypewriter(CYCLING_SUBTITLES)
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 lg:pt-36 overflow-hidden bg-[#050505]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 lg:pt-36 overflow-hidden bg-white">
       <ParticlesBackground />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,170,255,0.08)_0%,transparent_60%)] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,170,255,0.06)_0%,transparent_60%)] pointer-events-none z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
 
         {/* Badges */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
-          <div className="px-4 py-1.5 rounded-full border border-[#00aaff]/30 bg-[#00aaff]/5 backdrop-blur-md flex items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-[#33bbff] animate-pulse" />
-            <span className="text-[10px] uppercase tracking-widest text-[#00aaff] font-semibold">+10 Anos de Experiência</span>
+          <div className="px-4 py-1.5 rounded-full border border-[#00aaff]/25 bg-[#00aaff]/[0.06] backdrop-blur-md flex items-center gap-2">
+            <div className="w-2 h-2 rounded-full bg-[#0090dd] animate-pulse" />
+            <span className="text-[10px] uppercase tracking-widest text-[#0090dd] font-semibold">+10 Anos de Experiência</span>
           </div>
-          <div className="px-4 py-1.5 rounded-full border border-[#fafafa]/10 bg-[#fafafa]/5 backdrop-blur-md flex items-center gap-2">
-            <CheckCircle2 className="w-3 h-3 text-[#00aaff]" />
-            <span className="text-[10px] uppercase tracking-widest text-[#888888] font-semibold">CREA 1017786453D-GO</span>
+          <div className="px-4 py-1.5 rounded-full border border-[#0b1220]/10 bg-[#0b1220]/[0.03] backdrop-blur-md flex items-center gap-2">
+            <CheckCircle2 className="w-3 h-3 text-[#0090dd]" />
+            <span className="text-[10px] uppercase tracking-widest text-[#5b6472] font-semibold">CREA 1017786453D-GO</span>
           </div>
         </div>
 
         {/* Título dinâmico */}
-        <h1 className="text-5xl md:text-7xl font-bold text-[#fafafa] mb-6 tracking-tight leading-[1.15]">
+        <h1 className="text-5xl md:text-7xl font-bold text-[#0b1220] mb-6 tracking-tight leading-[1.15]">
           {CYCLING_PREFIXES[phraseIndex]}{" "}
           <br />
           <span className="text-[#00aaff]">{displayed}</span>
@@ -120,7 +120,7 @@ export function Hero() {
         {/* Resolução rápida */}
         <p
           key={phraseIndex}
-          className="flex items-center justify-center gap-2 text-sm md:text-base text-[#4ade80] font-medium mb-6 px-4 animate-[fadeIn_0.6s_ease-out]"
+          className="flex items-center justify-center gap-2 text-sm md:text-base text-[#16a34a] font-medium mb-6 px-4 animate-[fadeIn_0.6s_ease-out]"
         >
           <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
           {CYCLING_RESOLUTIONS[phraseIndex]}
@@ -128,10 +128,10 @@ export function Hero() {
 
         {/* Subtítulo fixo */}
         <div className="min-h-[3.5rem] md:min-h-[2rem] flex items-center justify-center mb-10">
-          <p className="text-[#888888] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#5b6472] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
             Alvará de Construção, Habite-se, Regularização de Obras e Projetos de
             Engenharia em{" "}
-            <span className="text-[#fafafa] font-semibold">Goiânia, Aparecida de Goiânia, Anápolis e região</span>.
+            <span className="text-[#0b1220] font-semibold">Goiânia, Aparecida de Goiânia, Anápolis e região</span>.
           </p>
         </div>
 
@@ -147,16 +147,16 @@ export function Hero() {
           <Button
             asChild
             style={{
-              border: "1px solid rgba(255,255,255,0.2)",
-              background: "rgba(255,255,255,0.05)",
+              border: "1px solid rgba(11,18,32,0.15)",
+              background: "rgba(11,18,32,0.03)",
             }}
-            className="text-[#fafafa] px-8 py-6 rounded-xl transition-all hover:brightness-125"
+            className="text-[#0b1220] px-8 py-6 rounded-xl transition-all hover:bg-[#0b1220]/[0.06]"
           >
             <a href="#servicos">Ver Serviços</a>
           </Button>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto pt-8 border-t border-[#1a1a1a]">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto pt-8 border-t border-[#e5e9ef]">
           {[
             { icon: FileText, label: "Alvará & Habite-se" },
             { icon: Home, label: "Regularização de Obras" },
@@ -164,10 +164,10 @@ export function Hero() {
             { icon: Search, label: "Perícias e Laudos" },
           ].map((item, idx) => (
             <div key={idx} className="flex flex-col items-center gap-3 group">
-              <div className="w-14 h-14 rounded-full bg-[#111111] flex items-center justify-center border border-[#222222] group-hover:border-[#00aaff]/50 transition-colors">
-                <item.icon className="w-7 h-7 text-[#00aaff]" />
+              <div className="w-14 h-14 rounded-full bg-[#f2f6fb] flex items-center justify-center border border-[#e5e9ef] group-hover:border-[#00aaff]/50 transition-colors">
+                <item.icon className="w-7 h-7 text-[#0090dd]" />
               </div>
-              <span className="text-xs font-semibold text-[#aad4f5] group-hover:text-[#fafafa] transition-colors text-center leading-tight">
+              <span className="text-xs font-semibold text-[#3d5573] group-hover:text-[#0b1220] transition-colors text-center leading-tight">
                 {item.label}
               </span>
             </div>
