@@ -260,29 +260,29 @@ export function PainPoints() {
   return (
     <section
       id="problemas"
-      className="py-24 sm:py-32 bg-[#060606] relative overflow-hidden border-t border-[#111111]"
+      className="py-24 sm:py-32 bg-white relative overflow-hidden border-t border-[#e0e5eb]"
     >
       {/* Background glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[700px] h-[500px] rounded-full bg-[#00aaff]/4 blur-[140px]" />
+        <div className="w-[700px] h-[500px] rounded-full bg-[#066bef]/4 blur-[140px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00aaff]/30 bg-[#00aaff]/5 backdrop-blur-md mb-6">
-            <div className="w-2 h-2 rounded-full bg-[#00aaff] animate-pulse" />
-            <span className="text-[10px] uppercase tracking-widest text-[#00aaff] font-semibold font-mono">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#066bef]/30 bg-[#066bef]/5 backdrop-blur-md mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#066bef] animate-pulse" />
+            <span className="text-[10px] uppercase tracking-widest text-[#066bef] font-semibold font-mono">
               // quem deve regularizar
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-[#fafafa] mb-4 tracking-tight text-balance">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1d283a] mb-4 tracking-tight text-balance">
             Seu imóvel se enquadra em{" "}
-            <span className="text-[#00aaff]">alguma dessas situações?</span>
+            <span className="text-[#066bef]">alguma dessas situações?</span>
           </h2>
-          <p className="text-[#888888] max-w-2xl mx-auto text-lg text-balance">
+          <p className="text-[#5a687c] max-w-2xl mx-auto text-lg text-balance">
             Situações irregulares têm solução. Veja os casos mais comuns que atendemos em Goiânia e Aparecida de
             Goiânia, e como resolvemos cada um.
           </p>
@@ -306,31 +306,31 @@ export function PainPoints() {
                       }
                     : undefined
                 }
-                className={`group relative p-6 rounded-2xl bg-[#0a0a0a]/60 border border-[#1a1a1a] hover:border-[#00aaff]/40 hover:shadow-[0_0_30px_rgba(0,170,255,0.07)] transition-all duration-500 flex flex-col text-left ${
+                className={`group relative p-6 rounded-2xl bg-[#f9fafb] border border-[#e0e5eb] hover:border-[#066bef]/40 hover:shadow-[0_0_30px_rgba(6,107,239,0.07)] transition-all duration-500 flex flex-col text-left ${
                   isClickable ? "cursor-pointer" : ""
                 }`}
               >
                 {/* Glow on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-[#00aaff]/4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <div className="absolute inset-0 rounded-2xl bg-[#066bef]/4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 <div className="relative z-10 flex flex-col flex-1">
                   {/* Icon */}
-                  <div className="w-10 h-10 rounded-lg bg-[#111111] border border-[#222222] flex items-center justify-center mb-4 group-hover:border-[#00aaff]/30 group-hover:bg-[#00aaff]/10 transition-all duration-500">
-                    <problem.icon className="w-5 h-5 text-[#00aaff]" />
+                  <div className="w-10 h-10 rounded-lg bg-[#edeff3] border border-[#e0e5eb] flex items-center justify-center mb-4 group-hover:border-[#066bef]/30 group-hover:bg-[#066bef]/10 transition-all duration-500">
+                    <problem.icon className="w-5 h-5 text-[#066bef]" />
                   </div>
 
                   {/* Question — SEO: H3 com pergunta real */}
-                  <h3 className="text-sm font-semibold text-[#fafafa] mb-3 leading-snug group-hover:text-[#00aaff] transition-colors duration-300">
+                  <h3 className="text-sm font-semibold text-[#1d283a] mb-3 leading-snug group-hover:text-[#066bef] transition-colors duration-300">
                     {problem.question}
                   </h3>
 
                   {/* Answer */}
-                  <p className="text-xs text-[#666666] leading-relaxed group-hover:text-[#888888] transition-colors duration-300 flex-1">
+                  <p className="text-xs text-[#5a687c] leading-relaxed group-hover:text-[#5a687c] transition-colors duration-300 flex-1">
                     {problem.description}
                   </p>
 
                   {isClickable && (
-                    <span className="mt-3 text-xs font-semibold text-[#00aaff]">Ver detalhes completos →</span>
+                    <span className="mt-3 text-xs font-semibold text-[#066bef]">Ver detalhes completos →</span>
                   )}
                 </div>
               </Wrapper>
@@ -339,30 +339,30 @@ export function PainPoints() {
         </div>
 
         {/* CTA — Diagnóstico gratuito */}
-        <div className="relative rounded-2xl border border-[#00aaff]/25 bg-[#0a0f14] overflow-hidden">
+        <div className="relative rounded-2xl border border-[#066bef]/25 bg-[#ecf4fe] overflow-hidden">
           {/* Glow background */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,170,255,0.08)_0%,transparent_70%)] pointer-events-none" />
-          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00aaff]/40 to-transparent" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,107,239,0.08)_0%,transparent_70%)] pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#066bef]/40 to-transparent" />
 
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 p-10 lg:p-14">
             {/* Left */}
             <div className="text-center lg:text-left max-w-xl">
-              <p className="text-[10px] font-mono uppercase tracking-widest text-[#00aaff] mb-3">
+              <p className="text-[10px] font-mono uppercase tracking-widest text-[#066bef] mb-3">
                 // avaliação gratuita
               </p>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#fafafa] mb-3 leading-tight">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#1d283a] mb-3 leading-tight">
                 Não sabe se o seu imóvel precisa de regularização?
               </h3>
-              <p className="text-[#888888] text-base leading-relaxed">
-                Solicite uma <strong className="text-[#fafafa] font-semibold">avaliação gratuita</strong> da situação do seu imóvel.
+              <p className="text-[#5a687c] text-base leading-relaxed">
+                Solicite uma <strong className="text-[#1d283a] font-semibold">avaliação gratuita</strong> da situação do seu imóvel.
                 Analisamos a documentação e a obra e indicamos o caminho mais rápido para a regularização —{" "}
-                <span className="text-[#00aaff]">sem compromisso</span>.
+                <span className="text-[#066bef]">sem compromisso</span>.
               </p>
 
-              <ul className="mt-5 flex flex-col sm:flex-row gap-3 text-sm text-[#888888] justify-center lg:justify-start">
+              <ul className="mt-5 flex flex-col sm:flex-row gap-3 text-sm text-[#5a687c] justify-center lg:justify-start">
                 {["Avaliação sem custo", "Resposta ágil", "Atendimento presencial em Goiânia"].map((item) => (
                   <li key={item} className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#00aaff] flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#066bef] flex-shrink-0" />
                     {item}
                   </li>
                 ))}
@@ -375,14 +375,14 @@ export function PainPoints() {
                 href="https://wa.me/5562998062169?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20da%20situa%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#00aaff] text-[#080808] font-bold text-sm hover:bg-[#33bbff] transition-all duration-300 shadow-[0_0_30px_rgba(0,170,255,0.4)] hover:shadow-[0_0_45px_rgba(0,170,255,0.6)] whitespace-nowrap"
+                className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#066bef] text-white font-bold text-sm hover:bg-[#0559c7] transition-all duration-300 shadow-[0_0_30px_rgba(6,107,239,0.4)] hover:shadow-[0_0_45px_rgba(6,107,239,0.6)] whitespace-nowrap"
               >
                 <MessageCircle className="w-4 h-4" />
                 Solicitar avaliação gratuita
               </a>
               <a
                 href="#contato"
-                className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-[#1a1a1a] text-[#888888] text-sm font-medium hover:border-[#00aaff]/40 hover:text-[#00aaff] hover:bg-[#00aaff]/5 transition-all duration-300 whitespace-nowrap"
+                className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl border border-[#e0e5eb] text-[#5a687c] text-sm font-medium hover:border-[#066bef]/40 hover:text-[#066bef] hover:bg-[#066bef]/5 transition-all duration-300 whitespace-nowrap"
               >
                 Ou envie uma mensagem
                 <ArrowRight className="w-4 h-4" />
@@ -400,27 +400,27 @@ export function PainPoints() {
           onClick={() => setOpenModal(null)}
         >
           <div
-            className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-[#0a0a0a] border border-[#1a1a1a] p-6 shadow-2xl md:p-8"
+            className="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white border border-[#e0e5eb] shadow-xl p-6 shadow-2xl md:p-8"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               type="button"
               onClick={() => setOpenModal(null)}
-              className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#111111] border border-[#222222] text-[#888888] transition hover:text-[#fafafa] hover:border-[#00aaff]/40"
+              className="absolute right-4 top-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#edeff3] border border-[#e0e5eb] text-[#5a687c] transition hover:text-[#1d283a] hover:border-[#066bef]/40"
               aria-label="Fechar"
             >
               <X className="h-4 w-4" />
             </button>
 
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#00aaff]">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#066bef]">
               {modalContent[openModal].tagline}
             </span>
-            <h3 className="mt-1 text-2xl font-bold tracking-tight text-[#fafafa]">
+            <h3 className="mt-1 text-2xl font-bold tracking-tight text-[#1d283a]">
               {modalContent[openModal].title}
             </h3>
 
             {/* City tabs */}
-            <div className="mt-5 flex gap-2 rounded-lg bg-[#111111] border border-[#1a1a1a] p-1">
+            <div className="mt-5 flex gap-2 rounded-lg bg-[#edeff3] border border-[#e0e5eb] p-1">
               {(Object.keys(cityLabels) as CityKey[]).map((city) => (
                 <button
                   key={city}
@@ -428,8 +428,8 @@ export function PainPoints() {
                   onClick={() => setActiveCity(city)}
                   className={`flex flex-1 items-center justify-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium transition ${
                     activeCity === city
-                      ? "bg-[#00aaff] text-[#080808]"
-                      : "text-[#888888] hover:text-[#fafafa]"
+                      ? "bg-[#066bef] text-white"
+                      : "text-[#5a687c] hover:text-[#1d283a]"
                   }`}
                 >
                   <MapPin className="h-3.5 w-3.5" />
@@ -438,23 +438,23 @@ export function PainPoints() {
               ))}
             </div>
 
-            <div className="mt-4 rounded-xl border border-[#00aaff]/20 bg-[#00aaff]/5 p-4">
-              <p className="text-sm font-semibold text-[#fafafa]">
+            <div className="mt-4 rounded-xl border border-[#066bef]/20 bg-[#066bef]/5 p-4">
+              <p className="text-sm font-semibold text-[#1d283a]">
                 {modalContent[openModal].byCity[activeCity].marco}
               </p>
-              <p className="mt-1 text-xs leading-relaxed text-[#888888]">
+              <p className="mt-1 text-xs leading-relaxed text-[#5a687c]">
                 {modalContent[openModal].byCity[activeCity].lei}
               </p>
             </div>
 
             <div className="mt-6 flex flex-col gap-5">
               {modalContent[openModal].byCity[activeCity].sections.map((section) => (
-                <div key={section.heading} className="rounded-xl border border-[#1a1a1a] bg-[#111111]/50 p-4">
+                <div key={section.heading} className="rounded-xl border border-[#e0e5eb] bg-[#edeff3]/50 p-4">
                   <div className="mb-2 flex items-center gap-2">
-                    <section.icon className="h-4 w-4 text-[#00aaff]" />
-                    <h4 className="text-sm font-semibold text-[#fafafa]">{section.heading}</h4>
+                    <section.icon className="h-4 w-4 text-[#066bef]" />
+                    <h4 className="text-sm font-semibold text-[#1d283a]">{section.heading}</h4>
                   </div>
-                  <ul className="ml-1 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-[#888888]">
+                  <ul className="ml-1 list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-[#5a687c]">
                     {section.items.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
@@ -463,14 +463,14 @@ export function PainPoints() {
               ))}
             </div>
 
-            <p className="mt-6 rounded-xl bg-[#00aaff]/10 border border-[#00aaff]/20 p-4 text-sm leading-relaxed text-[#fafafa]">
+            <p className="mt-6 rounded-xl bg-[#066bef]/10 border border-[#066bef]/20 p-4 text-sm leading-relaxed text-[#1d283a]">
               {modalContent[openModal].footer}
             </p>
 
             <a
               href="#contato"
               onClick={() => setOpenModal(null)}
-              className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-[#00aaff] px-4 py-3 text-sm font-semibold text-[#080808] transition hover:bg-[#33bbff]"
+              className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-[#066bef] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#0559c7]"
             >
               Solicitar avaliação gratuita
             </a>
