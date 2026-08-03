@@ -97,8 +97,8 @@ export function ParticlesBackground() {
         if (p.y > canvas.height) { p.y = canvas.height; p.vy *= -1 }
 
         const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius * 5)
-        grd.addColorStop(0, `rgba(0,170,255,${opacity})`)
-        grd.addColorStop(1, `rgba(0,170,255,0)`)
+        grd.addColorStop(0, `rgba(6,107,239,${opacity})`)
+        grd.addColorStop(1, `rgba(6,107,239,0)`)
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.radius * 5, 0, Math.PI * 2)
         ctx.fillStyle = grd
@@ -106,7 +106,7 @@ export function ParticlesBackground() {
 
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(0,120,190,${opacity * 0.9})`
+        ctx.fillStyle = `rgba(23,44,79,${opacity * 0.9})`
         ctx.fill()
       }
 
@@ -120,7 +120,7 @@ export function ParticlesBackground() {
             ctx.beginPath()
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
-            ctx.strokeStyle = `rgba(0,170,255,${alpha})`
+            ctx.strokeStyle = `rgba(6,107,239,${alpha})`
             ctx.lineWidth = 0.8
             ctx.stroke()
           }
