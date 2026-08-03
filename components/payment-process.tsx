@@ -103,7 +103,7 @@ export function PaymentProcess() {
             href="https://wa.me/5562998062169?text=Ol%C3%A1%2C%20quero%20entender%20como%20funciona%20o%20pagamento%20por%20etapa%20da%20Carvalho%20Engenharia"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#066bef] text-white font-bold text-sm hover:bg-[#0559c7] transition-all duration-300 shadow-[0_0_30px_rgba(6,107,239,0.4)] hover:shadow-[0_0_45px_rgba(6,107,239,0.6)]"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#066bef] text-white font-bold text-sm hover:bg-[#0559c7] transition-all duration-300 shadow-[0_8px_24px_rgba(6,107,239,0.25)] hover:shadow-[0_10px_30px_rgba(6,107,239,0.35)]"
           >
             Quero saber mais sobre esse modelo
           </a>
