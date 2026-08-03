@@ -24,16 +24,16 @@ const credenciais = [
 
 export function Sobre() {
   return (
-    <section id="sobre" className="py-24 bg-[#0a0a0a] border-t border-white/5">
+    <section id="sobre" className="py-24 bg-white border-t border-[#e0e5eb]">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Cabeçalho + Foto lado a lado */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
           <div>
-            <p className="text-cyan-400 text-sm font-mono uppercase tracking-widest mb-3">sobre</p>
-            <h2 className="text-4xl font-bold text-white leading-tight max-w-xl">
+            <p className="text-[#066bef] text-sm font-mono uppercase tracking-widest mb-3">sobre</p>
+            <h2 className="text-4xl font-bold text-[#1d283a] leading-tight max-w-xl">
               Engenharia especializada em{" "}
-              <span className="text-cyan-400">regularização de imóveis há mais de 10 anos</span>
+              <span className="text-[#066bef]">regularização de imóveis há mais de 10 anos</span>
             </h2>
           </div>
 
@@ -45,8 +45,8 @@ export function Sobre() {
                 height: "245px",
                 borderRadius: "20px",
                 overflow: "hidden",
-                border: "1px solid rgba(0,170,255,0.35)",
-                boxShadow: "0 0 60px rgba(0,170,255,0.2), 0 0 0 1px rgba(0,170,255,0.1)",
+                border: "1px solid rgba(6,107,239,0.35)",
+                boxShadow: "0 0 60px rgba(6,107,239,0.2), 0 0 0 1px rgba(6,107,239,0.1)",
                 position: "relative",
               }}
             >
@@ -78,7 +78,7 @@ export function Sobre() {
 
         {/* Texto + Stats */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-12">
-          <div className="space-y-5 text-white/60 text-base leading-relaxed">
+          <div className="space-y-5 text-[#5a687c] text-base leading-relaxed">
             <p>
               Sou Caio Maracaípe, Engenheiro Civil com mais de 10 anos de atuação em projetos, regularizações e
               alvarás em Goiânia e Aparecida de Goiânia. À frente da Carvalho Engenharia, transformo projetos em
@@ -99,13 +99,13 @@ export function Sobre() {
             {stats.map((stat) => (
               <div
                 key={stat.label}
-                className="border border-white/10 rounded-xl p-6 transition-colors"
-                style={{ backgroundColor: "rgba(255,255,255,0.02)" }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.04)")}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "rgba(255,255,255,0.02)")}
+                className="border border-[#e0e5eb] rounded-xl p-6 transition-colors"
+                style={{ backgroundColor: "#f9fafb" }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#edeff3")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#f9fafb")}
               >
-                <p className="text-3xl font-bold text-cyan-400 mb-1">{stat.value}</p>
-                <p className="text-white/50 text-sm">{stat.label}</p>
+                <p className="text-3xl font-bold text-[#066bef] mb-1">{stat.value}</p>
+                <p className="text-[#5a687c] text-sm">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -116,12 +116,12 @@ export function Sobre() {
           {credenciais.map((c) => (
             <div
               key={c.label}
-              className="flex items-center gap-3 px-4 py-3 rounded-full border border-cyan-400/20 bg-cyan-400/5 hover:border-cyan-400/50 transition-colors"
+              className="flex items-center gap-3 px-4 py-3 rounded-full border border-[#066bef]/25 bg-[#ecf4fe] hover:border-[#066bef]/50 transition-colors"
             >
-              <HardHat className="text-cyan-400 shrink-0" size={16} />
+              <HardHat className="text-[#066bef] shrink-0" size={16} />
               <div className="leading-tight">
-                <span className="text-white text-sm font-medium">{c.label}</span>
-                <span className="text-white/40 text-xs ml-2">— {c.sub}</span>
+                <span className="text-[#1d283a] text-sm font-medium">{c.label}</span>
+                <span className="text-[#5a687c] text-xs ml-2">— {c.sub}</span>
               </div>
             </div>
           ))}
@@ -137,11 +137,11 @@ export function Sobre() {
           ].map((item) => (
             <div
               key={item.titulo}
-              className="border border-white/10 rounded-xl p-5 hover:border-cyan-400/30 transition-colors group"
-              style={{ backgroundColor: "rgba(255,255,255,0.02)" }}
+              className="border border-[#e0e5eb] rounded-xl p-5 hover:border-[#066bef]/30 transition-colors group"
+              style={{ backgroundColor: "#f9fafb" }}
             >
-              <p className="text-cyan-400 font-bold text-sm mb-2 group-hover:scale-105 transition-transform">{item.titulo}</p>
-              <p className="text-white/40 text-xs leading-relaxed">{item.descricao}</p>
+              <p className="text-[#066bef] font-bold text-sm mb-2 group-hover:scale-105 transition-transform">{item.titulo}</p>
+              <p className="text-[#5a687c] text-xs leading-relaxed">{item.descricao}</p>
             </div>
           ))}
         </div>
@@ -151,12 +151,12 @@ export function Sobre() {
           {competencias.map((c) => (
             <div
               key={c.titulo}
-              className="border border-white/10 rounded-xl p-5 hover:border-cyan-400/30 transition-colors group"
-              style={{ backgroundColor: "rgba(255,255,255,0.02)" }}
+              className="border border-[#e0e5eb] rounded-xl p-5 hover:border-[#066bef]/30 transition-colors group"
+              style={{ backgroundColor: "#f9fafb" }}
             >
-              <c.icon className="text-cyan-400 mb-3 group-hover:scale-110 transition-transform" size={20} />
-              <p className="text-white font-medium text-sm mb-1">{c.titulo}</p>
-              <p className="text-white/40 text-xs leading-relaxed">{c.descricao}</p>
+              <c.icon className="text-[#066bef] mb-3 group-hover:scale-110 transition-transform" size={20} />
+              <p className="text-[#1d283a] font-medium text-sm mb-1">{c.titulo}</p>
+              <p className="text-[#5a687c] text-xs leading-relaxed">{c.descricao}</p>
             </div>
           ))}
         </div>
