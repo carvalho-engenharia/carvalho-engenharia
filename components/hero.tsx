@@ -138,7 +138,7 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <Button
             asChild
-            className="bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-all hover:scale-105 shadow-[0_0_20px_rgba(6,107,239,0.35)] gap-2"
+            className="bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-all hover:scale-105 shadow-[0_8px_20px_rgba(6,107,239,0.25)] gap-2"
           >
             <a href="https://wa.me/5562998062169" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5">
               Solicitar Orçamento Grátis →
