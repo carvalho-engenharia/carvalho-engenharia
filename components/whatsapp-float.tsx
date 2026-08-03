@@ -19,8 +19,8 @@ export function WhatsAppFloat() {
       {/* Tooltip label */}
       <span
         className={`
-          bg-[#111111] text-[#fafafa] text-sm font-semibold px-4 py-2 rounded-xl
-          border border-[#1a1a1a] shadow-lg whitespace-nowrap
+          bg-white text-[#1d283a] text-sm font-semibold px-4 py-2 rounded-xl
+          border border-[#e0e5eb] shadow-lg whitespace-nowrap
           transition-all duration-300 origin-right
           ${hovered ? "opacity-100 translate-x-0" : "opacity-0 translate-x-2 pointer-events-none"}
         `}
