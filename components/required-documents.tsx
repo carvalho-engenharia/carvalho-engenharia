@@ -103,26 +103,26 @@ export function RequiredDocuments() {
   return (
     <section
       id="documentos"
-      className="py-24 sm:py-32 bg-[#080808] relative overflow-hidden border-t border-[#111111]"
+      className="py-24 sm:py-32 bg-[#f9fafb] relative overflow-hidden border-t border-[#e0e5eb]"
     >
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[600px] h-[400px] rounded-full bg-[#00aaff]/4 blur-[140px]" />
+        <div className="w-[600px] h-[400px] rounded-full bg-[#066bef]/4 blur-[140px]" />
       </div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#00aaff]/30 bg-[#00aaff]/5 backdrop-blur-md mb-6">
-            <div className="w-2 h-2 rounded-full bg-[#00aaff] animate-pulse" />
-            <span className="text-[10px] uppercase tracking-widest text-[#00aaff] font-semibold font-mono">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#066bef]/30 bg-[#066bef]/5 backdrop-blur-md mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#066bef] animate-pulse" />
+            <span className="text-[10px] uppercase tracking-widest text-[#066bef] font-semibold font-mono">
               // documentação necessária
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-[#fafafa] mb-4 tracking-tight text-balance">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#1d283a] mb-4 tracking-tight text-balance">
             O que a Prefeitura de Goiânia{" "}
-            <span className="text-[#00aaff]">exige em cada processo</span>
+            <span className="text-[#066bef]">exige em cada processo</span>
           </h2>
-          <p className="text-[#888888] max-w-2xl mx-auto text-lg text-balance">
+          <p className="text-[#5a687c] max-w-2xl mx-auto text-lg text-balance">
             Reunimos os documentos exigidos pela Prefeitura de Goiânia para os processos mais comuns.
             Nós cuidamos de levantar, organizar e protocolar tudo por você.
           </p>
@@ -134,8 +134,8 @@ export function RequiredDocuments() {
             return (
               <div
                 key={set.key}
-                className={`rounded-2xl border bg-[#0a0a0a]/60 transition-all duration-300 ${
-                  isOpen ? "border-[#00aaff]/40" : "border-[#1a1a1a] hover:border-[#00aaff]/20"
+                className={`rounded-2xl border bg-white transition-all duration-300 ${
+                  isOpen ? "border-[#066bef]/40" : "border-[#e0e5eb] hover:border-[#066bef]/20"
                 }`}
               >
                 <button
@@ -143,33 +143,33 @@ export function RequiredDocuments() {
                   onClick={() => setOpenKey(isOpen ? null : set.key)}
                   className="flex w-full items-center gap-4 p-6 text-left"
                 >
-                  <div className="w-11 h-11 shrink-0 rounded-lg bg-[#111111] border border-[#222222] flex items-center justify-center">
-                    <set.icon className="w-5 h-5 text-[#00aaff]" />
+                  <div className="w-11 h-11 shrink-0 rounded-lg bg-[#edeff3] border border-[#e0e5eb] flex items-center justify-center">
+                    <set.icon className="w-5 h-5 text-[#066bef]" />
                   </div>
 
                   <div className="flex-1 min-w-0">
-                    <h3 className="text-base font-semibold text-[#fafafa]">{set.title}</h3>
-                    <p className="text-sm text-[#888888] mt-0.5">{set.subtitle}</p>
+                    <h3 className="text-base font-semibold text-[#1d283a]">{set.title}</h3>
+                    <p className="text-sm text-[#5a687c] mt-0.5">{set.subtitle}</p>
                   </div>
 
                   <ChevronDown
-                    className={`w-5 h-5 shrink-0 text-[#888888] transition-transform duration-300 ${
-                      isOpen ? "rotate-180 text-[#00aaff]" : ""
+                    className={`w-5 h-5 shrink-0 text-[#5a687c] transition-transform duration-300 ${
+                      isOpen ? "rotate-180 text-[#066bef]" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
                   <div className="px-6 pb-6">
-                    <div className="mb-4 flex items-start gap-2 rounded-xl border border-[#00aaff]/20 bg-[#00aaff]/5 p-3">
-                      <FileText className="w-4 h-4 mt-0.5 shrink-0 text-[#00aaff]" />
-                      <p className="text-xs leading-relaxed text-[#888888]">{set.lei}</p>
+                    <div className="mb-4 flex items-start gap-2 rounded-xl border border-[#066bef]/20 bg-[#066bef]/5 p-3">
+                      <FileText className="w-4 h-4 mt-0.5 shrink-0 text-[#066bef]" />
+                      <p className="text-xs leading-relaxed text-[#5a687c]">{set.lei}</p>
                     </div>
 
                     <ul className="flex flex-col gap-2.5">
                       {set.documents.map((doc) => (
-                        <li key={doc} className="flex items-start gap-2.5 text-sm text-[#aaaaaa] leading-relaxed">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#00aaff] shrink-0" />
+                        <li key={doc} className="flex items-start gap-2.5 text-sm text-[#3d4c5f] leading-relaxed">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#066bef] shrink-0" />
                           {doc}
                         </li>
                       ))}
@@ -182,8 +182,8 @@ export function RequiredDocuments() {
         </div>
 
         {/* CTA */}
-        <div className="mt-12 flex flex-col items-center gap-4 rounded-2xl border border-[#00aaff]/25 bg-[#0a0f14] p-8 text-center">
-          <p className="text-[#fafafa] text-base leading-relaxed max-w-xl">
+        <div className="mt-12 flex flex-col items-center gap-4 rounded-2xl border border-[#066bef]/25 bg-white p-8 text-center">
+          <p className="text-[#1d283a] text-base leading-relaxed max-w-xl">
             Não sabe quais desses documentos você já tem ou como conseguir os que faltam?
             A gente levanta tudo pra você.
           </p>
@@ -191,7 +191,7 @@ export function RequiredDocuments() {
             href="https://wa.me/5562998062169?text=Ol%C3%A1%2C%20quero%20ajuda%20para%20levantar%20a%20documenta%C3%A7%C3%A3o%20necess%C3%A1ria%20para%20o%20meu%20processo"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#00aaff] text-[#080808] font-bold text-sm hover:bg-[#33bbff] transition-all duration-300 shadow-[0_0_30px_rgba(0,170,255,0.4)] hover:shadow-[0_0_45px_rgba(0,170,255,0.6)]"
+            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#066bef] text-white font-bold text-sm hover:bg-[#0559c7] transition-all duration-300 shadow-[0_0_30px_rgba(6,107,239,0.4)] hover:shadow-[0_0_45px_rgba(6,107,239,0.6)]"
           >
             <MessageCircle className="w-4 h-4" />
             Falar com um especialista
