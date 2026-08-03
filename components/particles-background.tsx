@@ -106,7 +106,7 @@ export function ParticlesBackground() {
 
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(255,255,255,${opacity * 0.85})`
+        ctx.fillStyle = `rgba(0,120,190,${opacity * 0.9})`
         ctx.fill()
       }
 
@@ -116,7 +116,7 @@ export function ParticlesBackground() {
           const dy = particles[i].y - particles[j].y
           const dist = Math.sqrt(dx * dx + dy * dy)
           if (dist < MAX_DISTANCE) {
-            const alpha = (1 - dist / MAX_DISTANCE) * 0.45
+            const alpha = (1 - dist / MAX_DISTANCE) * 0.3
             ctx.beginPath()
             ctx.moveTo(particles[i].x, particles[i].y)
             ctx.lineTo(particles[j].x, particles[j].y)
