@@ -17,31 +17,31 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#080808] border-t border-[#1a1a1a]">
+    <footer className="bg-[#0e1f39] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Brand */}
           <div>
             <a href="#" className="flex items-center gap-0.5 mb-4">
-              <span className="font-mono text-lg font-bold text-[#fafafa] tracking-tight">
+              <span className="font-mono text-lg font-bold text-white tracking-tight">
                 Carvalho Engenharia
               </span>
-              <span className="w-2.5 h-5 bg-[#33bbff] animate-[blink_1s_steps(1)_infinite]" aria-hidden="true" />
+              <span className="w-2.5 h-5 bg-[#5b9dff] animate-[blink_1s_steps(1)_infinite]" aria-hidden="true" />
             </a>
-            <p className="text-sm text-[#888888]">
+            <p className="text-sm text-white/60">
               Alvarás, regularizações e projetos de engenharia em Goiânia e região.
             </p>
-            <p className="text-sm text-[#666666] mt-2">
+            <p className="text-sm text-white/50 mt-2">
               Edifício Office Flamboyant — Av. Dep. Jamel Cecílio, 3310, Sala 301
             </p>
-            <p className="text-sm text-[#666666]">
+            <p className="text-sm text-white/50">
               Jardim Goiás — Goiânia/GO
             </p>
             <a
               href="https://wa.me/5562998062169"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-3 text-sm text-[#33bbff] hover:text-[#33bbff]/80 transition-colors"
+              className="inline-flex items-center gap-2 mt-3 text-sm text-[#5b9dff] hover:text-[#5b9dff]/80 transition-colors"
             >
               <img src="/whatsapp.svg" alt="" aria-hidden="true" className="h-4 w-4 flex-shrink-0" />
               (62) 99806-2169
@@ -50,13 +50,13 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-[#fafafa] mb-4">Links Rápidos</h3>
+            <h3 className="font-semibold text-white mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-[#888888] hover:text-[#00aaff] transition-colors"
+                    className="text-sm text-white/60 hover:text-[#5b9dff] transition-colors"
                   >
                     {link.label}
                   </a>
@@ -67,7 +67,7 @@ export function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="font-semibold text-[#fafafa] mb-4">Redes Sociais</h3>
+            <h3 className="font-semibold text-white mb-4">Redes Sociais</h3>
             <div className="flex gap-4">
               {socialLinks.map((link) => (
                 <a
@@ -75,34 +75,34 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-[#151515] border border-[#1a1a1a] flex items-center justify-center text-[#888888] hover:text-[#00aaff] hover:border-[#00aaff]/50 transition-all duration-300"
+                  className="w-10 h-10 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center text-white/60 hover:text-[#5b9dff] hover:border-[#5b9dff]/50 transition-all duration-300"
                   aria-label={link.label}
                 >
                   <link.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
-            <p className="text-xs text-[#666666] mt-4">contato@carvalho-engenharia.com</p>
-            <p className="text-xs text-[#666666] mt-1">
+            <p className="text-xs text-white/50 mt-4">contato@carvalho-engenharia.com</p>
+            <p className="text-xs text-white/50 mt-1">
               Resp. Técnico: Engº Civil Caio Maracaípe
             </p>
-            <p className="text-xs text-[#666666]">CREA 1017786453D-GO</p>
+            <p className="text-xs text-white/50">CREA 1017786453D-GO</p>
           </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-[#1a1a1a] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[#666666]">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Carvalho Engenharia. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-4">
             <Link
               href="/politica-de-privacidade"
-              className="text-xs text-[#666666] hover:text-[#33bbff] transition-colors"
+              className="text-xs text-white/50 hover:text-[#5b9dff] transition-colors"
             >
               Política de Privacidade
             </Link>
-            <p className="text-xs text-[#666666]">CNPJ: 36.075.475/0001-94</p>
+            <p className="text-xs text-white/50">CNPJ: 36.075.475/0001-94</p>
           </div>
         </div>
       </div>
