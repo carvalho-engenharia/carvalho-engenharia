@@ -11,20 +11,33 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.carvalho-engenharia.com"),
   title: {
-    default: "Carvalho Engenharia | Alvará, Habite-se e Regularização de Imóveis em Goiânia",
+    default: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
     template: "%s | Carvalho Engenharia",
   },
   description:
-    "Especialistas em Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia e Aparecida de Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO.",
+    "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
   keywords: [
+    // Alto volume (1 mil–10 mil buscas/mês)
+    "regularização de imóveis Goiânia",
+    "despachante imobiliário Goiânia",
+    "INSS de obra Goiânia",
+    "avaliador de imóvel Goiânia",
+    "gerenciamento de projetos Goiânia",
+    // Médio volume (100–1 mil buscas/mês)
+    "gerenciamento de obra Goiânia",
+    "consultoria em engenharia civil Goiânia",
+    "emissão de ART Goiânia",
+    "projetos estruturais Goiânia",
+    // Baixo volume (10–100 buscas/mês)
+    "vistoria técnica de imóvel Goiânia",
+    // Sem volume testado, mas core do serviço
     "alvará de construção Goiânia",
     "habite-se Goiânia",
-    "regularização de imóveis Goiânia",
-    "regularização de obras Goiânia",
-    "projetos de engenharia Goiânia",
-    "carta de ocupação Goiânia",
     "averbação de construção",
-    "INSS de obras",
+    "desmembramento e remembramento Goiânia",
+    "projetos arquitetônicos Goiânia",
+    // Institucional / marca
+    "carta de ocupação Goiânia",
     "engenheiro civil Goiânia",
     "Carvalho Engenharia",
     "Caio Maracaípe",
@@ -37,23 +50,23 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://www.carvalho-engenharia.com",
     siteName: "Carvalho Engenharia",
-    title: "Carvalho Engenharia | Alvará, Habite-se e Regularização de Imóveis em Goiânia",
+    title: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
     description:
-      "Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO.",
+      "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Carvalho Engenharia — Alvará, Habite-se e Regularização de Imóveis em Goiânia",
+        alt: "Carvalho Engenharia — Regularização de Imóveis e Despachante Imobiliário em Goiânia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carvalho Engenharia | Alvará, Habite-se e Regularização de Imóveis em Goiânia",
+    title: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
     description:
-      "Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO.",
+      "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
     images: ["/og-image.jpg"],
   },
   robots: {
