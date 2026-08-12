@@ -1,113 +1,106 @@
 "use client"
 
 import {
-  Search,
-  Wrench,
-  FileText,
-  FileCheck2,
-  Building2,
   ClipboardList,
-  HardHat,
-  Store,
-  HeartPulse,
-  Footprints,
-  MapPin,
+  Briefcase,
+  FileCheck2,
+  FileText,
   Layers,
-  Users,
-  TrafficCone,
-  Recycle,
+  Landmark,
+  HardHat,
+  ClipboardCheck,
+  MessageCircle,
+  Stamp,
+  Wrench,
+  Search,
+  Calculator,
+  PencilRuler,
 } from "lucide-react"
 
 const services = [
   {
-    title: "Aprovação de Projetos",
-    description:
-      "Protocolamos e acompanhamos a aprovação do seu projeto junto à Prefeitura de Goiânia, conforme o Código de Obras e Edificações — a etapa de licenciamento que antecede o Alvará de Construção.",
-    icon: FileCheck2,
-  },
-  {
-    title: "Projetos de Engenharia",
-    description:
-      "Projetos Estruturais, Elétricos e Hidrossanitários completos para residências e comércios. Do croqui ao projeto executivo aprovado.",
-    icon: Wrench,
-  },
-  {
-    title: "Alvará de Construção",
-    description:
-      "Obtenção do Alvará de Construção e de toda a família de licenças da LC nº 364/2023: Alvará de Acréscimo, Autorização de Reforma, Revalidação de Alvará, Autorização para Tapumes e Canteiro de Obras, Alvará de Demolição, além de Habite-se e Carta de Ocupação.",
-    icon: FileText,
-  },
-  {
-    title: "Alvarás junto às Prefeituras",
-    description:
-      "Assessoria completa junto à Prefeitura de Goiânia e Aparecida de Goiânia: Desmembramento, Remembramento, Modificação de Projeto (com ou sem acréscimo, inclusive as built), Licenças Ambientais (Prévia, de Instalação e Única), retificação de áreas e averbação em cartório.",
-    icon: Building2,
-  },
-  {
     title: "Regularização de Imóveis",
     description:
-      "Regularização de obras construídas sem alvará, ampliações e reformas não documentadas. INSS de obras e conformidade com a legislação vigente.",
+      "Regularização completa de imóveis irregulares, imóveis sem escritura, habite-se ou com construção não averbada.",
     icon: ClipboardList,
   },
   {
-    title: "Perícias e Vistorias Técnicas",
+    title: "Despachante Imobiliário",
     description:
-      "Laudos técnicos detalhados para avaliar a segurança e conformidade do seu imóvel. Relatórios assinados por Engenheiro Civil com registro CREA.",
-    icon: Search,
+      "Assessoria completa em cartórios e prefeituras. Cuidamos de toda a tramitação documental para você não perder tempo com burocracia.",
+    icon: Briefcase,
   },
   {
-    title: "Acompanhamento de Obras",
+    title: "Averbação de Imóvel / Averbação de Construção",
     description:
-      "Gestão e execução de obras residenciais e comerciais do início ao fim. ART (Anotação de Responsabilidade Técnica) e controle de qualidade em cada etapa.",
-    icon: HardHat,
+      "Atualização da área construída e habite-se junto ao Cartório de Registro de Imóveis. Essencial para vender, financiar ou regularizar o patrimônio.",
+    icon: FileCheck2,
   },
   {
-    title: "Alvará de Localização e Funcionamento",
+    title: "Alvará de Construção e Habite-se",
     description:
-      "Nenhum comércio, indústria ou prestação de serviço pode abrir as portas em Goiânia sem esse alvará (art. 111 da LC nº 014/1992). Cuidamos do enquadramento de risco, uso do solo e protocolo junto à SEDEC — inclusive o processo simplificado para MEI e baixo risco.",
-    icon: Store,
+      "Emissão de licenças municipais para início de obras (alvará) e obtenção da certidão de conclusão (habite-se), conforme a LC nº 364/2023.",
+    icon: FileText,
   },
   {
-    title: "Alvará Sanitário (Vigilância Sanitária)",
+    title: "Desmembramento e Remembramento",
     description:
-      "Obrigatório para estabelecimentos cuja atividade possa impactar a saúde — alimentação, saúde, estética e afins (Lei nº 8.741/2008 e Portaria Municipal SMS 63/2023). Assessoria completa na classificação de risco, documentação e renovação anual junto à Vigilância Sanitária Municipal.",
-    icon: HeartPulse,
-  },
-  {
-    title: "Regularização de Calçada",
-    description:
-      "Adequação da calçada conforme a Lei Complementar nº 324/2019 e a Instrução Normativa nº 025/2025 — hoje exigida para emissão do Alvará de Aceite, Alvará de Regularização e Certidão de Conclusão de Obra.",
-    icon: Footprints,
-  },
-  {
-    title: "Regularização de Vazios Urbanos",
-    description:
-      "Terreno parado na Macrozona Construída pode gerar IPTU progressivo e até desapropriação (LC nº 371/2024). Apresentamos projeto de edificação, parcelamento ou aplicamos a Outorga Onerosa de Alteração de Uso para evitar a penalização.",
-    icon: MapPin,
-  },
-  {
-    title: "Aprovação de Loteamento",
-    description:
-      "Parcelamento do solo para transformar uma gleba em lotes individuais, conforme a LC nº 363/2023 — do projeto urbanístico à aprovação e registro em cartório.",
+      "Serviços técnicos de topografia e aprovação urbana para divisão ou unificação de terrenos.",
     icon: Layers,
   },
   {
-    title: "Estudo de Impacto de Vizinhança (EIV)",
+    title: "INSS de Obra",
     description:
-      "Exigido para empreendimentos de maior porte conforme a LC nº 349/2022 (arts. 254 e 257) — analisamos os efeitos do projeto na vizinhança e conduzimos a aprovação junto à Prefeitura.",
-    icon: Users,
+      "Regularização da obra junto ao INSS/Receita Federal com abertura e baixa de CNO, emissão de CND, evitando pendências para habite-se e financiamento.",
+    icon: Landmark,
   },
   {
-    title: "Estudo de Impacto de Trânsito (EIT)",
+    title: "Gerenciamento de Obra",
     description:
-      "Complementar ao EIV para empreendimentos que geram fluxo relevante de veículos, conforme a Lei nº 10.977/2023 — elaboração e protocolo junto aos órgãos competentes.",
-    icon: TrafficCone,
+      "Acompanhamento técnico especializado, planejamento, controle de custos e fiscalização da execução, do início ao fim da obra.",
+    icon: HardHat,
   },
   {
-    title: "PGRCC — Plano de Gerenciamento de Resíduos",
+    title: "Gerenciamento de Projetos",
     description:
-      "Documento técnico obrigatório para aprovação de projeto e emissão do Alvará de Construção ou Demolição (Lei Federal nº 12.305/2010 e Resolução CONAMA nº 307/2002), elaborado com ART do responsável técnico.",
-    icon: Recycle,
+      "Elaboração e gerenciamento completo de projetos de engenharia civil, garantindo compatibilização entre disciplinas e cumprimento de prazos.",
+    icon: ClipboardCheck,
+  },
+  {
+    title: "Consultoria em Engenharia Civil",
+    description:
+      "Consultoria técnica especializada para resolução de patologias construtivas, viabilidade de empreendimentos e pareceres técnicos.",
+    icon: MessageCircle,
+  },
+  {
+    title: "Emissão de ART",
+    description:
+      "Emissão ágil de ART (Anotação de Responsabilidade Técnica) para projetos, execuções e reformas.",
+    icon: Stamp,
+  },
+  {
+    title: "Projetos Estruturais",
+    description:
+      "Elaboração de projetos estruturais seguros e otimizados em concreto armado, metálico ou misto.",
+    icon: Wrench,
+  },
+  {
+    title: "Vistoria Técnica de Imóvel",
+    description:
+      "Inspeção predial e vistoria técnica detalhada para recebimento de chaves, verificação de fachadas e laudos de patologias.",
+    icon: Search,
+  },
+  {
+    title: "Avaliador de Imóvel",
+    description:
+      "Emissão de Laudo de Avaliação de Imóveis assinado por engenheiro civil habilitado, para financiamento, inventário ou partilha.",
+    icon: Calculator,
+  },
+  {
+    title: "Projetos Arquitetônicos",
+    description:
+      "Criação de projetos arquitetônicos funcionais, modernos e personalizados para residências e comércios.",
+    icon: PencilRuler,
   },
 ]
 
@@ -126,7 +119,7 @@ export function Services() {
             <span className="text-[#066bef]">em engenharia</span>
           </h2>
           <p className="text-[#5a687c] max-w-2xl mx-auto">
-            Da perícia técnica ao acompanhamento de obras. Cuidamos de todo o processo para que você não precise se preocupar.
+            Da regularização de imóveis ao acompanhamento de obras. Cuidamos de todo o processo para que você não precise se preocupar.
           </p>
         </div>
 
