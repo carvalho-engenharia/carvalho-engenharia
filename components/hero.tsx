@@ -10,40 +10,63 @@ const BlueprintBackground = dynamic(
   { ssr: false }
 )
 
-const CYCLING_SUBTITLES = [
-  "da escritura?",
-  "não tem Habite-se?",
-  "banco bloqueou?",
-  "Alvará de Funcionamento?",
-  "alvará de construção?",
-  "obra embargada?",
-  "INSS da obra?",
-  "Alvará Sanitário?",
-  "não terminou seu alvará?",
-]
+// Ordem alinhada à prioridade de busca dos serviços (services.tsx):
+// 1) Regularização de Imóveis, 2) Despachante Imobiliário, 3) INSS de Obra,
+// 4) Avaliador de Imóvel, 5) Gerenciamento de Projetos, 6) Gerenciamento de Obra,
+// 7) Consultoria em Engenharia Civil, 8) Emissão de ART, 9) Projetos Estruturais,
+// 10) Vistoria Técnica de Imóvel, 11) Alvará de Construção e Habite-se,
+// 12) Averbação de Imóvel/Construção, 13) Desmembramento e Remembramento,
+// 14) Projetos Arquitetônicos
 
 const CYCLING_PREFIXES = [
-  "Obra diferente",
-  "Seu imóvel ainda",
-  "Quer vender ou financiar mas o",
-  "Sua empresa está sem",
-  "Construiu sem",
-  "Recebeu notificação de",
+  "Seu imóvel está",
+  "Cansado de burocracia em",
   "Receita Federal cobrando o",
-  "Precisa do",
-  "Outro profissional começou e",
+  "Precisa de um",
+  "Quer o",
+  "Sua obra está",
+  "Tem dúvida técnica sobre a",
+  "Precisa de",
+  "Precisa de um",
+  "Vai receber as chaves e quer uma",
+  "Construiu sem",
+  "Quer vender ou financiar mas falta a",
+  "Precisa dividir ou unificar um",
+  "Quer construir e ainda não tem o",
+]
+
+const CYCLING_SUBTITLES = [
+  "irregular na prefeitura?",
+  "cartório e prefeitura?",
+  "INSS da obra?",
+  "Laudo de Avaliação de Imóvel?",
+  "projeto todo compatibilizado e no prazo?",
+  "sem controle de cronograma e custo?",
+  "viabilidade da sua obra?",
+  "ART com urgência?",
+  "projeto estrutural seguro e econômico?",
+  "vistoria técnica antes?",
+  "alvará de construção?",
+  "averbação da construção?",
+  "terreno ou lote?",
+  "projeto arquitetônico?",
 ]
 
 const CYCLING_RESOLUTIONS = [
   "Regularizamos a documentação e iniciamos em 1 dia útil após o contrato.",
-  "Emitimos o Habite-se — início do processo em 1 dia útil após o contrato.",
-  "Resolvemos a pendência que trava o banco — começamos em 1 dia útil.",
-  "Emitimos o Alvará de Funcionamento — protocolo em 1 dia útil após o contrato.",
-  "Regularizamos com alvará retroativo — início em 1 dia útil após assinar.",
-  "Revertemos o embargo e reabrimos seu processo em 1 dia útil.",
+  "Cuidamos de toda a tramitação para você — início em 1 dia útil.",
   "Emitimos CNO, CND e SERO — início em 1 dia útil após o contrato.",
-  "Cuidamos do licenciamento sanitário — protocolo em 1 dia útil.",
-  "Assumimos de onde parou — retomada em 1 dia útil após o contrato.",
+  "Emitimos o laudo assinado por engenheiro CREA para banco, inventário ou partilha.",
+  "Gerenciamos cada etapa do projeto até a aprovação final.",
+  "Assumimos a gestão técnica e a fiscalização até a entrega.",
+  "Damos o parecer técnico que você precisa para decidir com segurança.",
+  "Emitimos a ART em até 1 dia útil, com responsabilidade técnica CREA.",
+  "Elaboramos o cálculo estrutural completo, pronto para aprovação.",
+  "Fazemos a inspeção completa e o laudo de patologias em poucos dias.",
+  "Regularizamos com alvará retroativo — início em 1 dia útil após assinar.",
+  "Atualizamos a matrícula no cartório para liberar a venda ou o financiamento.",
+  "Fazemos o desmembramento ou remembramento junto à prefeitura e ao cartório.",
+  "Criamos o projeto completo, do croqui à planta aprovada.",
 ]
 
 const HERO_STATS = [
