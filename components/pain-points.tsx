@@ -5,8 +5,8 @@ import {
   Building2,
   FileWarning,
   Hammer,
-  MapPinOff,
-  TreePine,
+  Calculator,
+  Briefcase,
   FileDiff,
   Banknote,
   Store,
@@ -40,8 +40,8 @@ const problems = [
     icon: Store,
     question: "Estabelecimento sem Carta de Ocupação ou Habite-se?",
     description:
-      "Sem carta de ocupação ou habite-se não é possível renovar o alvará de funcionamento. Obtemos a documentação junto à prefeitura e garantimos a continuidade da sua atividade comercial sem riscos.",
-    keywords: "carta de ocupação, habite-se empresa, alvará de funcionamento Goiânia",
+      "Sem carta de ocupação ou habite-se, sua atividade comercial fica exposta a multas e interdições. Obtemos a documentação junto à prefeitura e garantimos a continuidade da operação sem riscos.",
+    keywords: "carta de ocupação, habite-se empresa, regularização comercial Goiânia",
   },
   {
     icon: Banknote,
@@ -67,18 +67,18 @@ const problems = [
     modalKey: "regularizacao",
   },
   {
-    icon: MapPinOff,
-    question: "Muro avançou na calçada ou chanfro de esquina?",
+    icon: Calculator,
+    question: "Precisa de um Laudo de Avaliação de Imóvel?",
     description:
-      "Muros fora do alinhamento são irregulares e impedem a regularização do imóvel. Elaboramos o projeto de adequação, obtemos o alvará específico e regularizamos a situação junto ao município.",
-    keywords: "muro calçada irregular, chanfro esquina, regularização de muro",
+      "Bancos, inventários e partilhas exigem laudo técnico de avaliação. Emitimos o Laudo de Avaliação de Imóvel assinado por engenheiro civil habilitado (CREA), com validade bancária e jurídica.",
+    keywords: "avaliador de imóvel Goiânia, laudo de avaliação de imóvel, avaliação de imóvel para financiamento",
   },
   {
-    icon: TreePine,
-    question: "Imóvel sem área permeável ou fora dos recuos?",
+    icon: Briefcase,
+    question: "Cansado de burocracia em cartório e prefeitura?",
     description:
-      "A legislação municipal exige recuos e área permeável mínima. Analisamos a situação do seu imóvel, identificamos as adequações necessárias e conduzimos todo o processo de regularização.",
-    keywords: "área permeável, recuos obrigatórios, regularização imóvel Goiânia",
+      "Assessoria completa em cartórios e prefeituras, do protocolo ao acompanhamento até a conclusão. Cuidamos de toda a tramitação documental para você não perder tempo com filas e exigências.",
+    keywords: "despachante imobiliário Goiânia, assessoria cartório e prefeitura, tramitação documental imóvel",
   },
   {
     icon: FileDiff,
@@ -89,10 +89,10 @@ const problems = [
   },
   {
     icon: FileWarning,
-    question: "Precisa do INSS de obra ou de um laudo técnico?",
+    question: "Precisa do INSS de obra?",
     description:
-      "A regularização fiscal de obras exige cálculo e recolhimento do INSS. Também elaboramos laudos técnicos e perícias detalhadas para fins jurídicos, bancários ou de segurança da edificação.",
-    keywords: "INSS de obra, laudo técnico engenharia, perícia imóvel Goiânia",
+      "A regularização fiscal de obras exige cálculo e recolhimento do INSS junto à Receita Federal. Emitimos CNO, CND e SERO, evitando pendências para habite-se e financiamento.",
+    keywords: "INSS de obra Goiânia, CNO CND obra, regularização fiscal de obra",
   },
 ]
 
