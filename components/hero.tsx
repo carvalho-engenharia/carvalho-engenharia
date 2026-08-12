@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { FileText, Home, Building2, Search, CheckCircle2 } from "lucide-react"
+import { FileText, Home, Building2, Search, CheckCircle2, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import dynamic from "next/dynamic"
 
@@ -46,6 +46,13 @@ const CYCLING_RESOLUTIONS = [
   "Assumimos de onde parou — retomada em 1 dia útil após o contrato.",
 ]
 
+const HERO_STATS = [
+  { value: "10+", label: "anos de experiência" },
+  { value: "500+", label: "obras regularizadas" },
+  { value: "3-12", label: "meses, prazo médio" },
+  { value: "CREA", label: "responsabilidade técnica" },
+]
+
 function useCyclingTypewriter(phrases: string[], typeSpeed = 55, deleteSpeed = 28, pauseMs = 2600) {
   const [phraseIndex, setPhraseIndex] = useState(0)
   const [displayed, setDisplayed] = useState("")
@@ -88,10 +95,45 @@ export function Hero() {
   const { displayed, phraseIndex } = useCyclingTypewriter(CYCLING_SUBTITLES)
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 lg:pt-36 overflow-hidden bg-[#f9fafb]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 lg:pt-32 overflow-hidden bg-[#f9fafb]">
       <BlueprintBackground />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+
+        {/* Foto do Caio + selo CREA — credibilidade visual imediata */}
+        <div className="flex justify-center mb-6">
+          <div
+            style={{
+              width: "88px",
+              height: "88px",
+              borderRadius: "9999px",
+              overflow: "hidden",
+              border: "2px solid rgba(6,107,239,0.35)",
+              boxShadow: "0 0 40px rgba(6,107,239,0.18)",
+              position: "relative",
+              flexShrink: 0,
+            }}
+          >
+            <img
+              src="/caio.jpg"
+              alt="Caio Maracaípe — Engenheiro Civil, CREA 1017786453D-GO"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center 20%",
+                display: "block",
+              }}
+            />
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <ShieldCheck className="w-3.5 h-3.5 text-[#066bef]" />
+          <span className="text-xs text-[#5a687c]">
+            <span className="font-semibold text-[#1d283a]">Caio Maracaípe</span> · Engenheiro Civil responsável pelo processo
+          </span>
+        </div>
 
         {/* Selo de credibilidade — linha única, sem caixas */}
         <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mb-8 text-[11px] uppercase tracking-widest font-semibold text-[#5a687c]">
@@ -132,7 +174,7 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
           <Button
             asChild
             className="bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-colors shadow-[0_4px_14px_rgba(6,107,239,0.18)] gap-2"
@@ -148,6 +190,19 @@ export function Hero() {
           >
             <a href="#servicos">Ver Serviços</a>
           </Button>
+        </div>
+
+        {/* Barra de estatísticas — prova social imediata */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-16">
+          {HERO_STATS.map((stat) => (
+            <div
+              key={stat.label}
+              className="border border-[#e0e5eb] rounded-xl px-4 py-4 bg-white/60 backdrop-blur-sm"
+            >
+              <p className="text-2xl font-bold text-[#066bef] mb-0.5">{stat.value}</p>
+              <p className="text-[#5a687c] text-[11px] uppercase tracking-wide leading-tight">{stat.label}</p>
+            </div>
+          ))}
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 max-w-4xl mx-auto">
