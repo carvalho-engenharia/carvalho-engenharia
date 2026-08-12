@@ -128,21 +128,11 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-2 mb-6">
+        <div className="flex items-center justify-center gap-2 mb-12">
           <ShieldCheck className="w-3.5 h-3.5 text-[#066bef]" />
           <span className="text-xs text-[#5a687c]">
-            <span className="font-semibold text-[#1d283a]">Caio Maracaípe</span> · Engenheiro Civil responsável pelo processo
+            <span className="font-semibold text-[#1d283a]">Caio Maracaípe</span> · Engenheiro Civil responsável pelo processo · CREA 1017786453D-GO
           </span>
-        </div>
-
-        {/* Selo de credibilidade — linha única, sem caixas */}
-        <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mb-8 text-[11px] uppercase tracking-widest font-semibold text-[#5a687c]">
-          <span className="flex items-center gap-1.5 text-[#0559c7]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0559c7]" />
-            +10 Anos de Experiência
-          </span>
-          <span className="text-[#c7cdd6]">•</span>
-          <span>CREA 1017786453D-GO</span>
         </div>
 
         {/* Título dinâmico */}
@@ -193,11 +183,11 @@ export function Hero() {
         </div>
 
         {/* Barra de estatísticas — prova social imediata */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto mb-16">
           {HERO_STATS.map((stat) => (
             <div
               key={stat.label}
-              className="border border-[#e0e5eb] rounded-xl px-4 py-4 bg-white/60 backdrop-blur-sm"
+              className="border border-[#e0e5eb] rounded-xl px-4 py-5 bg-white shadow-[0_2px_10px_rgba(29,40,58,0.05)]"
             >
               <p className="text-2xl font-bold text-[#066bef] mb-0.5">{stat.value}</p>
               <p className="text-[#5a687c] text-[11px] uppercase tracking-wide leading-tight">{stat.label}</p>
