@@ -3,21 +3,22 @@
 import {
   ClipboardList,
   Briefcase,
-  FileCheck2,
-  FileText,
-  Layers,
   Landmark,
-  HardHat,
+  Calculator,
   ClipboardCheck,
+  HardHat,
   MessageCircle,
   Stamp,
   Wrench,
   Search,
-  Calculator,
+  FileText,
+  FileCheck2,
+  Layers,
   PencilRuler,
 } from "lucide-react"
 
 const services = [
+  // Volume confirmado — alto (1 mil a 10 mil buscas/mês)
   {
     title: "Regularização de Imóveis",
     description:
@@ -31,40 +32,30 @@ const services = [
     icon: Briefcase,
   },
   {
-    title: "Averbação de Imóvel / Averbação de Construção",
-    description:
-      "Atualização da área construída e habite-se junto ao Cartório de Registro de Imóveis. Essencial para vender, financiar ou regularizar o patrimônio.",
-    icon: FileCheck2,
-  },
-  {
-    title: "Alvará de Construção e Habite-se",
-    description:
-      "Emissão de licenças municipais para início de obras (alvará) e obtenção da certidão de conclusão (habite-se), conforme a LC nº 364/2023.",
-    icon: FileText,
-  },
-  {
-    title: "Desmembramento e Remembramento",
-    description:
-      "Serviços técnicos de topografia e aprovação urbana para divisão ou unificação de terrenos.",
-    icon: Layers,
-  },
-  {
     title: "INSS de Obra",
     description:
       "Regularização da obra junto ao INSS/Receita Federal com abertura e baixa de CNO, emissão de CND, evitando pendências para habite-se e financiamento.",
     icon: Landmark,
   },
   {
-    title: "Gerenciamento de Obra",
+    title: "Avaliador de Imóvel",
     description:
-      "Acompanhamento técnico especializado, planejamento, controle de custos e fiscalização da execução, do início ao fim da obra.",
-    icon: HardHat,
+      "Emissão de Laudo de Avaliação de Imóveis assinado por engenheiro civil habilitado, para financiamento, inventário ou partilha.",
+    icon: Calculator,
   },
   {
     title: "Gerenciamento de Projetos",
     description:
       "Elaboração e gerenciamento completo de projetos de engenharia civil, garantindo compatibilização entre disciplinas e cumprimento de prazos.",
     icon: ClipboardCheck,
+  },
+
+  // Volume confirmado — médio (100 a 1 mil buscas/mês)
+  {
+    title: "Gerenciamento de Obra",
+    description:
+      "Acompanhamento técnico especializado, planejamento, controle de custos e fiscalização da execução, do início ao fim da obra.",
+    icon: HardHat,
   },
   {
     title: "Consultoria em Engenharia Civil",
@@ -84,17 +75,33 @@ const services = [
       "Elaboração de projetos estruturais seguros e otimizados em concreto armado, metálico ou misto.",
     icon: Wrench,
   },
+
+  // Volume confirmado — baixo (10 a 100 buscas/mês)
   {
     title: "Vistoria Técnica de Imóvel",
     description:
       "Inspeção predial e vistoria técnica detalhada para recebimento de chaves, verificação de fachadas e laudos de patologias.",
     icon: Search,
   },
+
+  // Sem volume testado no Planejador
   {
-    title: "Avaliador de Imóvel",
+    title: "Alvará de Construção e Habite-se",
     description:
-      "Emissão de Laudo de Avaliação de Imóveis assinado por engenheiro civil habilitado, para financiamento, inventário ou partilha.",
-    icon: Calculator,
+      "Emissão de licenças municipais para início de obras (alvará) e obtenção da certidão de conclusão (habite-se), conforme a LC nº 364/2023.",
+    icon: FileText,
+  },
+  {
+    title: "Averbação de Imóvel / Averbação de Construção",
+    description:
+      "Atualização da área construída e habite-se junto ao Cartório de Registro de Imóveis. Essencial para vender, financiar ou regularizar o patrimônio.",
+    icon: FileCheck2,
+  },
+  {
+    title: "Desmembramento e Remembramento",
+    description:
+      "Serviços técnicos de topografia e aprovação urbana para divisão ou unificação de terrenos.",
+    icon: Layers,
   },
   {
     title: "Projetos Arquitetônicos",
