@@ -58,12 +58,12 @@ export function WhyUs() {
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              "Facilidade na compra ou venda do imóvel",
+              "Despachante imobiliário: cuidamos de toda a burocracia em cartórios e prefeituras",
               "Possibilidade de financiamento junto à Caixa e bancos",
               "Averbação da construção na escritura, valorizando o imóvel",
               "Laudo de avaliação de imóvel para financiamento, inventário ou partilha",
               "Gerenciamento completo de projetos e obras, do início à entrega",
-              "Viabiliza inventário, partilha e processos jurídicos",
+              "Regularização do INSS de obra (CNO, SERO e CND)",
               "Obtenção da Carta de Ocupação e Habite-se",
               "Desmembramento (desdobro) e retificação de áreas",
               "Acompanhamento completo junto à prefeitura",
