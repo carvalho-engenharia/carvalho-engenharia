@@ -3,7 +3,6 @@ import Image from "next/image"
 const documents = [
   { image: "/segmentos/alvara-regularizacao.jpg", caption: "Alvará de Regularização" },
   { image: "/segmentos/alvara-construcao.jpg", caption: "Alvará de Construção" },
-  { image: "/segmentos/alvara-construcao2.jpg", caption: "Alvará de Construção" },
   { image: "/segmentos/alvara-localizacao.jpg", caption: "Alvará de Localização e Funcionamento" },
 ]
 
@@ -30,7 +29,7 @@ export function DocumentsGallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {documents.map((item) => (
             <div
               key={item.image}
@@ -41,7 +40,7 @@ export function DocumentsGallery() {
                 alt={item.caption}
                 fill
                 className="object-contain p-3 transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#080808]/80 to-transparent pt-10 pb-3 px-3">
                 <span className="text-xs font-medium text-[#fafafa]">{item.caption}</span>
