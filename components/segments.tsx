@@ -12,8 +12,15 @@ const industrialPhotos = [
   "/segmentos/galpao-industrial-05.jpg",
 ]
 
+const residentialPhotos = [
+  "/segmentos/piscina-deck-residencial-01.jpg",
+  "/segmentos/fachada-piscina-residencial-02.jpg",
+  "/segmentos/sala-ampla-residencial-03.jpg",
+]
+
 export function Segments() {
   const [activeIndustrial, setActiveIndustrial] = useState(0)
+  const [activeResidential, setActiveResidential] = useState(0)
 
   return (
     <section className="py-24 sm:py-32 bg-[#f8f9fb] relative overflow-hidden border-t border-[#e0e5eb]">
@@ -37,19 +44,43 @@ export function Segments() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Residencial */}
-          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
-            <Image
-              src="/segmentos/cozinha-goiania-01.jpg"
-              alt="Regularização e projetos residenciais"
-              fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
-            <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
-              Residencial
-            </span>
+          {/* Residencial - com mini galeria */}
+          <div className="flex flex-col gap-3">
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
+              <Image
+                src={residentialPhotos[activeResidential] || "/placeholder.svg"}
+                alt="Regularização e projetos residenciais"
+                fill
+                className="object-cover transition-all duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
+              <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
+                Residencial
+              </span>
+            </div>
+            <div className="grid grid-cols-3 gap-1.5">
+              {residentialPhotos.map((photo, i) => (
+                <button
+                  key={photo}
+                  onClick={() => setActiveResidential(i)}
+                  className={`relative aspect-square rounded-md overflow-hidden border transition-all ${
+                    activeResidential === i
+                      ? "border-[#066bef] ring-2 ring-[#066bef]/30"
+                      : "border-[#e0e5eb] opacity-70 hover:opacity-100"
+                  }`}
+                  aria-label={`Ver foto residencial ${i + 1}`}
+                >
+                  <Image
+                    src={photo || "/placeholder.svg"}
+                    alt={`Imóvel residencial ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Comercial / Clínicas — TEMP: sem foto até autorização do cliente (MedPrime).
