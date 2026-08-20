@@ -13,10 +13,6 @@ const gallery = [
     image: "/centro-administrativo-municipal.jpg",
     caption: "Acompanhamento junto à Prefeitura de Goiânia",
   },
-  {
-    image: "/chafariz-centro-administrativo.jpg",
-    caption: "Protocolo de processos no Centro Administrativo Municipal",
-  },
 ]
 
 export function Gallery() {
@@ -47,7 +43,7 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {gallery.map((item) => (
             <div
               key={item.caption}
@@ -58,7 +54,7 @@ export function Gallery() {
                 alt={item.caption}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
               <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
