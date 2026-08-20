@@ -2,12 +2,12 @@ import Image from "next/image"
 
 const gallery = [
   {
-    image: "/vistoria-telhado.jpg",
-    caption: "Vistoria técnica de cobertura",
+    image: "/telhado-detalhe.jpg",
+    caption: "Detalhamento executivo de cobertura metálica",
   },
   {
-    image: "/levantamento-vagas-garagem.jpg",
-    caption: "Levantamento de vagas de garagem em condomínio",
+    image: "/torre-fachada-residencial.jpg",
+    caption: "Levantamento de fachada em edifício residencial",
   },
   {
     image: "/centro-administrativo-municipal.jpg",
