@@ -51,13 +51,14 @@ export function Segments() {
             </span>
           </div>
 
-          {/* Comercial / Clínicas */}
-          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
+          {/* Comercial / Clínicas — TEMP: foto da fachada MedPrime removida até
+              autorização do cliente. Usando placeholder neutro por enquanto. */}
+          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500 bg-[#eef1f5] flex items-center justify-center">
             <Image
-              src="/segmentos/fachada-clinica-comercial-01.jpg"
+              src="/placeholder.jpg"
               alt="Regularização de estabelecimentos comerciais e clínicas"
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-cover opacity-60"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
