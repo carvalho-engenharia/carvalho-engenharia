@@ -1,0 +1,111 @@
+"use client"
+
+import Image from "next/image"
+import { useState } from "react"
+
+const industrialPhotos = [
+  "/segmentos/industrial-01.jpg",
+  "/segmentos/industrial-02.jpg",
+  "/segmentos/industrial-03.jpg",
+  "/segmentos/industrial-04.jpg",
+  "/segmentos/industrial-05.jpg",
+]
+
+export function Segments() {
+  const [activeIndustrial, setActiveIndustrial] = useState(0)
+
+  return (
+    <section className="py-24 sm:py-32 bg-[#f8f9fb] relative overflow-hidden border-t border-[#e0e5eb]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#066bef]/30 bg-[#066bef]/5 backdrop-blur-md mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#066bef] animate-pulse" />
+            <span className="text-[10px] uppercase tracking-widest text-[#066bef] font-semibold">
+              Segmentos que Atendemos
+            </span>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#1d283a] mb-4 text-balance">
+            Engenharia para todo tipo de{" "}
+            <span className="text-[#066bef]">imóvel e negócio</span>
+          </h2>
+
+          <p className="text-[#5a687c] text-lg max-w-xl mx-auto">
+            Residências, clínicas, comércios e galpões industriais — do projeto à regularização final.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Residencial */}
+          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
+            <Image
+              src="/segmentos/residencial.jpg"
+              alt="Regularização e projetos residenciais"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
+            <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
+              Residencial
+            </span>
+          </div>
+
+          {/* Comercial / Clínicas */}
+          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
+            <Image
+              src="/segmentos/comercial.jpg"
+              alt="Regularização de estabelecimentos comerciais e clínicas"
+              fill
+              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
+            <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
+              Comercial / Clínicas
+            </span>
+          </div>
+
+          {/* Industrial - com mini galeria */}
+          <div className="flex flex-col gap-3">
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
+              <Image
+                src={industrialPhotos[activeIndustrial] || "/placeholder.svg"}
+                alt="Projetos e regularização de galpões industriais"
+                fill
+                className="object-cover transition-all duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
+              <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
+                Industrial
+              </span>
+            </div>
+            <div className="grid grid-cols-5 gap-1.5">
+              {industrialPhotos.map((photo, i) => (
+                <button
+                  key={photo}
+                  onClick={() => setActiveIndustrial(i)}
+                  className={`relative aspect-square rounded-md overflow-hidden border transition-all ${
+                    activeIndustrial === i
+                      ? "border-[#066bef] ring-2 ring-[#066bef]/30"
+                      : "border-[#e0e5eb] opacity-70 hover:opacity-100"
+                  }`}
+                  aria-label={`Ver foto industrial ${i + 1}`}
+                >
+                  <Image
+                    src={photo || "/placeholder.svg"}
+                    alt={`Galpão industrial ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
