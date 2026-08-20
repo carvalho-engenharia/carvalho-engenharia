@@ -4,11 +4,11 @@ import Image from "next/image"
 import { useState } from "react"
 
 const industrialPhotos = [
-  "/segmentos/industrial-01.jpg",
-  "/segmentos/industrial-02.jpg",
-  "/segmentos/industrial-03.jpg",
-  "/segmentos/industrial-04.jpg",
-  "/segmentos/industrial-05.jpg",
+  "/segmentos/galpao-industrial-01.jpg",
+  "/segmentos/galpao-industrial-02.jpg",
+  "/segmentos/galpao-industrial-03.jpg",
+  "/segmentos/galpao-industrial-04.jpg",
+  "/segmentos/galpao-industrial-05.jpg",
 ]
 
 export function Segments() {
@@ -39,7 +39,7 @@ export function Segments() {
           {/* Residencial */}
           <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
             <Image
-              src="/segmentos/residencial.jpg"
+              src="/segmentos/cozinha-goiania-01.jpg"
               alt="Regularização e projetos residenciais"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -54,7 +54,7 @@ export function Segments() {
           {/* Comercial / Clínicas */}
           <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
             <Image
-              src="/segmentos/comercial.jpg"
+              src="/segmentos/fachada-clinica-comercial-01.jpg"
               alt="Regularização de estabelecimentos comerciais e clínicas"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
