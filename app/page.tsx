@@ -7,6 +7,8 @@ import { RequiredDocuments } from "@/components/required-documents"
 import { WhyUs } from "@/components/why-us"
 import { Gallery } from "@/components/gallery"
 import { Segments } from "@/components/segments"
+import { ProjectsGallery } from "@/components/projects-gallery"
+import { DocumentsGallery } from "@/components/documents-gallery"
 import { Sobre } from "@/components/sobre"
 import { CTASection } from "@/components/cta-section"
 import GoogleReviews from "@/components/google-reviews"
@@ -24,6 +26,8 @@ export default function Home() {
       <WhyUs />
       <Gallery />
       <Segments />
+      <ProjectsGallery />
+      <DocumentsGallery />
       <Sobre />
       <CTASection />
       <GoogleReviews />
