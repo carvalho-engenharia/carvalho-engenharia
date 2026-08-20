@@ -6,6 +6,7 @@ import { PainPoints } from "@/components/pain-points"
 import { RequiredDocuments } from "@/components/required-documents"
 import { WhyUs } from "@/components/why-us"
 import { Gallery } from "@/components/gallery"
+import { Segments } from "@/components/segments"
 import { Sobre } from "@/components/sobre"
 import { CTASection } from "@/components/cta-section"
 import GoogleReviews from "@/components/google-reviews"
@@ -22,6 +23,7 @@ export default function Home() {
       <RequiredDocuments />
       <WhyUs />
       <Gallery />
+      <Segments />
       <Sobre />
       <CTASection />
       <GoogleReviews />
