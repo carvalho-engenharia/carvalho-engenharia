@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { Building2 } from "lucide-react"
 import { useState } from "react"
 
 const industrialPhotos = [
@@ -51,17 +52,12 @@ export function Segments() {
             </span>
           </div>
 
-          {/* Comercial / Clínicas — TEMP: foto da fachada MedPrime removida até
-              autorização do cliente. Usando placeholder neutro por enquanto. */}
-          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500 bg-[#eef1f5] flex items-center justify-center">
-            <Image
-              src="/placeholder.jpg"
-              alt="Regularização de estabelecimentos comerciais e clínicas"
-              fill
-              className="object-cover opacity-60"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
+          {/* Comercial / Clínicas — TEMP: sem foto até autorização do cliente (MedPrime).
+              Bloco com ícone em vez de imagem quebrada/vazia. Trocar por
+              /segmentos/fachada-clinica-comercial-01.jpg assim que autorizado. */}
+          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500 bg-gradient-to-br from-[#066bef]/8 via-[#eef1f5] to-[#066bef]/5 flex items-center justify-center">
+            <Building2 className="w-16 h-16 text-[#066bef]/25" strokeWidth={1.2} />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1d283a]/85 via-transparent to-transparent" />
             <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
               Comercial / Clínicas
             </span>
