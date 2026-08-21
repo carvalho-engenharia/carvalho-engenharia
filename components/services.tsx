@@ -18,7 +18,7 @@ import {
 } from "lucide-react"
 
 const services = [
-  // Volume confirmado — alto (1 mil a 10 mil buscas/mês)
+  // Volume confirmado — alto (5.000 buscas/mês, empate no topo)
   {
     title: "Regularização de Imóveis",
     description:
@@ -46,11 +46,29 @@ const services = [
   {
     title: "Gerenciamento de Projetos",
     description:
-      "Elaboração e gerenciamento completo de projetos de engenharia civil, garantindo compatibilização entre disciplinas e cumprimento de prazos.",
+      "Elaboração e gestão de projetos de engenharia civil, garantindo compatibilização entre disciplinas e cumprimento de prazos.",
     icon: ClipboardCheck,
   },
+  {
+    title: "Averbação de Imóvel",
+    description:
+      "Averbação de construção junto ao Cartório de Registro de Imóveis, atualizando a área construída e o habite-se na matrícula. Essencial para vender, financiar ou regularizar o patrimônio.",
+    icon: FileCheck2,
+  },
+  {
+    title: "Projeto Estrutural",
+    description:
+      "Elaboração de projetos estruturais seguros e otimizados em concreto armado, metálico ou misto, com cálculo estrutural completo.",
+    icon: Wrench,
+  },
+  {
+    title: "Projeto Arquitetônico",
+    description:
+      "Criação de projetos arquitetônicos funcionais, modernos e personalizados para residências e comércios.",
+    icon: PencilRuler,
+  },
 
-  // Volume confirmado — médio (100 a 1 mil buscas/mês)
+  // Volume confirmado — médio (500 buscas/mês)
   {
     title: "Gerenciamento de Obra",
     description:
@@ -69,22 +87,14 @@ const services = [
       "Emissão ágil de ART (Anotação de Responsabilidade Técnica) para projetos, execuções e reformas.",
     icon: Stamp,
   },
-  {
-    title: "Projetos Estruturais",
-    description:
-      "Elaboração de projetos estruturais seguros e otimizados em concreto armado, metálico ou misto.",
-    icon: Wrench,
-  },
 
-  // Volume confirmado — baixo (10 a 100 buscas/mês)
+  // Volume confirmado — baixo (50 buscas/mês)
   {
     title: "Vistoria Técnica de Imóvel",
     description:
       "Inspeção predial e vistoria técnica detalhada para recebimento de chaves, verificação de fachadas e laudos de patologias.",
     icon: Search,
   },
-
-  // Sem volume testado no Planejador
   {
     title: "Alvará de Construção e Habite-se",
     description:
@@ -92,22 +102,10 @@ const services = [
     icon: FileText,
   },
   {
-    title: "Averbação de Imóvel / Averbação de Construção",
-    description:
-      "Atualização da área construída e habite-se junto ao Cartório de Registro de Imóveis. Essencial para vender, financiar ou regularizar o patrimônio.",
-    icon: FileCheck2,
-  },
-  {
     title: "Desmembramento e Remembramento",
     description:
       "Serviços técnicos de topografia e aprovação urbana para divisão ou unificação de terrenos.",
     icon: Layers,
-  },
-  {
-    title: "Projetos Arquitetônicos",
-    description:
-      "Criação de projetos arquitetônicos funcionais, modernos e personalizados para residências e comércios.",
-    icon: PencilRuler,
   },
 ]
 
