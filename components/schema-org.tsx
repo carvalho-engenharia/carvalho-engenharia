@@ -30,7 +30,7 @@ export function SchemaOrg() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
-      reviewCount: "47",
+      reviewCount: "64",
       bestRating: "5",
     },
     hasOfferCatalog: {
