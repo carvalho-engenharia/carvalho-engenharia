@@ -18,11 +18,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Carvalho Engenharia`,
     description: post.description,
+    alternates: {
+      canonical: `https://www.carvalho-engenharia.com/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
       type: "article",
       publishedTime: post.date,
+      authors: [post.author ?? "Caio Maracaípe"],
+      url: `https://www.carvalho-engenharia.com/blog/${slug}`,
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   };
 }
@@ -35,8 +48,41 @@ export default async function PostPage({ params }: Props) {
   const allPosts = getAllPosts();
   const related = allPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: "https://www.carvalho-engenharia.com/og-image.jpg",
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author ?? "Caio Maracaípe",
+      jobTitle: post.authorTitle ?? "Engenheiro Civil — CREA 1017786453D-GO",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Carvalho Engenharia",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.carvalho-engenharia.com/logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.carvalho-engenharia.com/blog/${post.slug}`,
+    },
+    articleSection: post.category,
+  }
+
   return (
     <main className="min-h-screen bg-[#0a0a0a] text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+
       {/* Breadcrumb */}
       <div className="px-6 pt-10 max-w-3xl mx-auto">
         <nav className="flex items-center gap-2 text-sm text-zinc-500 mb-10">
