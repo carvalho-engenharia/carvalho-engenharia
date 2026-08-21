@@ -1,112 +1,69 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { SchemaOrg } from "@/components/schema-org"
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { CookieBanner } from "@/components/cookie-banner"
-import { WhatsAppFloat } from "@/components/whatsapp-float"
+import type { MetadataRoute } from "next"
+import fs from "fs"
+import path from "path"
 
-const inter = Inter({ subsets: ["latin"] })
+const BASE_URL = "https://www.carvalho-engenharia.com"
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://www.carvalho-engenharia.com"),
-  title: {
-    default: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
-    template: "%s | Carvalho Engenharia",
-  },
-  description:
-    "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
-  keywords: [
-    // Alto volume (5.000 buscas/mês, empate no topo)
-    "regularização de imóveis Goiânia",
-    "despachante imobiliário Goiânia",
-    "INSS de obra Goiânia",
-    "avaliador de imóvel Goiânia",
-    "avaliação de imóveis Goiânia",
-    "gerenciamento de projetos Goiânia",
-    "gestão de projetos Goiânia",
-    "averbação de imóvel Goiânia",
-    "projeto estrutural Goiânia",
-    "engenharia estrutural Goiânia",
-    "projeto arquitetônico Goiânia",
-    // Médio volume (500 buscas/mês)
-    "gerenciamento de obra Goiânia",
-    "consultoria em engenharia civil Goiânia",
-    "emissão de ART Goiânia",
-    "projetos estruturais Goiânia",
-    "projetos arquitetônicos Goiânia",
-    "averbação de construção",
-    // Baixo volume (50 buscas/mês)
-    "vistoria técnica de imóvel Goiânia",
-    "alvará de construção Goiânia",
-    "habite-se Goiânia",
-    "desmembramento e remembramento Goiânia",
-    // Institucional / marca
-    "carta de ocupação Goiânia",
-    "engenheiro civil Goiânia",
-    "Carvalho Engenharia",
-    "Caio Maracaípe",
-    "CREA Goiânia",
-  ],
-  authors: [{ name: "Caio Maracaípe", url: "https://www.carvalho-engenharia.com" }],
-  creator: "Carvalho Engenharia",
-  openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: "https://www.carvalho-engenharia.com",
-    siteName: "Carvalho Engenharia",
-    title: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
-    description:
-      "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Carvalho Engenharia — Regularização de Imóveis e Despachante Imobiliário em Goiânia",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
-    description:
-      "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
-    images: ["/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://www.carvalho-engenharia.com",
-  },
-  verification: {
-    google: "_8llKmEMAfxglCw0iqE8xCEWcsVpN4-4UpJ6FBIZt1o",
-  },
+function getBlogSlugs(): string[] {
+  const blogDir = path.join(process.cwd(), "content", "blog")
+
+  try {
+    return fs
+      .readdirSync(blogDir)
+      .filter((file) => file.endsWith(".mdx") || file.endsWith(".md"))
+      .map((file) => file.replace(/\.mdx?$/, ""))
+  } catch {
+    // Pasta ainda não existe no momento do build — retorna vazio em vez de quebrar
+    return []
+  }
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="pt-BR">
-      <body className={inter.className}>
-        <SchemaOrg />
-        {children}
-        <CookieBanner />
-        <WhatsAppFloat />
-        <SpeedInsights />
-      </body>
-    </html>
-  )
+export default function sitemap(): MetadataRoute.Sitemap {
+  const staticRoutes: MetadataRoute.Sitemap = [
+    {
+      url: BASE_URL,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: `${BASE_URL}/#servicos`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/#quem-somos`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/#depoimentos`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${BASE_URL}/#contato`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+  ]
+
+  const blogRoutes: MetadataRoute.Sitemap = getBlogSlugs().map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }))
+
+  return [...staticRoutes, ...blogRoutes]
 }
