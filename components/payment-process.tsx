@@ -59,6 +59,11 @@ export function PaymentProcess() {
             torcer para o alvará sair —{" "}
             <span className="text-[#066bef] font-semibold">garantimos a conclusão total do processo</span>.
           </p>
+          <p className="text-[#5a687c] max-w-2xl mx-auto text-sm mt-3">
+            Valores a partir de{" "}
+            <span className="text-[#1d283a] font-semibold">R$ 500</span>, variando conforme a
+            complexidade e o tempo do processo.
+          </p>
         </div>
 
         {/* Highlight badge */}
