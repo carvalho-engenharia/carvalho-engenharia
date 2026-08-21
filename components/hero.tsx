@@ -10,13 +10,13 @@ const BlueprintBackground = dynamic(
   { ssr: false }
 )
 
-// Ordem alinhada à prioridade de busca dos serviços (services.tsx):
-// 1) Regularização de Imóveis, 2) Despachante Imobiliário, 3) INSS de Obra,
-// 4) Avaliador de Imóvel, 5) Gerenciamento de Projetos, 6) Gerenciamento de Obra,
-// 7) Consultoria em Engenharia Civil, 8) Emissão de ART, 9) Projetos Estruturais,
-// 10) Vistoria Técnica de Imóvel, 11) Alvará de Construção e Habite-se,
-// 12) Averbação de Imóvel/Construção, 13) Desmembramento e Remembramento,
-// 14) Projetos Arquitetônicos
+// Ordem alinhada à prioridade de busca confirmada no Google Keyword Planner:
+// Alto (5.000/mês): 1) Regularização de Imóveis, 2) Despachante Imobiliário, 3) INSS de Obra,
+// 4) Avaliador de Imóvel, 5) Gerenciamento de Projetos, 6) Averbação de Imóvel,
+// 7) Projeto Estrutural, 8) Projeto Arquitetônico
+// Médio (500/mês): 9) Gerenciamento de Obra, 10) Consultoria em Engenharia Civil, 11) Emissão de ART
+// Baixo (50/mês): 12) Vistoria Técnica de Imóvel, 13) Alvará de Construção e Habite-se,
+// 14) Desmembramento e Remembramento
 
 const CYCLING_PREFIXES = [
   "Seu imóvel está",
@@ -24,15 +24,15 @@ const CYCLING_PREFIXES = [
   "Receita Federal cobrando o",
   "Precisa de um",
   "Quer o",
+  "Quer vender ou financiar mas falta a",
+  "Precisa de um",
+  "Quer construir e ainda não tem o",
   "Sua obra está",
   "Tem dúvida técnica sobre a",
   "Precisa de",
-  "Precisa de um",
   "Vai receber as chaves e quer uma",
   "Construiu sem",
-  "Quer vender ou financiar mas falta a",
   "Precisa dividir ou unificar um",
-  "Quer construir e ainda não tem o",
 ]
 
 const CYCLING_SUBTITLES = [
@@ -41,15 +41,15 @@ const CYCLING_SUBTITLES = [
   "INSS da obra?",
   "Laudo de Avaliação de Imóvel?",
   "projeto todo compatibilizado e no prazo?",
+  "averbação do imóvel?",
+  "projeto estrutural seguro e econômico?",
+  "projeto arquitetônico?",
   "sem controle de cronograma e custo?",
   "viabilidade da sua obra?",
   "ART com urgência?",
-  "projeto estrutural seguro e econômico?",
   "vistoria técnica antes?",
   "alvará de construção?",
-  "averbação da construção?",
   "terreno ou lote?",
-  "projeto arquitetônico?",
 ]
 
 const CYCLING_RESOLUTIONS = [
@@ -58,15 +58,15 @@ const CYCLING_RESOLUTIONS = [
   "Emitimos CNO, CND e SERO — início em 1 dia útil após o contrato.",
   "Emitimos o laudo assinado por engenheiro CREA para banco, inventário ou partilha.",
   "Gerenciamos cada etapa do projeto até a aprovação final.",
+  "Atualizamos a matrícula no cartório para liberar a venda ou o financiamento.",
+  "Elaboramos o cálculo estrutural completo, pronto para aprovação.",
+  "Criamos o projeto completo, do croqui à planta aprovada.",
   "Assumimos a gestão técnica e a fiscalização até a entrega.",
   "Damos o parecer técnico que você precisa para decidir com segurança.",
   "Emitimos a ART em até 1 dia útil, com responsabilidade técnica CREA.",
-  "Elaboramos o cálculo estrutural completo, pronto para aprovação.",
   "Fazemos a inspeção completa e o laudo de patologias em poucos dias.",
   "Regularizamos com alvará retroativo — início em 1 dia útil após assinar.",
-  "Atualizamos a matrícula no cartório para liberar a venda ou o financiamento.",
   "Fazemos o desmembramento ou remembramento junto à prefeitura e ao cartório.",
-  "Criamos o projeto completo, do croqui à planta aprovada.",
 ]
 
 const HERO_STATS = [
