@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { FileText, Home, Building2, Search, CheckCircle2, ShieldCheck } from "lucide-react"
+import { ClipboardList, FileCheck2, Ruler, PencilRuler, CheckCircle2, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import dynamic from "next/dynamic"
 
@@ -181,8 +181,8 @@ export function Hero() {
         {/* Subtítulo fixo */}
         <div className="min-h-[3.5rem] md:min-h-[2rem] flex items-center justify-center mb-10">
           <p className="text-[#5a687c] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Alvará de Construção, Habite-se, Regularização de Obras e Projetos de
-            Engenharia em{" "}
+            Regularização de Imóveis, Despachante Imobiliário, INSS de Obra e
+            Avaliação de Imóveis em{" "}
             <span className="text-[#1d283a] font-semibold">Goiânia, Aparecida de Goiânia, Anápolis e região</span>.
           </p>
         </div>
@@ -220,10 +220,10 @@ export function Hero() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 max-w-4xl mx-auto">
           {[
-            { icon: FileText, label: "Alvará & Habite-se" },
-            { icon: Home, label: "Regularização de Obras" },
-            { icon: Building2, label: "Projetos de Engenharia" },
-            { icon: Search, label: "Perícias e Laudos" },
+            { icon: ClipboardList, label: "Gerenciamento de Projetos" },
+            { icon: FileCheck2, label: "Averbação de Imóvel" },
+            { icon: Ruler, label: "Projeto Estrutural" },
+            { icon: PencilRuler, label: "Projeto Arquitetônico" },
           ].map((item, idx) => (
             <div key={idx} className="flex flex-col items-center gap-2.5">
               <item.icon className="w-6 h-6 text-[#8a94a3]" strokeWidth={1.5} />
