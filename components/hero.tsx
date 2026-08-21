@@ -187,7 +187,7 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <Button
             asChild
             className="bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-colors shadow-[0_4px_14px_rgba(6,107,239,0.18)] gap-2"
@@ -205,6 +205,22 @@ export function Hero() {
           </Button>
         </div>
 
+        {/* Linha de confiança — preço e velocidade em destaque, logo abaixo do CTA */}
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#5a687c] mb-14">
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
+            Orçamento grátis em até 24h
+          </span>
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
+            A partir de <span className="font-semibold text-[#1d283a]">R$ 500</span>
+          </span>
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
+            Início em <span className="font-semibold text-[#1d283a]">1 dia útil</span>
+          </span>
+        </div>
+
         {/* Barra de estatísticas — prova social imediata */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto mb-16">
           {HERO_STATS.map((stat) => (
@@ -216,6 +232,29 @@ export function Hero() {
               <p className="text-[#5a687c] text-[11px] uppercase tracking-wide leading-tight">{stat.label}</p>
             </div>
           ))}
+        </div>
+
+        {/* Depoimento em destaque — prova social real, logo após as estatísticas */}
+        <div className="max-w-2xl mx-auto mb-16 px-6 py-6 rounded-2xl bg-white border border-[#e0e5eb] shadow-[0_2px_10px_rgba(29,40,58,0.05)] text-left">
+          <div className="flex gap-0.5 mb-3">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="#FBBC04">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            ))}
+          </div>
+          <p className="text-[#3d4c5f] text-sm leading-relaxed mb-4">
+            "Quero registrar minha satisfação com a Carvalho Engenharia. O atendimento do engenheiro Caio tem sido muito atencioso e profissional desde o início. Sempre esclarece minhas dúvidas e transmite segurança durante todo o processo de regularização do imóvel. Recomendo pelo comprometimento, organização e excelente atendimento."
+          </p>
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-full bg-[#EA4335] flex items-center justify-center text-white text-xs font-semibold shrink-0">
+              LC
+            </div>
+            <div>
+              <p className="text-[#1d283a] font-medium text-sm">Luana Cristina</p>
+              <p className="text-[#5a687c] text-xs">Avaliação no Google</p>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 max-w-4xl mx-auto">
