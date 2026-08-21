@@ -2,8 +2,8 @@ import Image from "next/image"
 
 const gallery = [
   {
-    image: "/telhado-detalhe.jpg",
-    caption: "Vistoria em Cobertura",
+    image: "/levantamento-campo.jpg",
+    caption: "Levantamento em Campo",
   },
   {
     image: "/torre-fachada-residencial.jpg",
