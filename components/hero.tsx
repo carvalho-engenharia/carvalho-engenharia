@@ -72,7 +72,7 @@ const CYCLING_RESOLUTIONS = [
 const HERO_STATS = [
   { value: "10+", label: "anos de experiência" },
   { value: "800+", label: "obras regularizadas" },
-  { value: "3-12", label: "meses, prazo médio" },
+  { value: "1 dia útil", label: "início após contrato" },
   { value: "CREA", label: "responsabilidade técnica" },
 ]
 
