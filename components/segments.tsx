@@ -17,9 +17,16 @@ const residentialPhotos = [
   "/segmentos/sala-ampla-residencial-03.jpg",
 ]
 
+// Fotos da Clínica MedPrime, uso autorizado pelo proprietário.
+const commercialPhotos = [
+  "/segmentos/fachada-clinica-comercial-01.jpg",
+  "/segmentos/recepcao-clinica-medprime.jpg",
+]
+
 export function Segments() {
   const [activeIndustrial, setActiveIndustrial] = useState(0)
   const [activeResidential, setActiveResidential] = useState(0)
+  const [activeCommercial, setActiveCommercial] = useState(0)
 
   return (
     <section className="py-24 sm:py-32 bg-[#f8f9fb] relative overflow-hidden border-t border-[#e0e5eb]">
@@ -82,20 +89,43 @@ export function Segments() {
             </div>
           </div>
 
-          {/* Comercial / Clínicas — foto da fachada da Clínica MedPrime,
-              uso autorizado pelo proprietário. */}
-          <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
-            <Image
-              src="/segmentos/fachada-clinica-comercial-01.jpg"
-              alt="Fachada da Clínica MedPrime — projeto comercial/clínica"
-              fill
-              className="object-cover transition-all duration-500"
-              sizes="(max-width: 768px) 100vw, 33vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
-            <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
-              Comercial / Clínicas
-            </span>
+          {/* Comercial / Clínicas - com mini galeria (Clínica MedPrime) */}
+          <div className="flex flex-col gap-3">
+            <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
+              <Image
+                src={commercialPhotos[activeCommercial] || "/placeholder.svg"}
+                alt="Clínica MedPrime — projeto comercial/clínica"
+                fill
+                className="object-cover transition-all duration-500"
+                sizes="(max-width: 768px) 100vw, 33vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
+              <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
+                Comercial / Clínicas
+              </span>
+            </div>
+            <div className="grid grid-cols-2 gap-1.5">
+              {commercialPhotos.map((photo, i) => (
+                <button
+                  key={photo}
+                  onClick={() => setActiveCommercial(i)}
+                  className={`relative aspect-square rounded-md overflow-hidden border transition-all ${
+                    activeCommercial === i
+                      ? "border-[#066bef] ring-2 ring-[#066bef]/30"
+                      : "border-[#e0e5eb] opacity-70 hover:opacity-100"
+                  }`}
+                  aria-label={`Ver foto comercial ${i + 1}`}
+                >
+                  <Image
+                    src={photo || "/placeholder.svg"}
+                    alt={`Clínica MedPrime ${i + 1}`}
+                    fill
+                    className="object-cover"
+                    sizes="80px"
+                  />
+                </button>
+              ))}
+            </div>
           </div>
 
           {/* Industrial - com mini galeria */}
