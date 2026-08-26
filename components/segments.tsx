@@ -89,13 +89,16 @@ export function Segments() {
             </div>
           </div>
 
-          {/* Comercial / Clínicas - com mini galeria (Clínica MedPrime) */}
+          {/* Comercial / Clínicas - com mini galeria (Clínica MedPrime).
+              Só 2 fotos: mostra como miniatura apenas a que NÃO está em destaque,
+              pra não parecer foto duplicada. */}
           <div className="flex flex-col gap-3">
             <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
               <Image
                 src={commercialPhotos[activeCommercial] || "/placeholder.svg"}
                 alt="Clínica MedPrime — projeto comercial/clínica"
                 fill
+                quality={90}
                 className="object-cover transition-all duration-500"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
@@ -104,27 +107,26 @@ export function Segments() {
                 Comercial / Clínicas
               </span>
             </div>
-            <div className="grid grid-cols-2 gap-1.5">
-              {commercialPhotos.map((photo, i) => (
-                <button
-                  key={photo}
-                  onClick={() => setActiveCommercial(i)}
-                  className={`relative aspect-square rounded-md overflow-hidden border transition-all ${
-                    activeCommercial === i
-                      ? "border-[#066bef] ring-2 ring-[#066bef]/30"
-                      : "border-[#e0e5eb] opacity-70 hover:opacity-100"
-                  }`}
-                  aria-label={`Ver foto comercial ${i + 1}`}
-                >
-                  <Image
-                    src={photo || "/placeholder.svg"}
-                    alt={`Clínica MedPrime ${i + 1}`}
-                    fill
-                    className="object-cover"
-                    sizes="80px"
-                  />
-                </button>
-              ))}
+            <div className="grid grid-cols-3 gap-1.5">
+              {commercialPhotos.map((photo, i) =>
+                i === activeCommercial ? null : (
+                  <button
+                    key={photo}
+                    onClick={() => setActiveCommercial(i)}
+                    className="relative aspect-square rounded-md overflow-hidden border border-[#e0e5eb] opacity-70 hover:opacity-100 transition-all"
+                    aria-label={`Ver foto comercial ${i + 1}`}
+                  >
+                    <Image
+                      src={photo || "/placeholder.svg"}
+                      alt={`Clínica MedPrime ${i + 1}`}
+                      fill
+                      quality={90}
+                      className="object-cover"
+                      sizes="80px"
+                    />
+                  </button>
+                ),
+              )}
             </div>
           </div>
 
