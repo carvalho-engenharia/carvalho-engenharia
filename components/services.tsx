@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import {
   ClipboardList,
   Briefcase,
@@ -17,25 +18,35 @@ import {
   PencilRuler,
 } from "lucide-react"
 
-const services = [
+type ServiceCard = {
+  title: string
+  description: string
+  icon: typeof ClipboardList
+  slug?: string
+}
+
+const services: ServiceCard[] = [
   // Volume confirmado — alto (5.000 buscas/mês, empate no topo)
   {
     title: "Regularização de Imóveis",
     description:
       "Regularização completa de imóveis irregulares, imóveis sem escritura, habite-se ou com construção não averbada.",
     icon: ClipboardList,
+    slug: "regularizacao-de-imoveis-goiania",
   },
   {
     title: "Despachante Imobiliário",
     description:
       "Assessoria completa em cartórios e prefeituras. Cuidamos de toda a tramitação documental para você não perder tempo com burocracia.",
     icon: Briefcase,
+    slug: "despachante-imobiliario-goiania",
   },
   {
     title: "INSS de Obra",
     description:
       "Regularização da obra junto ao INSS/Receita Federal com abertura e baixa de CNO, emissão de CND, evitando pendências para habite-se e financiamento.",
     icon: Landmark,
+    slug: "inss-de-obra-goiania",
   },
   {
     title: "Avaliador de Imóvel",
@@ -54,18 +65,21 @@ const services = [
     description:
       "Averbação de construção junto ao Cartório de Registro de Imóveis, atualizando a área construída e o habite-se na matrícula. Essencial para vender, financiar ou regularizar o patrimônio.",
     icon: FileCheck2,
+    slug: "averbacao-de-imovel-goiania",
   },
   {
     title: "Projeto Estrutural",
     description:
       "Elaboração de projetos estruturais seguros e otimizados em concreto armado, metálico ou misto, com cálculo estrutural completo.",
     icon: Wrench,
+    slug: "projeto-estrutural-goiania",
   },
   {
     title: "Projeto Arquitetônico",
     description:
       "Criação de projetos arquitetônicos funcionais, modernos e personalizados para residências e comércios.",
     icon: PencilRuler,
+    slug: "projeto-arquitetonico-goiania",
   },
 
   // Volume confirmado — médio (500 buscas/mês)
@@ -142,19 +156,28 @@ export function Services() {
                 </div>
 
                 <h3 className="text-xl font-bold text-[#066bef] mb-3">
-                  {service.title}
+                  {service.slug ? <Link href={`/${service.slug}`}>{service.title}</Link> : service.title}
                 </h3>
 
                 <p className="text-sm leading-relaxed text-[#5a687c] group-hover:text-[#3d4c5f] transition-colors mb-6">
                   {service.description}
                 </p>
 
-                <a
-                  href="#contato"
-                  className="inline-flex items-center gap-1 text-sm text-[#066bef] hover:underline"
-                >
-                  Solicitar orçamento →
-                </a>
+                {service.slug ? (
+                  <Link
+                    href={`/${service.slug}`}
+                    className="inline-flex items-center gap-1 text-sm text-[#066bef] hover:underline"
+                  >
+                    Saiba mais →
+                  </Link>
+                ) : (
+                  <a
+                    href="#contato"
+                    className="inline-flex items-center gap-1 text-sm text-[#066bef] hover:underline"
+                  >
+                    Solicitar orçamento →
+                  </a>
+                )}
               </div>
             </div>
           ))}

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 import fs from "fs"
 import path from "path"
+import { services } from "@/lib/services-data"
 
 const BASE_URL = "https://www.carvalho-engenharia.com"
 
@@ -65,5 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticRoutes, ...blogRoutes]
+  const serviceRoutes: MetadataRoute.Sitemap = services.map((service) => ({
+    url: `${BASE_URL}/${service.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.9,
+  }))
+
+  return [...staticRoutes, ...serviceRoutes, ...blogRoutes]
 }
