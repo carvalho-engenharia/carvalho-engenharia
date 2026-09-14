@@ -52,7 +52,10 @@ export function Navbar() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#066bef] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#066bef]" />
               </span>
-              CREA 1017786453D-GO · CNPJ 69.116.621/0001-31
+              CREA 1017786453D-GO
+            </span>
+            <span className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#066bef]/25 bg-[#ecf4fe] text-[#0559c7] font-semibold tracking-wide shadow-[0_0_12px_rgba(6,107,239,0.25)]">
+              CNPJ 69.116.621/0001-31
             </span>
           </div>
         </div>
@@ -131,7 +134,10 @@ export function Navbar() {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#066bef] opacity-75" />
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#066bef]" />
                     </span>
-                    CREA 1017786453D-GO · CNPJ 69.116.621/0001-31
+                    CREA 1017786453D-GO
+                  </span>
+                  <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#066bef]/25 bg-[#ecf4fe] text-[#0559c7] font-semibold text-xs self-start shadow-[0_0_10px_rgba(6,107,239,0.2)]">
+                    CNPJ 69.116.621/0001-31
                   </span>
                 </div>
 
