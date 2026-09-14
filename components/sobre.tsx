@@ -17,9 +17,10 @@ const competencias = [
 ]
 
 const credenciais = [
-  { label: "Engenheiro Civil", sub: "CREA 1017786453D-GO · CNPJ 69.116.621/0001-31" },
+  { label: "Engenheiro Civil", sub: "CREA 1017786453D-GO" },
   { label: "Pós-graduado em Regularização Imobiliária", sub: "UFG" },
   { label: "Mais de 10 anos no mercado", sub: "Goiânia e região" },
+  { label: "Carvalho Engenharia", sub: "CNPJ 69.116.621/0001-31" },
 ]
 
 export function Sobre() {
