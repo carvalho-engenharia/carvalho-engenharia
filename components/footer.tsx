@@ -102,7 +102,6 @@ export function Footer() {
             >
               Política de Privacidade
             </Link>
-            <p className="text-xs text-white/50">CNPJ: 69.116.621/0001-31</p>
           </div>
         </div>
       </div>
