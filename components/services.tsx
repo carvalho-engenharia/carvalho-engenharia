@@ -53,12 +53,14 @@ const services: ServiceCard[] = [
     description:
       "Emissão de Laudo de Avaliação de Imóveis assinado por engenheiro civil habilitado, para financiamento, inventário ou partilha.",
     icon: Calculator,
+    slug: "avaliador-de-imovel-goiania",
   },
   {
     title: "Gerenciamento de Projetos",
     description:
       "Elaboração e gestão de projetos de engenharia civil, garantindo compatibilização entre disciplinas e cumprimento de prazos.",
     icon: ClipboardCheck,
+    slug: "gerenciamento-de-projetos-goiania",
   },
   {
     title: "Averbação de Imóvel",
@@ -88,18 +90,21 @@ const services: ServiceCard[] = [
     description:
       "Acompanhamento técnico especializado, planejamento, controle de custos e fiscalização da execução, do início ao fim da obra.",
     icon: HardHat,
+    slug: "gerenciamento-de-obra-goiania",
   },
   {
     title: "Consultoria em Engenharia Civil",
     description:
       "Consultoria técnica especializada para resolução de patologias construtivas, viabilidade de empreendimentos e pareceres técnicos.",
     icon: MessageCircle,
+    slug: "consultoria-engenharia-civil-goiania",
   },
   {
     title: "Emissão de ART",
     description:
       "Emissão ágil de ART (Anotação de Responsabilidade Técnica) para projetos, execuções e reformas.",
     icon: Stamp,
+    slug: "emissao-de-art-goiania",
   },
 
   // Volume confirmado — baixo (50 buscas/mês)
@@ -108,18 +113,21 @@ const services: ServiceCard[] = [
     description:
       "Inspeção predial e vistoria técnica detalhada para recebimento de chaves, verificação de fachadas e laudos de patologias.",
     icon: Search,
+    slug: "vistoria-tecnica-de-imovel-goiania",
   },
   {
     title: "Alvará de Construção e Habite-se",
     description:
       "Emissão de licenças municipais para início de obras (alvará) e obtenção da certidão de conclusão (habite-se), conforme a LC nº 364/2023.",
     icon: FileText,
+    slug: "alvara-de-construcao-e-habite-se-goiania",
   },
   {
     title: "Desmembramento e Remembramento",
     description:
       "Serviços técnicos de topografia e aprovação urbana para divisão ou unificação de terrenos.",
     icon: Layers,
+    slug: "desmembramento-remembramento-goiania",
   },
 ]
 
