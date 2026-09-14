@@ -4,10 +4,11 @@ export function SchemaOrg() {
     "@type": "ProfessionalService",
     name: "Carvalho Engenharia",
     description:
-      "Especialistas em Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia e Aparecida de Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO.",
+      "Especialistas em Alvará de Construção, Habite-se, Regularização de Obras e Projetos de Engenharia em Goiânia e Aparecida de Goiânia. Mais de 10 anos de experiência. CREA 1017786453D-GO · CNPJ 69.116.621/0001-31.",
     url: "https://www.carvalho-engenharia.com",
     telephone: "+55-62-99806-2169",
     email: "contato@carvalho-engenharia.com",
+    taxID: "69.116.621/0001-31",
     openingHours: "Mo-Fr 08:00-18:00",
     address: {
       "@type": "PostalAddress",
