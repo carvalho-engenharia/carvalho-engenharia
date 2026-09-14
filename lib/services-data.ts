@@ -37,7 +37,7 @@ export const services: ServiceData[] = [
     slug: "regularizacao-de-imoveis-goiania",
     icon: "regularizacao",
     badge: "Regularização de Imóveis",
-    metaTitle: "Regularização de Imóveis em Goiânia | Carvalho Engenharia",
+    metaTitle: "Regularização de Imóveis em Goiânia",
     metaDescription:
       "Regularização de imóveis irregulares em Goiânia: sem alvará, sem Habite-se ou sem averbação. Engenheiro responsável técnico cuida de todo o processo junto à Prefeitura e ao Cartório.",
     h1: "Regularização de Imóveis em Goiânia",
@@ -115,7 +115,7 @@ export const services: ServiceData[] = [
     slug: "despachante-imobiliario-goiania",
     icon: "despachante",
     badge: "Despachante Imobiliário",
-    metaTitle: "Despachante Imobiliário em Goiânia | Carvalho Engenharia",
+    metaTitle: "Despachante Imobiliário em Goiânia",
     metaDescription:
       "Despachante imobiliário e responsável técnico em um só serviço: tramitação de alvarás, Habite-se, averbação e certidões em cartórios e prefeituras de Goiânia.",
     h1: "Despachante Imobiliário em Goiânia",
@@ -185,7 +185,7 @@ export const services: ServiceData[] = [
     slug: "averbacao-de-imovel-goiania",
     icon: "averbacao",
     badge: "Averbação de Imóvel",
-    metaTitle: "Averbação de Imóvel em Goiânia | Carvalho Engenharia",
+    metaTitle: "Averbação de Imóvel em Goiânia",
     metaDescription:
       "Averbação de construção na matrícula do imóvel em Goiânia. Entenda a diferença entre alvará, Habite-se e averbação, e o que fazer para desbloquear financiamento e venda.",
     h1: "Averbação de Imóvel em Goiânia",
@@ -253,7 +253,7 @@ export const services: ServiceData[] = [
     slug: "inss-de-obra-goiania",
     icon: "inss",
     badge: "INSS de Obra",
-    metaTitle: "INSS de Obra em Goiânia: CNO, SERO e CND | Carvalho Engenharia",
+    metaTitle: "INSS de Obra em Goiânia: CNO, SERO e CND",
     metaDescription:
       "Regularização do INSS de obra em Goiânia: inscrição no CNO, aferição no SERO e emissão da CND, sem multa da Receita Federal. Responsabilidade técnica registrada no CREA.",
     h1: "INSS de Obra em Goiânia (CNO, SERO e CND)",
@@ -319,7 +319,7 @@ export const services: ServiceData[] = [
     slug: "projeto-arquitetonico-goiania",
     icon: "arquitetonico",
     badge: "Projeto Arquitetônico",
-    metaTitle: "Projeto Arquitetônico em Goiânia | Carvalho Engenharia",
+    metaTitle: "Projeto Arquitetônico em Goiânia",
     metaDescription:
       "Projetos arquitetônicos residenciais e comerciais em Goiânia, prontos para aprovação na Prefeitura. Planta de situação, cortes, fachadas, quadro de áreas e ART inclusos.",
     h1: "Projeto Arquitetônico em Goiânia",
@@ -378,7 +378,7 @@ export const services: ServiceData[] = [
     slug: "projeto-estrutural-goiania",
     icon: "estrutural",
     badge: "Projeto Estrutural",
-    metaTitle: "Projeto Estrutural em Goiânia | Carvalho Engenharia",
+    metaTitle: "Projeto Estrutural em Goiânia",
     metaDescription:
       "Projetos estruturais em concreto armado, metálico ou misto, com cálculo estrutural completo e ART registrada no CREA. Engenheiro estrutural em Goiânia.",
     h1: "Projeto Estrutural em Goiânia",
