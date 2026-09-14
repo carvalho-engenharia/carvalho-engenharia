@@ -52,7 +52,7 @@ export function Navbar() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#066bef] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#066bef]" />
               </span>
-              CREA 1017786453D-GO
+              CREA 1017786453D-GO · CNPJ 69.116.621/0001-31
             </span>
           </div>
         </div>
@@ -131,7 +131,7 @@ export function Navbar() {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#066bef] opacity-75" />
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-[#066bef]" />
                     </span>
-                    CREA 1017786453D-GO
+                    CREA 1017786453D-GO · CNPJ 69.116.621/0001-31
                   </span>
                 </div>
 
