@@ -17,7 +17,7 @@ const competencias = [
 ]
 
 const credenciais = [
-  { label: "Engenheiro Civil", sub: "CREA 1017786453D-GO" },
+  { label: "Engenheiro Civil", sub: "CREA 1017786453D-GO · CNPJ 69.116.621/0001-31" },
   { label: "Pós-graduado em Regularização Imobiliária", sub: "UFG" },
   { label: "Mais de 10 anos no mercado", sub: "Goiânia e região" },
 ]
@@ -90,8 +90,9 @@ export function Sobre() {
               hidrossanitários. Cada caso é tratado com dedicação e compromisso até a entrega final.
             </p>
             <p>
-              Com registro ativo no CREA (1017786453D-GO), ofereço responsabilidade técnica em todos os projetos e
-              acompanho pessoalmente cada processo junto às prefeituras de Goiânia, Aparecida de Goiânia, Anápolis e região.
+              Com registro ativo no CREA (1017786453D-GO) e CNPJ 69.116.621/0001-31, ofereço responsabilidade
+              técnica em todos os projetos e acompanho pessoalmente cada processo junto às prefeituras de Goiânia,
+              Aparecida de Goiânia, Anápolis e região.
             </p>
           </div>
 
