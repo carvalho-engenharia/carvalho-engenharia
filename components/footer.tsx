@@ -86,7 +86,7 @@ export function Footer() {
             <p className="text-xs text-white/50 mt-1">
               Resp. Técnico: Engº Civil Caio Maracaípe
             </p>
-            <p className="text-xs text-white/50">CREA 1017786453D-GO</p>
+            <p className="text-xs text-white/50">CREA 1017786453D-GO · CNPJ 69.116.621/0001-31</p>
           </div>
         </div>
 
