@@ -24,6 +24,7 @@ import {
 const problems = [
   {
     icon: Hammer,
+    shortLabel: "Sem alvará",
     question: "Construiu sem alvará de construção?",
     description:
       "Obra erguida sem licença pode ser embargada e gera multa. Regularizamos junto à Prefeitura de Goiânia e Aparecida de Goiânia, obtendo o alvará retroativo e garantindo a legalidade total da edificação.",
@@ -31,6 +32,7 @@ const problems = [
   },
   {
     icon: Building2,
+    shortLabel: "Reforma sem projeto",
     question: "Fez ampliação ou reforma sem projeto aprovado?",
     description:
       "Ampliações e reformas precisam de aprovação prévia. Elaboramos o projeto de regularização, aprovamos na prefeitura e providenciamos o aditivo ao alvará original para que a obra fique 100% legalizada.",
@@ -38,6 +40,7 @@ const problems = [
   },
   {
     icon: Store,
+    shortLabel: "Sem habite-se",
     question: "Estabelecimento sem Carta de Ocupação ou Habite-se?",
     description:
       "Sem carta de ocupação ou habite-se, sua atividade comercial fica exposta a multas e interdições. Obtemos a documentação junto à prefeitura e garantimos a continuidade da operação sem riscos.",
@@ -45,6 +48,7 @@ const problems = [
   },
   {
     icon: Banknote,
+    shortLabel: "Venda ou financiamento",
     question: "Quer vender ou financiar o imóvel mas há pendências?",
     description:
       "Bancos exigem documentação regularizada para financiamento. Resolvemos averbação de construção, habite-se e escritura para que a venda ou refinanciamento ocorra sem entraves junto à Caixa e demais instituições.",
@@ -52,6 +56,7 @@ const problems = [
   },
   {
     icon: CalendarClock,
+    shortLabel: "Construção antiga",
     question: "Sua construção é antiga e nunca teve alvará?",
     description:
       "Imóveis construídos há mais tempo podem ser regularizados pelo Alvará de Aceite, um processo mais simples. A data de corte varia entre Goiânia e Aparecida de Goiânia — veja qual se aplica ao seu caso.",
@@ -60,6 +65,7 @@ const problems = [
   },
   {
     icon: FileCheck2,
+    shortLabel: "Em desacordo com projeto",
     question: "Sua construção é recente e está em desacordo com o projeto?",
     description:
       "Edificações mais novas, sem alvará ou em desacordo com o Plano Diretor, são regularizadas pelo Alvará de Regularização. Cuidamos do levantamento técnico, ART e todo o processo.",
@@ -68,6 +74,7 @@ const problems = [
   },
   {
     icon: Calculator,
+    shortLabel: "Laudo de avaliação",
     question: "Precisa de um Laudo de Avaliação de Imóvel?",
     description:
       "Bancos, inventários e partilhas exigem laudo técnico de avaliação. Emitimos o Laudo de Avaliação de Imóvel assinado por engenheiro civil habilitado (CREA), com validade bancária e jurídica.",
@@ -75,6 +82,7 @@ const problems = [
   },
   {
     icon: Briefcase,
+    shortLabel: "Cartório e prefeitura",
     question: "Cansado de burocracia em cartório e prefeitura?",
     description:
       "Assessoria completa em cartórios e prefeituras, do protocolo ao acompanhamento até a conclusão. Cuidamos de toda a tramitação documental para você não perder tempo com filas e exigências.",
@@ -82,6 +90,7 @@ const problems = [
   },
   {
     icon: FileDiff,
+    shortLabel: "Escritura divergente",
     question: "Imóvel não confere com a escritura ou matrícula?",
     description:
       "Divergências entre o imóvel físico e os documentos geram problemas em inventários, heranças e vendas. Fazemos a retificação de área, desmembramento ou remembramento para regularizar a documentação.",
@@ -89,6 +98,7 @@ const problems = [
   },
   {
     icon: FileWarning,
+    shortLabel: "INSS de obra",
     question: "Precisa do INSS de obra?",
     description:
       "A regularização fiscal de obras exige cálculo e recolhimento do INSS junto à Receita Federal. Emitimos CNO, CND e SERO, evitando pendências para habite-se e financiamento.",
@@ -256,6 +266,8 @@ const modalContent = {
 export function PainPoints() {
   const [openModal, setOpenModal] = useState<keyof typeof modalContent | null>(null)
   const [activeCity, setActiveCity] = useState<CityKey>("goiania")
+  const [activeProblem, setActiveProblem] = useState(0)
+  const current = problems[activeProblem]
 
   return (
     <section
@@ -288,54 +300,53 @@ export function PainPoints() {
           </p>
         </div>
 
-        {/* Problems grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
-          {problems.map((problem, index) => {
-            const isClickable = Boolean((problem as any).modalKey)
-            const Wrapper = isClickable ? "button" : "div"
-
-            return (
-              <Wrapper
+        {/* Tabs compactas — situações comuns */}
+        <div className="mb-16">
+          <div className="flex gap-2 overflow-x-auto pb-3 mb-6 -mx-4 px-4 sm:mx-0 sm:px-0 sm:flex-wrap sm:justify-center scrollbar-none">
+            {problems.map((problem, index) => (
+              <button
                 key={index}
-                type={isClickable ? "button" : undefined}
-                onClick={
-                  isClickable
-                    ? () => {
-                        setActiveCity("goiania")
-                        setOpenModal((problem as any).modalKey as keyof typeof modalContent)
-                      }
-                    : undefined
-                }
-                className={`group relative p-6 rounded-2xl bg-[#f9fafb] border border-[#e0e5eb] hover:border-[#066bef]/40 hover:shadow-[0_0_30px_rgba(6,107,239,0.07)] transition-all duration-500 flex flex-col text-left ${
-                  isClickable ? "cursor-pointer" : ""
+                type="button"
+                onClick={() => setActiveProblem(index)}
+                className={`flex items-center gap-2 whitespace-nowrap rounded-full border px-4 py-2 text-xs font-semibold transition-all duration-300 shrink-0 ${
+                  activeProblem === index
+                    ? "border-[#066bef] bg-[#066bef] text-white"
+                    : "border-[#e0e5eb] bg-[#f9fafb] text-[#5a687c] hover:border-[#066bef]/40 hover:text-[#1d283a]"
                 }`}
               >
-                {/* Glow on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-[#066bef]/4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                <problem.icon className="w-3.5 h-3.5" />
+                {problem.shortLabel}
+              </button>
+            ))}
+          </div>
 
-                <div className="relative z-10 flex flex-col flex-1">
-                  {/* Icon */}
-                  <div className="w-10 h-10 rounded-lg bg-[#edeff3] border border-[#e0e5eb] flex items-center justify-center mb-4 group-hover:border-[#066bef]/30 group-hover:bg-[#066bef]/10 transition-all duration-500">
-                    <problem.icon className="w-5 h-5 text-[#066bef]" />
-                  </div>
+          {/* Painel de detalhe da situação ativa */}
+          <div className="relative rounded-2xl bg-[#f9fafb] border border-[#e0e5eb] p-8 sm:p-10">
+            <div className="flex flex-col sm:flex-row sm:items-start gap-5">
+              <div className="w-12 h-12 shrink-0 rounded-lg bg-[#edeff3] border border-[#e0e5eb] flex items-center justify-center">
+                <current.icon className="w-6 h-6 text-[#066bef]" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-[#1d283a] mb-3 leading-snug">
+                  {current.question}
+                </h3>
+                <p className="text-sm text-[#5a687c] leading-relaxed">{current.description}</p>
 
-                  {/* Question — SEO: H3 com pergunta real */}
-                  <h3 className="text-sm font-semibold text-[#1d283a] mb-3 leading-snug group-hover:text-[#066bef] transition-colors duration-300">
-                    {problem.question}
-                  </h3>
-
-                  {/* Answer */}
-                  <p className="text-xs text-[#5a687c] leading-relaxed group-hover:text-[#5a687c] transition-colors duration-300 flex-1">
-                    {problem.description}
-                  </p>
-
-                  {isClickable && (
-                    <span className="mt-3 text-xs font-semibold text-[#066bef]">Ver detalhes completos →</span>
-                  )}
-                </div>
-              </Wrapper>
-            )
-          })}
+                {Boolean((current as any).modalKey) && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActiveCity("goiania")
+                      setOpenModal((current as any).modalKey as keyof typeof modalContent)
+                    }}
+                    className="mt-4 text-xs font-semibold text-[#066bef] hover:underline"
+                  >
+                    Ver detalhes completos →
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* CTA — Diagnóstico gratuito */}

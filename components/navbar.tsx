@@ -19,10 +19,11 @@ export function Navbar() {
 
   const navLinks = [
     { href: "#como-funciona", label: "Como Funciona" },
-    { href: "#servicos", label: "Serviços" },
+    { href: "/servicos", label: "Serviços" },
+    { href: "/portfolio", label: "Portfólio" },
+    { href: "/documentacao-necessaria", label: "Documentos" },
     { href: "#vantagens", label: "Vantagens" },
-    { href: "#sobre", label: "Quem Somos" },
-    { href: "#depoimentos", label: "Depoimentos" },
+    { href: "/sobre", label: "Quem Somos" },
     { href: "/blog", label: "Blog" },
     { href: "#contato", label: "Contato" },
   ]
@@ -83,7 +84,7 @@ export function Navbar() {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden lg:flex items-center gap-5">
               {navLinks.map((link) => (
                 <a
                   key={link.href}

@@ -4,8 +4,10 @@ import { Instagram, Mail } from "lucide-react"
 import Link from "next/link"
 
 const quickLinks = [
-  { href: "#servicos", label: "Serviços" },
-  { href: "#sobre", label: "Empresa" },
+  { href: "/servicos", label: "Serviços" },
+  { href: "/portfolio", label: "Portfólio" },
+  { href: "/documentacao-necessaria", label: "Documentação" },
+  { href: "/sobre", label: "Empresa" },
   { href: "#vantagens", label: "Vantagens" },
   { href: "#contato", label: "Contato" },
 ]
@@ -54,12 +56,12 @@ export function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm text-white/60 hover:text-[#5b9dff] transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
