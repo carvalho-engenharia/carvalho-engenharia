@@ -339,6 +339,12 @@ export function BlueprintBackground() {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full"
+      style={{
+        maskImage:
+          "linear-gradient(to right, black 0%, black 12%, transparent 32%, transparent 68%, black 88%, black 100%)",
+        WebkitMaskImage:
+          "linear-gradient(to right, black 0%, black 12%, transparent 32%, transparent 68%, black 88%, black 100%)",
+      }}
       aria-hidden="true"
     />
   )

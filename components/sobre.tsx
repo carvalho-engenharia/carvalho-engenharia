@@ -4,7 +4,7 @@ import { HardHat, Award, Users, FileCheck } from "lucide-react"
 
 const stats = [
   { value: "10+", label: "anos de experiência" },
-  { value: "800+", label: "obras regularizadas" },
+  { value: "900+", label: "obras regularizadas" },
   { value: "Goiânia", label: "Aparecida, Anápolis e região" },
   { value: "CREA", label: "responsabilidade técnica" },
 ]

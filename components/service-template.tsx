@@ -48,7 +48,7 @@ const iconMap = {
 const WHATSAPP_NUMBER = "5562998062169"
 
 function waLink(message: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+  return `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(message)}`
 }
 
 export function ServiceTemplate({ data }: { data: ServiceData }) {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { ClipboardList, FileCheck2, Ruler, PencilRuler, CheckCircle2, ShieldCheck } from "lucide-react"
+import { ClipboardList, FileCheck2, Ruler, PencilRuler, CheckCircle2, ShieldCheck, Landmark } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import dynamic from "next/dynamic"
 
@@ -71,7 +71,7 @@ const CYCLING_RESOLUTIONS = [
 
 const HERO_STATS = [
   { value: "10+", label: "anos de experiência" },
-  { value: "800+", label: "obras regularizadas" },
+  { value: "900+", label: "obras regularizadas" },
   { value: "1 dia útil", label: "início após contrato" },
   { value: "CREA", label: "responsabilidade técnica" },
 ]
@@ -158,16 +158,31 @@ export function Hero() {
           </span>
         </div>
 
-        {/* Título dinâmico */}
-        <h1 className="text-5xl md:text-7xl font-bold text-[#1d283a] mb-6 tracking-tight leading-[1.15]">
+        {/* H1 estático — fixo para SEO, independente da rotação de texto abaixo */}
+        <h1 className="text-5xl md:text-7xl font-bold text-[#1d283a] mb-5 tracking-tight leading-[1.15] text-balance">
+          Imóvel Irregular em Goiânia?{" "}
+          <span className="text-[#066bef]">Nós Resolvemos.</span>
+        </h1>
+
+        {/* Faixa de prova social — credibilidade imediata, logo abaixo do H1 */}
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#066bef]/30 bg-[#066bef]/5 backdrop-blur-md">
+            <Landmark className="w-4 h-4 text-[#066bef] flex-shrink-0" />
+            <span className="text-sm font-semibold text-[#1d283a]">
+              Mais de 900 imóveis regularizados e aprovados na Prefeitura de Goiânia.
+            </span>
+          </div>
+        </div>
+
+        {/* Frase rotativa — mantém a animação existente, agora como apoio (não é mais o H1) */}
+        <p className="text-2xl md:text-3xl font-bold text-[#1d283a] mb-6 tracking-tight leading-snug">
           {CYCLING_PREFIXES[phraseIndex]}{" "}
-          <br />
           <span className="text-[#066bef]">{displayed}</span>
           <span
-            className="inline-block w-[4px] h-[0.85em] bg-[#066bef] ml-1 align-middle animate-[blink_1s_steps(1)_infinite]"
+            className="inline-block w-[3px] h-[0.8em] bg-[#066bef] ml-1 align-middle animate-[blink_1s_steps(1)_infinite]"
             aria-hidden="true"
           />
-        </h1>
+        </p>
 
         {/* Resolução rápida */}
         <p
@@ -181,9 +196,9 @@ export function Hero() {
         {/* Subtítulo fixo */}
         <div className="min-h-[3.5rem] md:min-h-[2rem] flex items-center justify-center mb-10">
           <p className="text-[#5a687c] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Regularização de Imóveis, Despachante Imobiliário, INSS de Obra e
-            Avaliação de Imóveis em{" "}
-            <span className="text-[#1d283a] font-semibold">Goiânia, Aparecida de Goiânia, Anápolis e região</span>.
+            Sou Caio Maracaípe, Engenheiro Civil. Da burocracia na Prefeitura à
+            averbação no Cartório, a Carvalho Engenharia regulariza seu patrimônio
+            com rapidez e segurança.
           </p>
         </div>
 
@@ -192,7 +207,7 @@ export function Hero() {
             asChild
             className="bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-colors shadow-[0_4px_14px_rgba(6,107,239,0.18)] gap-2"
           >
-            <a href="https://wa.me/5562998062169" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5">
+            <a href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5">
               Solicitar Orçamento Grátis →
             </a>
           </Button>

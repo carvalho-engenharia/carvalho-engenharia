@@ -90,7 +90,7 @@ export default function BlogPage() {
             Goiânia. Fale com a gente e receba uma avaliação gratuita.
           </p>
           <a
-            href="https://wa.me/5562999999999?text=Olá!%20Vim%20pelo%20blog%20e%20quero%20uma%20avaliação%20gratuita"
+            href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá!%20Vim%20pelo%20blog%20e%20quero%20uma%20avaliação%20gratuita"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-3 rounded-full transition-colors"

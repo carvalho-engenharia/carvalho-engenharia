@@ -102,7 +102,7 @@ export function Navbar() {
                 asChild
                 className="bg-[#066bef] text-white hover:bg-[#0559c7] font-semibold shadow-[0_4px_20px_rgba(6,107,239,0.35)] hover:shadow-[0_6px_28px_rgba(6,107,239,0.45)] transition-all duration-300"
               >
-                <a href="https://wa.me/5562998062169" target="_blank" rel="noopener noreferrer">
+                <a href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel" target="_blank" rel="noopener noreferrer">
                   Solicitar Orçamento
                 </a>
               </Button>
@@ -157,7 +157,7 @@ export function Navbar() {
                   className="bg-[#066bef] text-white hover:bg-[#0559c7] font-medium mt-2 shadow-[0_4px_20px_rgba(6,107,239,0.35)]"
                 >
                   <a
-                    href="https://wa.me/5562998062169"
+                    href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}

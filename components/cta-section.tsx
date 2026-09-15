@@ -61,7 +61,7 @@ export function CTASection() {
               size="lg"
               className="bg-[#0559c7] text-white hover:bg-[#0559c7]/90 font-semibold px-10 py-7 text-lg shadow-[0_8px_24px_rgba(6,107,239,0.25)] hover:shadow-[0_10px_30px_rgba(6,107,239,0.35)] transition-all duration-300"
             >
-              <a href="https://wa.me/5562998062169" target="_blank" rel="noopener noreferrer">
+              <a href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel" target="_blank" rel="noopener noreferrer">
                 <img src="/WhatsApp.svg" alt="" aria-hidden="true" className="mr-2 h-5 w-5 flex-shrink-0" />
                 Chamar no WhatsApp
               </a>

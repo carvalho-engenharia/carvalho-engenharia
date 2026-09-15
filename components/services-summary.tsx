@@ -1,36 +1,43 @@
 "use client"
 
 import Link from "next/link"
-import { ClipboardList, Briefcase, Calculator, PencilRuler, ArrowRight } from "lucide-react"
+import { ClipboardList, Briefcase, Landmark, FileCheck2, PencilRuler, ArrowRight } from "lucide-react"
 
-const pillars = [
+const services = [
   {
-    slug: "regularizacao-e-habite-se",
+    slug: "regularizacao-de-imoveis-goiania",
     icon: ClipboardList,
-    title: "Regularização e Habite-se",
+    title: "Regularização de Imóveis",
     description:
-      "Regularização de imóveis irregulares, alvará de construção, habite-se e desmembramento/remembramento junto à Prefeitura.",
+      "Regularização completa de imóveis irregulares, sem escritura, habite-se ou construção não averbada.",
   },
   {
-    slug: "despachante-e-cartorio",
+    slug: "despachante-imobiliario-goiania",
     icon: Briefcase,
-    title: "Despachante e Cartório",
+    title: "Despachante Imobiliário",
     description:
-      "Assessoria completa em cartórios e prefeituras: despachante imobiliário, averbação de construção e INSS de obra.",
+      "Assessoria completa em cartórios e prefeituras. Cuidamos de toda a tramitação documental para você não perder tempo com burocracia.",
   },
   {
-    slug: "laudos-e-avaliacoes",
-    icon: Calculator,
-    title: "Laudos e Avaliações",
+    slug: "inss-de-obra-goiania",
+    icon: Landmark,
+    title: "INSS de Obra",
     description:
-      "Laudo de avaliação de imóvel, vistoria técnica e consultoria em engenharia civil para decisões seguras.",
+      "Regularização da obra junto ao INSS/Receita Federal, com abertura e baixa de CNO e emissão de CND, evitando pendências para habite-se e financiamento.",
   },
   {
-    slug: "projetos-e-art",
+    slug: "averbacao-de-imovel-goiania",
+    icon: FileCheck2,
+    title: "Averbação de Imóvel",
+    description:
+      "Averbação de construção junto ao Cartório de Registro de Imóveis, atualizando a área construída e o habite-se na matrícula. Essencial para vender, financiar ou regularizar o patrimônio.",
+  },
+  {
+    slug: "projeto-arquitetonico-goiania",
     icon: PencilRuler,
-    title: "Projetos e ART",
+    title: "Projeto Arquitetônico",
     description:
-      "Gerenciamento de projetos e de obras, projetos estruturais e arquitetônicos, e emissão de ART.",
+      "Criação de projeto arquitetônico funcional, moderno e personalizado para residências e comércios.",
   },
 ]
 
@@ -53,27 +60,27 @@ export function ServicesSummary() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pillars.map((pillar) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service) => (
             <div
-              key={pillar.slug}
+              key={service.slug}
               className="group relative p-8 rounded-2xl bg-[#f9fafb] border border-[#e0e5eb] hover:border-[#066bef]/50 transition-all duration-500 flex flex-col"
             >
               <div className="absolute inset-0 rounded-2xl bg-[#066bef]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10 flex flex-col flex-1">
                 <div className="w-12 h-12 rounded-lg bg-[#edeff3] border border-[#e0e5eb] flex items-center justify-center mb-6 group-hover:scale-110 group-hover:border-[#066bef]/30 transition-all duration-500">
-                  <pillar.icon className="w-6 h-6 text-[#066bef]" />
+                  <service.icon className="w-6 h-6 text-[#066bef]" />
                 </div>
 
-                <h3 className="text-xl font-bold text-[#1d283a] mb-3">{pillar.title}</h3>
+                <h3 className="text-xl font-bold text-[#1d283a] mb-3">{service.title}</h3>
 
                 <p className="text-sm leading-relaxed text-[#5a687c] group-hover:text-[#3d4c5f] transition-colors mb-6 flex-1">
-                  {pillar.description}
+                  {service.description}
                 </p>
 
                 <Link
-                  href={`/servicos#${pillar.slug}`}
+                  href={`/${service.slug}`}
                   className="inline-flex items-center gap-1 text-sm font-semibold text-[#066bef] hover:underline"
                 >
                   Saiba mais <ArrowRight className="w-3.5 h-3.5" />
