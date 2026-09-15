@@ -1,15 +1,11 @@
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { PaymentProcess } from "@/components/payment-process"
-import { Services } from "@/components/services"
+import { ServicesSummary } from "@/components/services-summary"
 import { PainPoints } from "@/components/pain-points"
-import { RequiredDocuments } from "@/components/required-documents"
+import { PortfolioSummary } from "@/components/portfolio-summary"
 import { WhyUs } from "@/components/why-us"
-import { Gallery } from "@/components/gallery"
-import { Segments } from "@/components/segments"
-import { ProjectsGallery } from "@/components/projects-gallery"
-import { DocumentsGallery } from "@/components/documents-gallery"
-import { Sobre } from "@/components/sobre"
+import { SobreResumo } from "@/components/sobre-resumo"
 import { CTASection } from "@/components/cta-section"
 import GoogleReviews from "@/components/google-reviews"
 import { Footer } from "@/components/footer"
@@ -20,17 +16,13 @@ export default function Home() {
       <Navbar />
       <Hero />
       <PaymentProcess />
-      <Services />
+      <ServicesSummary />
       <PainPoints />
-      <RequiredDocuments />
-      <WhyUs />
-      <Gallery />
-      <Segments />
-      <ProjectsGallery />
-      <DocumentsGallery />
-      <Sobre />
-      <CTASection />
       <GoogleReviews />
+      <PortfolioSummary />
+      <WhyUs />
+      <SobreResumo />
+      <CTASection />
       <Footer />
     </main>
   )
