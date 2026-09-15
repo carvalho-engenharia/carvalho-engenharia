@@ -1,6 +1,6 @@
 "use client"
 
-import { Instagram, Mail } from "lucide-react"
+import { Instagram, Mail, Star } from "lucide-react"
 import Link from "next/link"
 
 const quickLinks = [
@@ -40,7 +40,7 @@ export function Footer() {
               Jardim Goiás — Goiânia/GO
             </p>
             <a
-              href="https://wa.me/5562998062169"
+              href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-3 text-sm text-[#5b9dff] hover:text-[#5b9dff]/80 transition-colors"
@@ -89,6 +89,15 @@ export function Footer() {
               Resp. Técnico: Engº Civil Caio Maracaípe
             </p>
             <p className="text-xs text-white/50">CREA 1017786453D-GO · CNPJ 69.116.621/0001-31</p>
+            <a
+              href="https://maps.google.com/maps?cid=15465752454159730866"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 mt-3 text-xs text-[#5b9dff] hover:text-[#5b9dff]/80 transition-colors"
+            >
+              <Star className="w-3.5 h-3.5 fill-current" />
+              Veja nossas avaliações 5 estrelas no Google
+            </a>
           </div>
         </div>
 

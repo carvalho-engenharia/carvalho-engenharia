@@ -223,7 +223,7 @@ const sections = [
           </li>
           <li>
             WhatsApp:{" "}
-            <a href="https://wa.me/5562998062169" className="text-[#33bbff] hover:underline">
+            <a href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel" className="text-[#33bbff] hover:underline">
               (62) 99806-2169
             </a>
           </li>

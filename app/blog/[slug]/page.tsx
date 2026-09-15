@@ -146,7 +146,7 @@ export default async function PostPage({ params }: Props) {
             gratuita, sem compromisso.
           </p>
           <a
-            href={`https://wa.me/5562999999999?text=Olá!%20Li%20o%20artigo%20"${encodeURIComponent(post.title)}"%20e%20quero%20uma%20avaliação`}
+            href={`https://api.whatsapp.com/send?phone=5562998062169&text=Olá!%20Li%20o%20artigo%20"${encodeURIComponent(post.title)}"%20e%20quero%20uma%20avaliação`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-3 rounded-full transition-colors text-sm"
