@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: `${post.title} | Carvalho Engenharia`,
+    title: post.title,
     description: post.description,
     alternates: {
       canonical: `https://www.carvalho-engenharia.com/blog/${slug}`,
@@ -44,6 +44,14 @@ export default async function PostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) notFound();
+
+  const ctaTitle = post.ctaTitle || "Precisa regularizar sua obra?";
+  const ctaText =
+    post.ctaText ||
+    "A Carvalho Engenharia resolve de ponta a ponta em Goiânia. Avaliação gratuita, sem compromisso.";
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=5562998062169&text=${encodeURIComponent(
+    `Olá! Li o artigo "${post.title}" e quero uma avaliação`
+  )}`;
 
   const allPosts = getAllPosts();
   const related = allPosts.filter((p) => p.slug !== post.slug).slice(0, 2);
@@ -140,19 +148,26 @@ export default async function PostPage({ params }: Props) {
       {/* CTA box */}
       <section className="px-6 pb-20 max-w-3xl mx-auto">
         <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-8 text-center">
-          <h2 className="text-xl font-bold mb-2">Precisa regularizar sua obra?</h2>
-          <p className="text-zinc-400 mb-6 text-sm">
-            A Carvalho Engenharia resolve de ponta a ponta em Goiânia. Avaliação
-            gratuita, sem compromisso.
-          </p>
-          <a
-            href={`https://api.whatsapp.com/send?phone=5562998062169&text=Olá!%20Li%20o%20artigo%20"${encodeURIComponent(post.title)}"%20e%20quero%20uma%20avaliação`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-3 rounded-full transition-colors text-sm"
-          >
-            Falar no WhatsApp
-          </a>
+          <h2 className="text-xl font-bold mb-2">{ctaTitle}</h2>
+          <p className="text-zinc-400 mb-6 text-sm">{ctaText}</p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-3 rounded-full transition-colors text-sm"
+            >
+              Falar no WhatsApp
+            </a>
+            {post.serviceUrl && (
+              <Link
+                href={post.serviceUrl}
+                className="inline-block border border-amber-500/50 hover:border-amber-400 text-amber-400 font-bold px-8 py-3 rounded-full transition-colors text-sm"
+              >
+                Ver como funciona o serviço
+              </Link>
+            )}
+          </div>
         </div>
       </section>
 

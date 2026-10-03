@@ -53,7 +53,7 @@ export const services: ServiceData[] = [
     badge: "Regularização de Imóveis",
     metaTitle: "Regularização de Imóveis em Goiânia",
     metaDescription:
-      "Regularização de imóveis irregulares em Goiânia: sem alvará, sem Habite-se ou sem averbação. Engenheiro responsável técnico cuida de todo o processo junto à Prefeitura e ao Cartório.",
+      "Imóvel sem alvará, sem Habite-se ou sem averbação em Goiânia? Engenheiro com CREA cuida de tudo, da Prefeitura ao Cartório. Avaliação gratuita pelo WhatsApp.",
     h1: "Regularização de Imóveis em Goiânia",
     subtitle:
       "Se a construção não corresponde ao que está registrado na Prefeitura ou no Cartório, o imóvel está irregular — e isso trava financiamento, venda e inventário. Cuidamos de todo o processo, do levantamento técnico à averbação final.",
@@ -131,7 +131,7 @@ export const services: ServiceData[] = [
     badge: "Despachante Imobiliário",
     metaTitle: "Despachante Imobiliário em Goiânia",
     metaDescription:
-      "Despachante imobiliário e responsável técnico em um só serviço: tramitação de alvarás, Habite-se, averbação e certidões em cartórios e prefeituras de Goiânia.",
+      "Despachante imobiliário e engenheiro com CREA em um só serviço: alvarás, Habite-se, averbação e certidões em Goiânia. Avaliação gratuita pelo WhatsApp.",
     h1: "Despachante Imobiliário em Goiânia",
     subtitle:
       "Filas, formulários e exigências que mudam de um atendente para outro consomem tempo e atrasam processos. Cuidamos de toda a tramitação em cartórios e na Prefeitura — e, como somos engenheiros habilitados no CREA, também assinamos a parte técnica quando o processo exige.",

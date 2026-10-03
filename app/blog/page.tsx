@@ -3,9 +3,12 @@ import Link from "next/link";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata: Metadata = {
-  title: "Blog | Carvalho Engenharia – Regularização e Alvarás em Goiânia",
+  title: "Blog: Regularização de Imóveis e Alvarás em Goiânia",
   description:
     "Artigos sobre regularização de obras, alvarás de construção e habite-se em Goiânia. Tire suas dúvidas com a Carvalho Engenharia.",
+  alternates: {
+    canonical: "https://www.carvalho-engenharia.com/blog",
+  },
 };
 
 export default function BlogPage() {

@@ -15,6 +15,9 @@ export type Post = {
   author: string;
   authorTitle: string;
   ogImage: string;
+  ctaTitle: string;
+  ctaText: string;
+  serviceUrl: string;
   content: string;
 };
 
@@ -38,6 +41,9 @@ export function getAllPosts(): Post[] {
         author: data.author ?? "Carvalho Engenharia",
         authorTitle: data.authorTitle ?? "",
         ogImage: data.ogImage ?? "",
+        ctaTitle: data.ctaTitle ?? "",
+        ctaText: data.ctaText ?? "",
+        serviceUrl: data.serviceUrl ?? "",
         content,
       } as Post;
     })
@@ -62,6 +68,9 @@ export function getPostBySlug(slug: string): Post | undefined {
     author: data.author ?? "Carvalho Engenharia",
     authorTitle: data.authorTitle ?? "",
     ogImage: data.ogImage ?? "",
+    ctaTitle: data.ctaTitle ?? "",
+    ctaText: data.ctaText ?? "",
+    serviceUrl: data.serviceUrl ?? "",
     content,
   };
 }
