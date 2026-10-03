@@ -67,10 +67,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carvalho Engenharia | Regularização de Imóveis em Goiânia",
-    description:
-      "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
-    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,

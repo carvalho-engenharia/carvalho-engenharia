@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -85,37 +87,38 @@ export default async function PostPage({ params }: Props) {
   }
 
   return (
-    <main className="min-h-screen bg-[#0a0a0a] text-white">
+    <main className="min-h-screen bg-[#f9fafb] text-[#1d283a]">
+      <Navbar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
 
       {/* Breadcrumb */}
-      <div className="px-6 pt-10 max-w-3xl mx-auto">
-        <nav className="flex items-center gap-2 text-sm text-zinc-500 mb-10">
-          <Link href="/" className="hover:text-white transition-colors">
+      <div className="px-6 pt-28 lg:pt-36 max-w-3xl mx-auto">
+        <nav className="flex items-center gap-2 text-sm text-[#5a687c] mb-10">
+          <Link href="/" className="hover:text-[#066bef] transition-colors">
             Início
           </Link>
           <span>/</span>
-          <Link href="/blog" className="hover:text-white transition-colors">
+          <Link href="/blog" className="hover:text-[#066bef] transition-colors">
             Blog
           </Link>
           <span>/</span>
-          <span className="text-zinc-300 truncate">{post.title}</span>
+          <span className="text-[#1d283a] truncate">{post.title}</span>
         </nav>
       </div>
 
       {/* Article header */}
       <header className="px-6 pb-10 max-w-3xl mx-auto">
-        <p className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-3">
+        <p className="text-[#066bef] text-sm font-semibold uppercase tracking-widest mb-3">
           {post.category}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-4">
           {post.title}
         </h1>
-        <p className="text-zinc-400 text-lg mb-6">{post.description}</p>
-        <div className="flex items-center gap-4 text-sm text-zinc-500 border-b border-zinc-800 pb-8">
+        <p className="text-[#5a687c] text-lg mb-6">{post.description}</p>
+        <div className="flex items-center gap-4 text-sm text-[#5a687c] border-b border-[#e0e5eb] pb-8">
           <span>
             Publicado em{" "}
             {new Date(post.date).toLocaleDateString("pt-BR", {
@@ -129,40 +132,40 @@ export default async function PostPage({ params }: Props) {
         </div>
         {post.author && (
           <div className="flex items-center gap-3 pt-6 pb-2">
-            <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold text-sm shrink-0">
+            <div className="w-10 h-10 rounded-full bg-[#ecf4fe] flex items-center justify-center text-[#066bef] font-bold text-sm shrink-0">
               {post.author.split(" ").map((n) => n[0]).slice(0, 2).join("")}
             </div>
             <div>
-              <p className="text-sm font-semibold text-white">{post.author}</p>
-              <p className="text-xs text-zinc-500">{post.authorTitle}</p>
+              <p className="text-sm font-semibold text-[#1d283a]">{post.author}</p>
+              <p className="text-xs text-[#5a687c]">{post.authorTitle}</p>
             </div>
           </div>
         )}
       </header>
 
       {/* Article body */}
-      <article className="px-6 pb-20 max-w-3xl mx-auto prose prose-invert prose-amber prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-p:text-zinc-300 prose-p:leading-relaxed prose-li:text-zinc-300 prose-strong:text-white prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline">
+      <article className="px-6 pb-20 max-w-3xl mx-auto prose prose-headings:font-bold prose-headings:text-[#1d283a] prose-h2:text-2xl prose-h3:text-xl prose-p:text-[#3d4c5f] prose-p:leading-relaxed prose-li:text-[#3d4c5f] prose-strong:text-[#1d283a] prose-a:text-[#066bef] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline">
         <MDXRemote source={post.content} />
       </article>
 
       {/* CTA box */}
       <section className="px-6 pb-20 max-w-3xl mx-auto">
-        <div className="rounded-2xl border border-amber-500/30 bg-amber-500/5 p-8 text-center">
+        <div className="rounded-2xl border border-[#066bef]/25 bg-white p-8 text-center">
           <h2 className="text-xl font-bold mb-2">{ctaTitle}</h2>
-          <p className="text-zinc-400 mb-6 text-sm">{ctaText}</p>
+          <p className="text-[#5a687c] mb-6 text-sm">{ctaText}</p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-amber-500 hover:bg-amber-400 text-black font-bold px-8 py-3 rounded-full transition-colors text-sm"
+              className="inline-block bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-3 rounded-full transition-colors text-sm"
             >
               Falar no WhatsApp
             </a>
             {post.serviceUrl && (
               <Link
                 href={post.serviceUrl}
-                className="inline-block border border-amber-500/50 hover:border-amber-400 text-amber-400 font-bold px-8 py-3 rounded-full transition-colors text-sm"
+                className="inline-block border border-[#e0e5eb] bg-white hover:border-[#066bef] text-[#1d283a] font-bold px-8 py-3 rounded-full transition-colors text-sm"
               >
                 Ver como funciona o serviço
               </Link>
@@ -173,18 +176,18 @@ export default async function PostPage({ params }: Props) {
 
       {/* Related posts */}
       {related.length > 0 && (
-        <section className="border-t border-zinc-800 px-6 py-16 max-w-3xl mx-auto">
-          <h2 className="text-lg font-bold mb-8 text-zinc-300">
+        <section className="border-t border-[#e0e5eb] px-6 py-16 max-w-3xl mx-auto">
+          <h2 className="text-lg font-bold mb-8 text-[#1d283a]">
             Leia também
           </h2>
           <div className="grid md:grid-cols-2 gap-5">
             {related.map((p) => (
               <Link key={p.slug} href={`/blog/${p.slug}`} className="group block">
-                <article className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 hover:border-amber-500/40 transition-colors h-full">
-                  <p className="text-amber-500 text-xs font-semibold uppercase tracking-wider mb-2">
+                <article className="rounded-xl border border-[#e0e5eb] bg-white p-6 hover:border-[#066bef]/40 transition-colors h-full">
+                  <p className="text-[#066bef] text-xs font-semibold uppercase tracking-wider mb-2">
                     {p.category}
                   </p>
-                  <h3 className="font-bold leading-snug group-hover:text-amber-400 transition-colors">
+                  <h3 className="font-bold leading-snug group-hover:text-[#066bef] transition-colors">
                     {p.title}
                   </h3>
                 </article>
@@ -193,6 +196,8 @@ export default async function PostPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      <Footer />
     </main>
   );
 }

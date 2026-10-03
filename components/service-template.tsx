@@ -108,7 +108,7 @@ export function ServiceTemplate({ data }: { data: ServiceData }) {
               size="lg"
               className="border-[#e0e5eb] bg-white text-[#1d283a] hover:bg-[#f9fafb] hover:border-[#066bef] transition-all duration-300"
             >
-              <a href="tel:+556298062169">(62) 9 9806-2169</a>
+              <a href="tel:+5562998062169">(62) 9 9806-2169</a>
             </Button>
           </div>
         </div>

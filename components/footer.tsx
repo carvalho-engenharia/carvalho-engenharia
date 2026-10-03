@@ -8,8 +8,8 @@ const quickLinks = [
   { href: "/portfolio", label: "Portfólio" },
   { href: "/documentacao-necessaria", label: "Documentação" },
   { href: "/sobre", label: "Empresa" },
-  { href: "#vantagens", label: "Vantagens" },
-  { href: "#contato", label: "Contato" },
+  { href: "/#vantagens", label: "Vantagens" },
+  { href: "/#contato", label: "Contato" },
 ]
 
 const socialLinks = [

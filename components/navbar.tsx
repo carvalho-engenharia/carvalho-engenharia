@@ -18,14 +18,14 @@ export function Navbar() {
   }, [])
 
   const navLinks = [
-    { href: "#como-funciona", label: "Como Funciona" },
+    { href: "/#como-funciona", label: "Como Funciona" },
     { href: "/servicos", label: "Serviços" },
     { href: "/portfolio", label: "Portfólio" },
     { href: "/documentacao-necessaria", label: "Documentos" },
-    { href: "#vantagens", label: "Vantagens" },
+    { href: "/#vantagens", label: "Vantagens" },
     { href: "/sobre", label: "Quem Somos" },
     { href: "/blog", label: "Blog" },
-    { href: "#contato", label: "Contato" },
+    { href: "/#contato", label: "Contato" },
   ]
 
   return (
@@ -35,7 +35,7 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center gap-3 h-9 text-xs text-[#5a687c]">
             <a
-              href="tel:+556298062169"
+              href="tel:+5562998062169"
               className="flex items-center gap-1.5 px-3 py-1 rounded-full border border-[#066bef]/25 bg-[#ecf4fe] text-[#0559c7] font-semibold tracking-wide shadow-[0_0_12px_rgba(6,107,239,0.25)] hover:bg-[#066bef]/20 transition-colors"
             >
               <Phone size={12} />
@@ -124,7 +124,7 @@ export function Navbar() {
               <div className="flex flex-col gap-4">
                 {/* Contato mobile */}
                 <div className="flex flex-col gap-2 pb-3 border-b border-[#e0e5eb] text-xs text-[#5a687c]">
-                  <a href="tel:+556298062169" className="flex items-center gap-2 hover:text-[#066bef] transition-colors">
+                  <a href="tel:+5562998062169" className="flex items-center gap-2 hover:text-[#066bef] transition-colors">
                     <Phone size={12} /> (62) 9 9806-2169
                   </a>
                   <a href="mailto:contato@carvalho-engenharia.com" className="flex items-center gap-2 hover:text-[#066bef] transition-colors">
