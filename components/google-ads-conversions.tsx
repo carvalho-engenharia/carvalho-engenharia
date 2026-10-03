@@ -12,9 +12,11 @@ declare global {
   }
 }
 
-function sendConversion(sendTo: string) {
+function sendConversion(sendTo: string, ga4Event: string, linkUrl: string) {
   if (typeof window.gtag !== "function") return
   window.gtag("event", "conversion", { send_to: sendTo, transport_type: "beacon" })
+  // Evento GA4 (só é coletado quando houver uma propriedade GA4 configurada via gtag('config', 'G-...')).
+  window.gtag("event", ga4Event, { link_url: linkUrl, transport_type: "beacon" })
 }
 
 export function GoogleAdsConversions() {
@@ -26,9 +28,9 @@ export function GoogleAdsConversions() {
       if (!href) return
 
       if (WHATSAPP_PATTERNS.some((pattern) => href.includes(pattern))) {
-        sendConversion(WHATSAPP_CONVERSION)
+        sendConversion(WHATSAPP_CONVERSION, "clique_whatsapp", href)
       } else if (href.startsWith("tel:")) {
-        sendConversion(PHONE_CONVERSION)
+        sendConversion(PHONE_CONVERSION, "clique_telefone", href)
       }
     }
 
