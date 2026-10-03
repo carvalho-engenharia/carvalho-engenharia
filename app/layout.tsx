@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.carvalho-engenharia.com"),
   title: {
-    default: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
+    default: "Carvalho Engenharia | Regularização de Imóveis em Goiânia",
     template: "%s | Carvalho Engenharia",
   },
   description:
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "https://www.carvalho-engenharia.com",
     siteName: "Carvalho Engenharia",
-    title: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
+    title: "Carvalho Engenharia | Regularização de Imóveis em Goiânia",
     description:
       "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
     images: [
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Regularização de Imóveis e Despachante Imobiliário | Goiânia",
+    title: "Carvalho Engenharia | Regularização de Imóveis em Goiânia",
     description:
       "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
     images: ["/og-image.jpg"],
@@ -82,9 +82,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  alternates: {
-    canonical: "https://www.carvalho-engenharia.com",
   },
   verification: {
     google: "_8llKmEMAfxglCw0iqE8xCEWcsVpN4-4UpJ6FBIZt1o",
