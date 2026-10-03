@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { PaymentProcess } from "@/components/payment-process"
@@ -9,6 +10,12 @@ import { SobreResumo } from "@/components/sobre-resumo"
 import { CTASection } from "@/components/cta-section"
 import GoogleReviews from "@/components/google-reviews"
 import { Footer } from "@/components/footer"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.carvalho-engenharia.com",
+  },
+}
 
 export default function Home() {
   return (
