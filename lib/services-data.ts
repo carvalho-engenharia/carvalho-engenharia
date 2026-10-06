@@ -954,6 +954,784 @@ export const services: ServiceData[] = [
     relatedSlugs: ["consultoria-engenharia-civil-goiania", "avaliador-de-imovel-goiania", "regularizacao-de-imoveis-goiania"],
     whatsappMessage: "Olá! Preciso de uma vistoria técnica de imóvel em Goiânia.",
   },
+  {
+    slug: "alvara-de-funcionamento-goiania",
+    icon: "alvara",
+    badge: "Alvará de Funcionamento",
+    metaTitle: "Alvará de Funcionamento em Goiânia",
+    metaDescription:
+      "Alvará de funcionamento em Goiânia para comércios, escritórios e clínicas. Análise do uso do solo, regularização do imóvel e acompanhamento até a liberação.",
+    h1: "Alvará de Funcionamento em Goiânia",
+    subtitle:
+      "Abrir ou mudar uma empresa de endereço exige que o imóvel e a atividade estejam de acordo com as regras da Prefeitura. Verificamos se o local permite a atividade, resolvemos as pendências do imóvel e acompanhamos o processo até a liberação do alvará.",
+    intro: [
+      "O alvará de funcionamento — também chamado de alvará de localização e funcionamento — é a licença da Prefeitura que autoriza uma empresa a exercer sua atividade em um endereço específico. Ele depende de duas coisas: a atividade ser permitida naquela zona da cidade e o imóvel estar regular. É justamente no imóvel que muitos pedidos travam, e é aí que um engenheiro faz diferença.",
+    ],
+    steps: [
+      "Consulta de viabilidade: verificação se a atividade é permitida no endereço (uso do solo)",
+      "Análise da situação do imóvel (alvará de construção, Habite-se ou Carta de Ocupação)",
+      "Regularização do imóvel, quando necessário",
+      "Reunião da documentação da empresa e do imóvel",
+      "Protocolo do pedido e acompanhamento das exigências",
+      "Emissão do alvará de funcionamento",
+    ],
+    documents: [
+      "CNPJ e contrato social (ou requerimento de empresário)",
+      "Documentos pessoais dos sócios",
+      "IPTU do imóvel e contrato de locação ou escritura",
+      "Certidão de Uso do Solo do endereço",
+      "Habite-se ou Carta de Ocupação do imóvel, quando exigido",
+      "Licenças complementares conforme a atividade (sanitária, Corpo de Bombeiros, ambiental)",
+    ],
+    sections: [
+      {
+        heading: "Quando você precisa do alvará de funcionamento",
+        bullets: [
+          "Abertura de uma nova empresa com endereço físico",
+          "Mudança de endereço da empresa",
+          "Inclusão de novas atividades no CNPJ",
+          "Ampliação do espaço físico do estabelecimento",
+          "Renovação ou regularização de um alvará vencido ou inexistente",
+        ],
+      },
+      {
+        heading: "Por que o imóvel costuma travar o processo",
+        paragraphs: [
+          "Muitos estabelecimentos funcionam em imóveis construídos ou ampliados sem alvará, sem Habite-se ou sem Carta de Ocupação. Quando o pedido de funcionamento chega à Prefeitura, essas pendências aparecem e o processo para. Como somos engenheiros com CREA, conseguimos resolver a parte do imóvel e a parte do alvará no mesmo atendimento, sem você precisar contratar dois profissionais.",
+        ],
+      },
+      {
+        heading: "Licenças que podem ser exigidas junto",
+        bullets: [
+          "Alvará sanitário, para atividades ligadas à saúde, alimentação e estética",
+          "Certificado do Corpo de Bombeiros (CERCON)",
+          "Licença ambiental, para atividades com potencial poluidor",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Posso alugar um imóvel antes de saber se ele aceita minha atividade?",
+        answer:
+          "Não é recomendável. Antes de assinar o contrato, faça a consulta de uso do solo do endereço. Se a atividade não for permitida naquela zona, o alvará de funcionamento não será emitido.",
+      },
+      {
+        question: "Quanto tempo leva para sair o alvará de funcionamento?",
+        answer:
+          "Para atividades de baixo risco com o imóvel regular, o processo costuma ser rápido. Quando o imóvel tem pendências ou a atividade exige outras licenças, o prazo aumenta conforme cada exigência.",
+      },
+      {
+        question: "Meu imóvel não tem Habite-se. Consigo o alvará mesmo assim?",
+        answer:
+          "Depende da atividade e do porte, mas a falta de Habite-se ou Carta de Ocupação é uma das causas mais comuns de indeferimento. Nesse caso, regularizamos o imóvel primeiro.",
+      },
+    ],
+    relatedSlugs: ["certidao-de-uso-do-solo-goiania", "alvara-sanitario-goiania", "carta-de-ocupacao-goiania"],
+    whatsappMessage: "Olá! Preciso de alvará de funcionamento em Goiânia. Minha atividade é:",
+  },
+  {
+    slug: "alvara-sanitario-goiania",
+    icon: "alvara",
+    badge: "Alvará Sanitário",
+    metaTitle: "Alvará Sanitário em Goiânia",
+    metaDescription:
+      "Alvará sanitário em Goiânia para clínicas, consultórios, restaurantes e salões. Projeto, adequação do espaço e acompanhamento junto à Vigilância Sanitária.",
+    h1: "Alvará Sanitário em Goiânia",
+    subtitle:
+      "Clínicas, consultórios, restaurantes, salões e outros estabelecimentos de interesse à saúde precisam do alvará sanitário para funcionar. Cuidamos do projeto, da adequação do espaço e do acompanhamento junto à Vigilância Sanitária de Goiânia.",
+    intro: [
+      "O alvará sanitário — também chamado de licença sanitária — é emitido pela Vigilância Sanitária e atesta que o estabelecimento atende às normas de higiene, saúde e segurança para a atividade que exerce. Para várias atividades, a Vigilância exige a análise de um projeto do espaço físico antes da vistoria, e esse projeto precisa ser feito por um profissional habilitado.",
+    ],
+    steps: [
+      "Enquadramento da atividade e identificação das normas aplicáveis",
+      "Visita técnica e levantamento do espaço existente",
+      "Elaboração do projeto de adequação, quando exigido",
+      "Orientação sobre as adequações físicas necessárias",
+      "Protocolo do pedido junto à Vigilância Sanitária",
+      "Acompanhamento da vistoria e das exigências até a emissão do alvará",
+    ],
+    sections: [
+      {
+        heading: "Quem precisa de alvará sanitário",
+        bullets: [
+          "Clínicas médicas, odontológicas e de fisioterapia",
+          "Consultórios e laboratórios",
+          "Restaurantes, lanchonetes, padarias e cozinhas industriais",
+          "Salões de beleza, barbearias e clínicas de estética",
+          "Farmácias, drogarias e outros estabelecimentos de interesse à saúde",
+        ],
+      },
+      {
+        heading: "Por que o projeto do espaço é tão importante",
+        paragraphs: [
+          "A Vigilância Sanitária avalia fluxos, dimensões dos ambientes, revestimentos, ventilação, pontos de água e esgoto, entre outros itens. Um projeto bem feito antes da obra ou da adaptação evita reformas refeitas depois da vistoria — que é onde costuma estar o maior prejuízo.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "O alvará sanitário substitui o alvará de funcionamento?",
+        answer:
+          "Não. São licenças diferentes e complementares. Para atividades de interesse à saúde, normalmente as duas são exigidas.",
+      },
+      {
+        question: "Preciso de projeto para tirar o alvará sanitário?",
+        answer:
+          "Depende da atividade e do risco sanitário. Para clínicas, consultórios com procedimentos e cozinhas, a análise de projeto costuma ser exigida.",
+      },
+      {
+        question: "O alvará sanitário tem validade?",
+        answer:
+          "Sim, ele precisa ser renovado periodicamente. Também precisa ser atualizado se houver mudança de endereço, de atividade ou reforma no espaço.",
+      },
+    ],
+    relatedSlugs: ["alvara-de-funcionamento-goiania", "projeto-arquitetonico-goiania", "cercon-corpo-de-bombeiros-goiania"],
+    whatsappMessage: "Olá! Preciso de alvará sanitário em Goiânia. Meu estabelecimento é:",
+  },
+  {
+    slug: "certidao-de-uso-do-solo-goiania",
+    icon: "despachante",
+    badge: "Certidão de Uso do Solo",
+    metaTitle: "Certidão de Uso do Solo e Numeração Predial em Goiânia",
+    metaDescription:
+      "Certidão de Uso do Solo e Certidão de Numeração Predial em Goiânia para abrir empresa, construir, financiar ou vender. Emissão e análise por engenheiro civil.",
+    h1: "Certidão de Uso do Solo e Numeração Predial em Goiânia",
+    subtitle:
+      "Antes de construir, abrir uma empresa ou financiar um imóvel, a Prefeitura e os bancos pedem certidões que mostram o que pode ser feito no terreno e qual é o endereço oficial dele. Emitimos e explicamos o que cada certidão significa para o seu caso.",
+    intro: [
+      "A Certidão de Uso do Solo informa quais atividades e parâmetros de construção são permitidos para um imóvel, de acordo com o Plano Diretor de Goiânia. Já a Certidão de Numeração Predial confirma o número oficial do imóvel na rua — um documento muito pedido em financiamentos, ligações de energia e água e registros em cartório.",
+    ],
+    sections: [
+      {
+        heading: "Quando cada certidão é pedida",
+        bullets: [
+          "Uso do Solo: abertura de empresa e alvará de funcionamento",
+          "Uso do Solo: consulta de viabilidade antes de comprar um terreno ou projetar uma obra",
+          "Uso do Solo: aprovação de projeto e alvará de construção",
+          "Numeração Predial: financiamento bancário e escritura",
+          "Numeração Predial: averbação de construção e atualização da matrícula",
+        ],
+      },
+      {
+        heading: "Mais do que emitir: interpretar",
+        paragraphs: [
+          "A certidão de uso do solo traz informações técnicas como zona, atividades permitidas, taxa de ocupação e afastamentos. Como engenheiros, explicamos o que esses parâmetros significam na prática: se a sua atividade é permitida, quanto você pode construir e quais limites o projeto precisa respeitar.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Para que serve a Certidão de Uso do Solo?",
+        answer:
+          "Ela mostra o que é permitido naquele endereço — tanto em atividades (comércio, serviço, indústria) quanto em construção (altura, ocupação do lote, afastamentos).",
+      },
+      {
+        question: "Meu imóvel não tem numeração oficial. O que fazer?",
+        answer:
+          "É possível solicitar a numeração predial à Prefeitura. É comum em imóveis novos, lotes desmembrados ou construções feitas sem aprovação.",
+      },
+      {
+        question: "Vale a pena consultar o uso do solo antes de comprar um terreno?",
+        answer:
+          "Sim. Essa consulta evita comprar um terreno onde não é possível construir o que você planeja ou instalar a atividade que você quer.",
+      },
+    ],
+    relatedSlugs: ["alvara-de-funcionamento-goiania", "alvara-de-construcao-e-habite-se-goiania", "despachante-imobiliario-goiania"],
+    whatsappMessage: "Olá! Preciso de certidão de uso do solo ou numeração predial em Goiânia.",
+  },
+  {
+    slug: "alvara-de-reforma-goiania",
+    icon: "alvara",
+    badge: "Alvará de Reforma",
+    metaTitle: "Alvará de Reforma em Goiânia (com ou sem acréscimo de área)",
+    metaDescription:
+      "Alvará de reforma em Goiânia, com ou sem acréscimo de área. Projeto de modificação, ART e aprovação na Prefeitura por engenheiro civil com CREA.",
+    h1: "Alvará de Reforma em Goiânia",
+    subtitle:
+      "Ampliar a casa, mudar a planta ou alterar a fachada exige aprovação da Prefeitura. Elaboramos o projeto de modificação, emitimos a ART e conduzimos a aprovação — com ou sem acréscimo de área.",
+    intro: [
+      "Toda reforma que altera a área construída, a estrutura, a fachada ou a planta aprovada do imóvel precisa de licença da Prefeitura de Goiânia. Sem ela, a reforma deixa o imóvel irregular: a área nova não pode ser averbada e o imóvel passa a ter divergência entre o que existe e o que está documentado.",
+    ],
+    steps: [
+      "Análise do projeto aprovado e da situação atual do imóvel",
+      "Verificação dos parâmetros urbanísticos para a ampliação",
+      "Elaboração do projeto de modificação (com ou sem acréscimo de área)",
+      "Emissão da ART do responsável técnico",
+      "Protocolo e acompanhamento na Prefeitura até a emissão do alvará",
+      "Após a obra: Habite-se ou Carta de Ocupação e averbação da nova área",
+    ],
+    sections: [
+      {
+        heading: "Reforma com ou sem acréscimo de área",
+        paragraphs: [
+          "Na reforma com acréscimo de área, a construção aumenta — um novo cômodo, um pavimento superior, uma área gourmet coberta. Nesse caso, o projeto precisa respeitar a taxa de ocupação, os afastamentos e a permeabilidade do lote.",
+          "Na reforma sem acréscimo de área, a área total não muda, mas a planta, a estrutura ou a fachada são alteradas. Também exige projeto e aprovação, mas o processo costuma ser mais simples.",
+        ],
+      },
+      {
+        heading: "A reforma já foi feita sem alvará?",
+        paragraphs: [
+          "Nesse caso, o caminho é a regularização: fazemos o levantamento do imóvel como ele está, elaboramos o projeto de regularização e conduzimos o processo na Prefeitura até a averbação da nova área.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Toda reforma precisa de alvará?",
+        answer:
+          "Não. Pinturas, troca de pisos e revestimentos e pequenos reparos normalmente não precisam. Reformas que mudam área, estrutura, fachada ou a planta aprovada precisam.",
+      },
+      {
+        question: "Posso começar a obra enquanto o alvará está em análise?",
+        answer:
+          "Não. Começar antes da aprovação sujeita a obra a embargo e multa da Prefeitura.",
+      },
+      {
+        question: "Depois da reforma preciso fazer mais alguma coisa?",
+        answer:
+          "Sim. Quando há acréscimo de área, é preciso emitir o Habite-se (ou Carta de Ocupação) da parte nova e averbá-la na matrícula do imóvel.",
+      },
+    ],
+    relatedSlugs: ["alvara-de-construcao-e-habite-se-goiania", "laudo-de-reforma-nbr-16280-goiania", "averbacao-de-imovel-goiania"],
+    whatsappMessage: "Olá! Preciso de alvará de reforma em Goiânia. A reforma é:",
+  },
+  {
+    slug: "laudo-de-reforma-nbr-16280-goiania",
+    icon: "vistoria",
+    badge: "Laudo de Reforma (NBR 16280)",
+    metaTitle: "Laudo de Reforma em Apartamento (NBR 16280) em Goiânia",
+    metaDescription:
+      "Plano de reforma com ART conforme a NBR 16280, exigido pelos condomínios de Goiânia. Libere a reforma do seu apartamento ou sala comercial com segurança.",
+    h1: "Laudo de Reforma em Apartamento (NBR 16280) em Goiânia",
+    subtitle:
+      "Para reformar um apartamento ou uma sala comercial, o condomínio exige um plano de reforma assinado por engenheiro ou arquiteto, conforme a NBR 16280. Elaboramos o documento com ART e acompanhamos a reforma para liberar sua obra sem atrito com o síndico.",
+    intro: [
+      "A NBR 16280 é a norma da ABNT que define como reformas em edificações devem ser planejadas e executadas. Ela determina que, antes de qualquer reforma que possa afetar a segurança do prédio, o proprietário apresente ao síndico um plano de reforma elaborado por um profissional habilitado, com a respectiva ART ou RRT.",
+    ],
+    steps: [
+      "Visita técnica ao imóvel e entendimento do que será reformado",
+      "Análise dos projetos do edifício, quando disponíveis",
+      "Elaboração do plano de reforma conforme a NBR 16280",
+      "Emissão da ART do responsável técnico",
+      "Entrega do plano ao síndico para aprovação",
+      "Acompanhamento técnico e termo de encerramento da reforma",
+    ],
+    sections: [
+      {
+        heading: "O que o plano de reforma informa",
+        bullets: [
+          "Descrição dos serviços que serão executados",
+          "Impactos nos sistemas do edifício (estrutura, instalações, vedações)",
+          "Responsável técnico pela reforma e pela execução",
+          "Materiais, prazos e horários previstos",
+          "Medidas para garantir a segurança dos moradores e do prédio",
+        ],
+      },
+      {
+        heading: "Reformas que mais exigem atenção",
+        bullets: [
+          "Remoção ou abertura de paredes",
+          "Troca de pisos com mudança de carga ou de contrapiso",
+          "Alterações em instalações hidráulicas, elétricas ou de gás",
+          "Fechamento de sacadas e mudanças na fachada",
+          "Instalação de banheiras, spas ou equipamentos pesados",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Toda reforma em apartamento precisa de laudo NBR 16280?",
+        answer:
+          "Reformas que possam afetar estrutura, instalações ou segurança do edifício precisam. Serviços simples, como pintura, normalmente não — mas quem define as regras internas é o regulamento do condomínio.",
+      },
+      {
+        question: "O síndico pode impedir a reforma?",
+        answer:
+          "O síndico pode não autorizar a reforma se ela não tiver o plano assinado por profissional habilitado ou se representar risco ao prédio. Por isso o plano técnico é tão importante.",
+      },
+      {
+        question: "Posso tirar uma parede do meu apartamento?",
+        answer:
+          "Só depois de um engenheiro verificar se ela não é estrutural e não tem instalações importantes. Paredes estruturais não podem ser removidas sem projeto e reforço adequados.",
+      },
+    ],
+    relatedSlugs: ["alvara-de-reforma-goiania", "emissao-de-art-goiania", "vistoria-tecnica-de-imovel-goiania"],
+    whatsappMessage: "Olá! Preciso de laudo de reforma (NBR 16280) para meu apartamento em Goiânia.",
+  },
+  {
+    slug: "alvara-de-demolicao-goiania",
+    icon: "alvara",
+    badge: "Alvará de Demolição",
+    metaTitle: "Alvará de Demolição em Goiânia",
+    metaDescription:
+      "Alvará de demolição total ou parcial em Goiânia, com ART e acompanhamento na Prefeitura. Também cuidamos da baixa da construção na matrícula do imóvel.",
+    h1: "Alvará de Demolição em Goiânia",
+    subtitle:
+      "Para demolir uma construção, total ou parcialmente, é preciso licença da Prefeitura. Cuidamos do alvará de demolição, da ART e, depois da obra, da atualização da matrícula do imóvel no cartório.",
+    intro: [
+      "O alvará de demolição autoriza a remoção de uma edificação ou de parte dela. Ele é necessário tanto para quem vai construir algo novo no lugar quanto para quem quer apenas retirar uma construção antiga. Demolir sem licença pode gerar multa, e a construção continua constando na matrícula do imóvel até que a demolição seja averbada.",
+    ],
+    steps: [
+      "Análise da documentação do imóvel e da construção existente",
+      "Emissão da ART de demolição",
+      "Protocolo do pedido de alvará na Prefeitura",
+      "Execução da demolição com segurança",
+      "Averbação da demolição na matrícula, no Cartório de Registro de Imóveis",
+    ],
+    sections: [
+      {
+        heading: "Quando o alvará de demolição é necessário",
+        bullets: [
+          "Demolição total para construir uma nova edificação",
+          "Demolição parcial durante uma reforma",
+          "Retirada de construções antigas ou em mau estado",
+          "Remoção de construções irregulares por exigência da Prefeitura",
+        ],
+      },
+      {
+        heading: "Não esqueça da matrícula",
+        paragraphs: [
+          "Mesmo depois de demolida, a construção continua registrada na matrícula do imóvel até que a demolição seja averbada no cartório. Isso causa problemas na venda, no financiamento e na aprovação de um novo projeto. Por isso, cuidamos também dessa etapa final.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Posso demolir minha casa sem alvará?",
+        answer:
+          "Não. A demolição sem licença está sujeita a multa e embargo, além de deixar a matrícula do imóvel desatualizada.",
+      },
+      {
+        question: "A demolição precisa de engenheiro responsável?",
+        answer:
+          "Sim. A demolição exige ART de um profissional habilitado, que responde pela segurança da execução e dos imóveis vizinhos.",
+      },
+      {
+        question: "Posso pedir o alvará de demolição e o de construção juntos?",
+        answer:
+          "Em muitos casos, sim. Quando a demolição faz parte de um novo projeto, os dois processos podem ser organizados juntos para ganhar tempo.",
+      },
+    ],
+    relatedSlugs: ["alvara-de-construcao-e-habite-se-goiania", "averbacao-de-imovel-goiania", "inss-de-obra-goiania"],
+    whatsappMessage: "Olá! Preciso de alvará de demolição em Goiânia.",
+  },
+  {
+    slug: "carta-de-ocupacao-goiania",
+    icon: "averbacao",
+    badge: "Carta de Ocupação",
+    metaTitle: "Carta de Ocupação em Goiânia",
+    metaDescription:
+      "Carta de Ocupação em Goiânia para imóveis comerciais, industriais e de serviços. Vistoria, documentação e acompanhamento na Prefeitura até a emissão.",
+    h1: "Carta de Ocupação em Goiânia",
+    subtitle:
+      "A Carta de Ocupação é o documento que libera o uso de imóveis comerciais, industriais e de serviços depois da obra. Cuidamos da documentação, da vistoria e do acompanhamento na Prefeitura até a emissão.",
+    intro: [
+      "Assim como o Habite-se libera o uso de imóveis residenciais, a Carta de Ocupação atesta que um imóvel não residencial foi construído conforme o projeto aprovado e está apto para funcionar. Sem ela, o imóvel fica irregular, a construção não pode ser averbada e a empresa pode ter dificuldade para obter o alvará de funcionamento.",
+    ],
+    steps: [
+      "Verificação do alvará de construção e do projeto aprovado",
+      "Vistoria técnica da obra concluída",
+      "Correção de eventuais divergências entre a obra e o projeto",
+      "Reunião da documentação, incluindo a regularidade do INSS da obra",
+      "Protocolo e acompanhamento da vistoria da Prefeitura",
+      "Emissão da Carta de Ocupação e averbação da construção",
+    ],
+    sections: [
+      {
+        heading: "Quem precisa de Carta de Ocupação",
+        bullets: [
+          "Salas e lojas comerciais",
+          "Galpões e imóveis industriais",
+          "Clínicas, escolas e outros imóveis de serviços",
+          "Imóveis de uso misto, na parte não residencial",
+        ],
+      },
+      {
+        heading: "Obra construída diferente do projeto?",
+        paragraphs: [
+          "É comum que a obra termine com diferenças em relação ao projeto aprovado. Nesse caso, a Carta de Ocupação não é emitida até que essas diferenças sejam resolvidas — normalmente com um projeto de modificação ou de regularização. Fazemos esse diagnóstico antes de pedir a vistoria, para evitar exigências e atrasos.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Qual a diferença entre Habite-se e Carta de Ocupação?",
+        answer:
+          "Os dois atestam que a obra está concluída e apta para uso. O Habite-se é para imóveis residenciais; a Carta de Ocupação, para comerciais, industriais e de serviços.",
+      },
+      {
+        question: "Preciso de Carta de Ocupação para tirar o alvará de funcionamento?",
+        answer:
+          "Em muitos casos, sim. A falta da Carta de Ocupação é uma das causas mais comuns de problemas no alvará de funcionamento.",
+      },
+      {
+        question: "Meu imóvel comercial foi construído sem alvará. Ainda consigo a Carta de Ocupação?",
+        answer:
+          "Na maioria dos casos, sim, desde que a construção respeite os parâmetros urbanísticos. O caminho começa pela regularização do imóvel.",
+      },
+    ],
+    relatedSlugs: ["alvara-de-construcao-e-habite-se-goiania", "alvara-de-funcionamento-goiania", "averbacao-de-imovel-goiania"],
+    whatsappMessage: "Olá! Preciso de Carta de Ocupação para um imóvel em Goiânia.",
+  },
+  {
+    slug: "levantamento-arquitetonico-goiania",
+    icon: "arquitetonico",
+    badge: "Levantamento Arquitetônico (As Built)",
+    metaTitle: "Levantamento Arquitetônico (As Built) em Goiânia",
+    metaDescription:
+      "Levantamento arquitetônico (as built) em Goiânia: medição e desenho do imóvel como ele está, para regularização, reforma, averbação ou venda. Com ART.",
+    h1: "Levantamento Arquitetônico (As Built) em Goiânia",
+    subtitle:
+      "Antes de regularizar, reformar ou averbar, é preciso saber exatamente o que existe. Medimos o imóvel e desenhamos a planta como ele está construído hoje, com ART do responsável técnico.",
+    intro: [
+      "O levantamento arquitetônico — também chamado de as built, que em inglês significa “como construído” — é a medição completa de um imóvel existente e o desenho das suas plantas, cortes e fachadas. Ele é a base de quase todo processo de regularização, porque a Prefeitura e o Cartório precisam de um retrato fiel da construção real.",
+    ],
+    steps: [
+      "Visita técnica e medição completa do imóvel",
+      "Registro fotográfico e verificação de níveis e alturas",
+      "Desenho das plantas, cortes, fachadas e situação no lote",
+      "Cálculo das áreas construídas",
+      "Comparação com o projeto aprovado e a matrícula, quando existentes",
+      "Entrega dos arquivos e da ART",
+    ],
+    sections: [
+      {
+        heading: "Para que serve o levantamento",
+        bullets: [
+          "Regularização de imóveis construídos sem alvará",
+          "Alvará de Aceite e Alvará de Regularização na Prefeitura",
+          "Averbação de construção no cartório",
+          "Base para projetos de reforma e ampliação",
+          "Venda, financiamento e inventário de imóveis sem planta",
+        ],
+      },
+      {
+        heading: "O que você recebe",
+        bullets: [
+          "Plantas baixas de todos os pavimentos",
+          "Cortes e fachadas",
+          "Planta de situação e implantação no lote",
+          "Quadro de áreas",
+          "ART do responsável técnico",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Meu imóvel não tem nenhuma planta. Dá para fazer o levantamento?",
+        answer:
+          "Sim. É exatamente para esses casos que o levantamento arquitetônico existe: medimos tudo no local e desenhamos as plantas do zero.",
+      },
+      {
+        question: "Quanto tempo leva um levantamento arquitetônico?",
+        answer:
+          "Para uma casa, a medição costuma ser feita em uma visita. O prazo de entrega dos desenhos depende do tamanho e da complexidade do imóvel.",
+      },
+      {
+        question: "O levantamento já serve para regularizar o imóvel?",
+        answer:
+          "Ele é a primeira etapa. A partir dele montamos o projeto e conduzimos o processo de regularização na Prefeitura e a averbação no cartório.",
+      },
+    ],
+    relatedSlugs: ["regularizacao-de-imoveis-goiania", "projeto-arquitetonico-goiania", "averbacao-de-imovel-goiania"],
+    whatsappMessage: "Olá! Preciso de levantamento arquitetônico (as built) de um imóvel em Goiânia.",
+  },
+  {
+    slug: "laudo-de-rachaduras-e-infiltracoes-goiania",
+    icon: "vistoria",
+    badge: "Laudo de Rachaduras e Infiltrações",
+    metaTitle: "Laudo Técnico de Rachaduras e Infiltrações em Goiânia",
+    metaDescription:
+      "Laudo técnico de rachaduras, trincas e infiltrações em Goiânia, com causa provável, gravidade e solução recomendada. Assinado por engenheiro civil com ART.",
+    h1: "Laudo Técnico de Rachaduras e Infiltrações em Goiânia",
+    subtitle:
+      "Rachaduras, trincas, umidade e infiltrações podem ser apenas estéticas ou sinal de um problema sério. Inspecionamos o imóvel, identificamos a causa provável e emitimos um laudo com a solução recomendada, assinado por engenheiro civil.",
+    intro: [
+      "Problemas como fissuras, trincas, mofo, descolamento de revestimento e infiltrações são chamados de patologias construtivas. O laudo técnico identifica o que está acontecendo, avalia a gravidade e indica como corrigir — e também serve como prova em disputas com construtoras, vizinhos, condomínios ou seguradoras.",
+    ],
+    steps: [
+      "Conversa inicial para entender o histórico do problema",
+      "Vistoria no imóvel com registro fotográfico",
+      "Análise das manifestações e da causa provável",
+      "Classificação da gravidade e do risco",
+      "Emissão do laudo com recomendações de correção e ART",
+    ],
+    sections: [
+      {
+        heading: "Problemas mais comuns que analisamos",
+        bullets: [
+          "Trincas e rachaduras em paredes, lajes e vigas",
+          "Infiltrações em lajes, paredes e fachadas",
+          "Umidade ascendente, mofo e bolor",
+          "Descolamento de pisos e revestimentos",
+          "Danos causados por obras vizinhas",
+        ],
+      },
+      {
+        heading: "Quando o laudo é indicado",
+        bullets: [
+          "Imóvel novo com defeitos dentro da garantia da construtora",
+          "Disputa com vizinho por danos causados por obra ao lado",
+          "Infiltração vinda de outra unidade ou de área comum do condomínio",
+          "Acionamento de seguro",
+          "Antes de comprar um imóvel usado com sinais de problema",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Toda rachadura é perigosa?",
+        answer:
+          "Não. Muitas fissuras são superficiais e apenas estéticas. Mas trincas que aumentam com o tempo, que atravessam a parede ou que aparecem em vigas e lajes precisam de avaliação técnica rápida.",
+      },
+      {
+        question: "O laudo serve para processar a construtora?",
+        answer:
+          "Sim. Um laudo assinado por engenheiro com ART é uma prova técnica importante em reclamações e processos contra construtoras, vizinhos ou condomínios.",
+      },
+      {
+        question: "O laudo já diz como resolver o problema?",
+        answer:
+          "Sim. Além da causa provável e da gravidade, o laudo traz as recomendações de correção.",
+      },
+    ],
+    relatedSlugs: ["vistoria-tecnica-de-imovel-goiania", "consultoria-engenharia-civil-goiania", "projeto-estrutural-goiania"],
+    whatsappMessage: "Olá! Preciso de um laudo de rachaduras/infiltrações em um imóvel em Goiânia.",
+  },
+  {
+    slug: "analise-documental-compra-de-imovel-goiania",
+    icon: "consultoria",
+    badge: "Análise Documental para Compra",
+    metaTitle: "Análise Documental para Compra de Imóvel em Goiânia",
+    metaDescription:
+      "Antes de comprar um imóvel em Goiânia, verifique se ele está regular na Prefeitura e no Cartório. Análise técnica da documentação e da construção por engenheiro.",
+    h1: "Análise Documental para Compra de Imóvel em Goiânia",
+    subtitle:
+      "Antes de assinar, verificamos se o imóvel está regular na Prefeitura e no Cartório e se a construção bate com o que está documentado. Assim você evita comprar um problema — e negocia com base em informação.",
+    intro: [
+      "Muitos compradores só descobrem depois da compra que o imóvel tem área construída não averbada, ampliação sem alvará ou falta de Habite-se. Essas pendências podem impedir o financiamento, atrasar a escritura e custar caro para resolver. A análise técnica antes da compra mostra exatamente a situação do imóvel e o que seria necessário para regularizá-lo.",
+    ],
+    steps: [
+      "Análise da matrícula atualizada do imóvel",
+      "Verificação de alvarás, Habite-se ou Carta de Ocupação na Prefeitura",
+      "Vistoria para comparar a construção real com a documentada",
+      "Identificação de pendências e do caminho para resolvê-las",
+      "Relatório com os riscos e uma estimativa do que seria preciso regularizar",
+    ],
+    sections: [
+      {
+        heading: "O que verificamos",
+        bullets: [
+          "Se a área construída está averbada na matrícula",
+          "Se existem alvará de construção e Habite-se",
+          "Se houve ampliações ou reformas sem aprovação",
+          "Se a construção respeita os parâmetros urbanísticos",
+          "Se há divergência de área ou de medidas do terreno",
+        ],
+      },
+      {
+        heading: "Por que fazer antes de fechar negócio",
+        paragraphs: [
+          "Com o relatório em mãos, você decide com segurança: pode desistir, negociar o preço considerando o custo da regularização ou exigir que o vendedor resolva as pendências antes da escritura. É um investimento pequeno perto do valor do imóvel.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "A análise jurídica do advogado não é suficiente?",
+        answer:
+          "Ela é importante, mas focada em dívidas, ônus e titularidade. A análise técnica verifica se a construção está regular e se bate com a documentação — algo que exige um engenheiro.",
+      },
+      {
+        question: "O banco não faz essa verificação no financiamento?",
+        answer:
+          "O banco avalia o imóvel para a garantia do empréstimo, mas não resolve as pendências. Se encontrar irregularidades, o financiamento pode ser negado e a negociação trava.",
+      },
+      {
+        question: "Quanto tempo leva a análise?",
+        answer:
+          "Depende da disponibilidade dos documentos, mas normalmente é rápida o suficiente para ser feita antes da assinatura do contrato.",
+      },
+    ],
+    relatedSlugs: ["regularizacao-de-imoveis-goiania", "avaliador-de-imovel-goiania", "vistoria-tecnica-de-imovel-goiania"],
+    whatsappMessage: "Olá! Vou comprar um imóvel em Goiânia e quero uma análise da documentação.",
+  },
+  {
+    slug: "instituicao-de-condominio-goiania",
+    icon: "desmembramento",
+    badge: "Instituição de Condomínio",
+    metaTitle: "Instituição de Condomínio em Goiânia",
+    metaDescription:
+      "Instituição de condomínio em Goiânia: cálculo de áreas e frações ideais (NBR 12721), documentação e registro no Cartório para individualizar as unidades.",
+    h1: "Instituição de Condomínio em Goiânia",
+    subtitle:
+      "Casas geminadas, sobrados no mesmo lote ou pequenos prédios só podem ser vendidos e financiados separadamente depois que o condomínio é instituído e cada unidade ganha sua própria matrícula. Cuidamos da parte técnica e acompanhamos o registro no Cartório.",
+    intro: [
+      "A instituição de condomínio é o ato registrado no Cartório de Registro de Imóveis que transforma uma construção em unidades autônomas — cada casa, apartamento ou sala passa a ter sua própria matrícula, com sua fração ideal do terreno e das áreas comuns. Ela segue o Código Civil e a Lei nº 4.591/1964, e o cálculo das áreas segue a NBR 12721.",
+    ],
+    steps: [
+      "Análise da matrícula e da situação do imóvel na Prefeitura",
+      "Regularização da construção, quando necessário (alvará e Habite-se)",
+      "Cálculo das áreas privativas, comuns e frações ideais (NBR 12721)",
+      "Elaboração do memorial e da documentação técnica com ART",
+      "Apoio na minuta da instituição e da convenção de condomínio",
+      "Registro no Cartório e abertura das matrículas individuais",
+    ],
+    sections: [
+      {
+        heading: "Quando a instituição de condomínio é necessária",
+        bullets: [
+          "Duas ou mais casas construídas no mesmo lote",
+          "Sobrados geminados para venda individual",
+          "Pequenos edifícios residenciais ou comerciais",
+          "Herdeiros que querem separar as unidades de um mesmo imóvel",
+        ],
+      },
+      {
+        heading: "Por que vale a pena",
+        paragraphs: [
+          "Sem a instituição, todas as unidades ficam em uma única matrícula. Isso impede vender ou financiar cada unidade separadamente e costuma desvalorizar o imóvel. Depois do registro, cada unidade passa a ter documentação própria, como qualquer apartamento.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Preciso ter o Habite-se antes de instituir o condomínio?",
+        answer:
+          "Em geral, sim. A construção precisa estar regular e averbada para que o cartório registre a instituição e abra as matrículas individuais.",
+      },
+      {
+        question: "O que é fração ideal?",
+        answer:
+          "É a parte do terreno e das áreas comuns que pertence a cada unidade. Ela é calculada tecnicamente e aparece na matrícula de cada unidade.",
+      },
+      {
+        question: "Posso instituir condomínio em duas casas no mesmo lote?",
+        answer:
+          "Na maioria dos casos, sim, desde que a construção esteja regular e respeite a legislação municipal.",
+      },
+    ],
+    relatedSlugs: ["desmembramento-remembramento-goiania", "averbacao-de-imovel-goiania", "regularizacao-de-imoveis-goiania"],
+    whatsappMessage: "Olá! Preciso fazer a instituição de condomínio de um imóvel em Goiânia.",
+  },
+  {
+    slug: "retificacao-de-area-goiania",
+    icon: "desmembramento",
+    badge: "Retificação de Área",
+    metaTitle: "Retificação de Área de Imóvel em Goiânia",
+    metaDescription:
+      "Retificação de área e de medidas do imóvel na matrícula, em Goiânia. Levantamento técnico, memorial descritivo com ART e processo junto ao Cartório.",
+    h1: "Retificação de Área de Imóvel em Goiânia",
+    subtitle:
+      "Quando as medidas ou a área do terreno na matrícula não batem com a realidade, o imóvel pode travar na venda, no financiamento ou na aprovação de projetos. Fazemos o levantamento técnico e conduzimos a retificação junto ao Cartório.",
+    intro: [
+      "A retificação de área é o procedimento que corrige, na matrícula do imóvel, a área, as medidas ou as confrontações do terreno. Ela é prevista na Lei de Registros Públicos (Lei nº 6.015/1973) e, na maioria dos casos, pode ser feita diretamente no Cartório de Registro de Imóveis, sem processo judicial, com base em um levantamento técnico assinado por profissional habilitado.",
+    ],
+    steps: [
+      "Análise da matrícula e dos documentos do imóvel",
+      "Levantamento topográfico e técnico do terreno",
+      "Elaboração da planta e do memorial descritivo com ART",
+      "Coleta da anuência dos confrontantes (vizinhos), quando necessária",
+      "Protocolo do pedido no Cartório de Registro de Imóveis",
+      "Acompanhamento até a averbação da área corrigida",
+    ],
+    sections: [
+      {
+        heading: "Quando a retificação é necessária",
+        bullets: [
+          "A área do terreno na matrícula é diferente da área real",
+          "As medidas ou os confrontantes estão errados ou desatualizados",
+          "O banco ou a Prefeitura apontou divergência de área",
+          "Antes de desmembrar, remembrar ou instituir condomínio",
+          "Imóveis antigos com descrição incompleta na matrícula",
+        ],
+      },
+      {
+        heading: "Retificação no cartório: mais rápida que a judicial",
+        paragraphs: [
+          "Desde que não haja conflito com os vizinhos, a retificação pode ser feita de forma administrativa, diretamente no cartório. Um levantamento técnico bem feito e a documentação completa são o que garantem que o processo ande sem exigências.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Preciso da assinatura dos vizinhos?",
+        answer:
+          "Quando a retificação altera as divisas ou a área, normalmente é necessária a anuência dos confrontantes. Cuidamos dessa etapa junto com você.",
+      },
+      {
+        question: "A retificação precisa ir para a Justiça?",
+        answer:
+          "Na maioria dos casos, não. Ela pode ser feita direto no Cartório. A via judicial costuma ser necessária só quando há conflito com vizinhos.",
+      },
+      {
+        question: "A diferença de área é pequena. Mesmo assim preciso retificar?",
+        answer:
+          "Se a divergência estiver causando problemas em financiamento, venda ou aprovação de projetos, sim. Avaliamos o caso e indicamos se vale a pena.",
+      },
+    ],
+    relatedSlugs: ["desmembramento-remembramento-goiania", "levantamento-arquitetonico-goiania", "averbacao-de-imovel-goiania"],
+    whatsappMessage: "Olá! Preciso de retificação de área de um imóvel em Goiânia.",
+  },
+  {
+    slug: "cercon-corpo-de-bombeiros-goiania",
+    icon: "alvara",
+    badge: "Regularização no Corpo de Bombeiros",
+    metaTitle: "CERCON e Regularização no Corpo de Bombeiros em Goiânia",
+    metaDescription:
+      "CERCON em Goiânia: projeto de prevenção contra incêndio, adequações e certificado de conformidade junto ao Corpo de Bombeiros Militar de Goiás.",
+    h1: "Regularização no Corpo de Bombeiros (CERCON) em Goiânia",
+    subtitle:
+      "Comércios, prédios, galpões e locais de reunião de público precisam do Certificado de Conformidade do Corpo de Bombeiros. Cuidamos do projeto de prevenção contra incêndio, das adequações e do acompanhamento até a emissão do CERCON.",
+    intro: [
+      "O CERCON (Certificado de Conformidade) é emitido pelo Corpo de Bombeiros Militar do Estado de Goiás e atesta que a edificação tem as medidas de segurança contra incêndio exigidas para o seu uso e porte. Ele é exigido para o funcionamento de muitas atividades e costuma ser pedido junto com o alvará de funcionamento e a Carta de Ocupação.",
+    ],
+    steps: [
+      "Enquadramento da edificação conforme uso, área e altura",
+      "Vistoria técnica do imóvel",
+      "Elaboração do projeto de prevenção e combate a incêndio, quando exigido",
+      "Orientação das adequações (extintores, sinalização, iluminação de emergência, saídas)",
+      "Protocolo e acompanhamento no Corpo de Bombeiros",
+      "Vistoria do Corpo de Bombeiros e emissão do CERCON",
+    ],
+    sections: [
+      {
+        heading: "Quem precisa do CERCON",
+        bullets: [
+          "Lojas, escritórios e salas comerciais",
+          "Galpões, indústrias e depósitos",
+          "Prédios residenciais e comerciais com áreas comuns",
+          "Escolas, clínicas, igrejas e locais de reunião de público",
+          "Restaurantes, bares e eventos",
+        ],
+      },
+      {
+        heading: "Projeto bem feito evita gasto à toa",
+        paragraphs: [
+          "As exigências variam bastante conforme o uso, a área e a altura do imóvel. Um enquadramento correto evita comprar equipamentos desnecessários ou, ao contrário, ser reprovado na vistoria por falta de algum item.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Todo estabelecimento precisa de CERCON?",
+        answer:
+          "A maioria das atividades comerciais e de serviços precisa. O tipo de processo e as exigências dependem do risco da atividade, da área e da altura da edificação.",
+      },
+      {
+        question: "O CERCON tem validade?",
+        answer:
+          "Sim, ele precisa ser renovado periodicamente e atualizado quando há mudança de uso, ampliação ou reforma.",
+      },
+      {
+        question: "Preciso de projeto para tirar o CERCON?",
+        answer:
+          "Depende do porte e do risco. Edificações menores e de baixo risco podem ter um processo simplificado; as maiores exigem projeto de prevenção contra incêndio assinado por profissional habilitado.",
+      },
+    ],
+    relatedSlugs: ["alvara-de-funcionamento-goiania", "carta-de-ocupacao-goiania", "alvara-sanitario-goiania"],
+    whatsappMessage: "Olá! Preciso de CERCON / regularização no Corpo de Bombeiros em Goiânia.",
+  },
 ]
 
 export function getServiceBySlug(slug: string): ServiceData | undefined {
