@@ -12,6 +12,9 @@
 //   INDEXNOW_KEY                 chave IndexNow (precisa existir em public/<chave>.txt)
 //   SITEMAP_URL                  opcional; padrão https://www.carvalho-engenharia.com/sitemap.xml
 //
+// Cada execução salva o estado das URLs em .indexacao/<data>.json (ignorado pelo git)
+// e compara com a execução anterior: o que entrou no Google, o que saiu e o que mudou.
+//
 // Não usa a Google Indexing API: ela só aceita páginas com JobPosting ou BroadcastEvent.
 
 import fs from "node:fs"
@@ -155,9 +158,15 @@ async function inspectUrl(searchconsole, url) {
       indexed: status.verdict === "PASS",
       status: COVERAGE_PT[coverage] ?? coverage,
       lastCrawl: status.lastCrawlTime ? status.lastCrawlTime.slice(0, 10) : "—",
+      error: false,
     }
   } catch (err) {
-    return { indexed: false, status: `erro: ${httpStatusOf(err) ?? ""} ${err.message}`.trim(), lastCrawl: "—" }
+    return {
+      indexed: false,
+      status: `erro: ${httpStatusOf(err) ?? ""} ${err.message}`.trim(),
+      lastCrawl: "—",
+      error: true,
+    }
   }
 }
 
@@ -225,6 +234,70 @@ function printTable(rows, columns) {
 }
 
 // ---------------------------------------------------------------------------
+// Histórico: compara com a execução anterior
+// ---------------------------------------------------------------------------
+
+const HISTORY_DIR = path.join(ROOT, ".indexacao")
+
+function loadLastSnapshot() {
+  if (!fs.existsSync(HISTORY_DIR)) return null
+  const files = fs.readdirSync(HISTORY_DIR).filter((f) => f.endsWith(".json")).sort()
+  if (files.length === 0) return null
+  return JSON.parse(fs.readFileSync(path.join(HISTORY_DIR, files.at(-1)), "utf8"))
+}
+
+function saveSnapshot(results) {
+  fs.mkdirSync(HISTORY_DIR, { recursive: true })
+  const date = new Date().toISOString()
+  const file = path.join(HISTORY_DIR, `${date.slice(0, 19).replace(/:/g, "-")}.json`)
+  const urls = Object.fromEntries(
+    results.map((r) => [r.url, { indexed: r.indexed, status: r.status, lastCrawl: r.lastCrawl, error: r.error }]),
+  )
+  fs.writeFileSync(file, JSON.stringify({ date, urls }, null, 2) + "\n")
+  return path.relative(ROOT, file)
+}
+
+// URLs com erro de consulta (nesta ou na anterior) não entram na comparação,
+// para uma falha de API não aparecer como "saiu do Google"
+function compareWithPrevious(previous, results) {
+  const changes = { gained: [], lost: [], changed: [], added: [], removed: [] }
+  for (const r of results) {
+    const before = previous.urls[r.url]
+    if (!before) changes.added.push(r)
+    else if (before.error || r.error) continue
+    else if (!before.indexed && r.indexed) changes.gained.push(r)
+    else if (before.indexed && !r.indexed) changes.lost.push(r)
+    else if (!r.indexed && before.status !== r.status) changes.changed.push({ ...r, before: before.status })
+  }
+  const current = new Set(results.map((r) => r.url))
+  changes.removed = Object.keys(previous.urls).filter((url) => !current.has(url))
+  return changes
+}
+
+function formatDate(iso) {
+  return new Date(iso).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo", dateStyle: "short", timeStyle: "short" })
+}
+
+function printChanges(previous, changes) {
+  console.log(`\nDesde a última execução (${formatDate(previous.date)}):\n`)
+  const sections = [
+    ["✓ Entraram no Google", changes.gained, (r) => `[${r.group}] ${r.url}`],
+    ["✗ Saíram do Google", changes.lost, (r) => `[${r.group}] ${r.url}  — ${r.status}`],
+    ["↗ Mudaram de estado (ainda não indexadas)", changes.changed, (r) => `[${r.group}] ${r.url}  — ${r.before} → ${r.status}`],
+    ["+ Novas no sitemap", changes.added, (r) => `[${r.group}] ${r.url}  — ${r.status}`],
+    ["− Saíram do sitemap", changes.removed, (url) => url],
+  ]
+  let any = false
+  for (const [title, list, format] of sections) {
+    if (list.length === 0) continue
+    any = true
+    console.log(`  ${title} (${list.length}):`)
+    list.forEach((item) => console.log(`    ${format(item)}`))
+  }
+  if (!any) console.log("  Nenhuma mudança.")
+}
+
+// ---------------------------------------------------------------------------
 // Execução
 // ---------------------------------------------------------------------------
 
@@ -237,6 +310,7 @@ async function main() {
 
   const keyCheck = checkIndexNowKey()
   const hosts = groupByHost(urls)
+  const previous = loadLastSnapshot()
 
   if (DRY_RUN) {
     printTable(
@@ -255,6 +329,9 @@ async function main() {
     }
     console.log(`  • Chave IndexNow: ${keyCheck.ok ? "ok" : `PROBLEMA: ${keyCheck.reason}`}`)
     console.log(`  • Service account: ${process.env.GOOGLE_SERVICE_ACCOUNT_JSON ? "definida" : "não definida"}`)
+    console.log(
+      `  • Comparação: ${previous ? `com a execução de ${formatDate(previous.date)}` : "nenhuma execução anterior salva em .indexacao/"}`,
+    )
     console.log("\nNenhuma API foi chamada (--dry-run).")
     return
   }
@@ -304,6 +381,17 @@ async function main() {
   if (pending.length > 0) {
     console.log("\nAinda não indexadas, em ordem de prioridade (solicite em Search Console → Inspeção de URL):\n")
     pending.forEach((r, i) => console.log(`  ${i + 1}. [${r.group}] ${r.url}  — ${r.status}`))
+  }
+
+  // 6. Comparação com a execução anterior
+  if (previous) printChanges(previous, compareWithPrevious(previous, results))
+  else console.log("\nPrimeira execução salva: a próxima vai mostrar o que mudou desde hoje.")
+
+  // Se todas as consultas falharam (ex.: credencial inválida), não salva para não estragar a base
+  if (results.every((r) => r.error)) {
+    console.log("\nTodas as consultas falharam: resultado não salvo no histórico.")
+  } else {
+    console.log(`\nResultado salvo em ${saveSnapshot(results)}`)
   }
 }
 
