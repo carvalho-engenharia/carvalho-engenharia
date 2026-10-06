@@ -15,6 +15,7 @@ import {
   FileText,
   Search,
   ClipboardCheck,
+  Building2,
   ChevronRight,
   ArrowRight,
 } from "lucide-react"
@@ -50,6 +51,22 @@ const categories = [
       "alvara-de-construcao-e-habite-se-goiania",
       "desmembramento-remembramento-goiania",
       "averbacao-de-imovel-goiania",
+      "carta-de-ocupacao-goiania",
+      "alvara-de-reforma-goiania",
+      "alvara-de-demolicao-goiania",
+      "levantamento-arquitetonico-goiania",
+    ],
+  },
+  {
+    slug: "licencas-para-empresas",
+    icon: Building2,
+    title: "Licenças para Empresas",
+    description: "Alvarás e certificados para abrir e manter seu negócio funcionando dentro da lei.",
+    slugs: [
+      "alvara-de-funcionamento-goiania",
+      "alvara-sanitario-goiania",
+      "cercon-corpo-de-bombeiros-goiania",
+      "certidao-de-uso-do-solo-goiania",
     ],
   },
   {
@@ -57,7 +74,13 @@ const categories = [
     icon: Briefcase,
     title: "Despachante e Cartório",
     description: "Toda a tramitação documental em cartórios, prefeituras e Receita Federal.",
-    slugs: ["despachante-imobiliario-goiania", "inss-de-obra-goiania"],
+    slugs: [
+      "despachante-imobiliario-goiania",
+      "inss-de-obra-goiania",
+      "instituicao-de-condominio-goiania",
+      "retificacao-de-area-goiania",
+      "analise-documental-compra-de-imovel-goiania",
+    ],
   },
   {
     slug: "laudos-e-avaliacoes",
@@ -68,6 +91,8 @@ const categories = [
       "avaliador-de-imovel-goiania",
       "vistoria-tecnica-de-imovel-goiania",
       "consultoria-engenharia-civil-goiania",
+      "laudo-de-rachaduras-e-infiltracoes-goiania",
+      "laudo-de-reforma-nbr-16280-goiania",
     ],
   },
   {
@@ -88,14 +113,14 @@ const categories = [
 export const metadata: Metadata = {
   title: "Serviços de Engenharia e Regularização de Imóveis",
   description:
-    "Conheça os 14 serviços da Carvalho Engenharia em Goiânia: regularização de imóveis, despachante imobiliário, laudos e avaliações, projetos e ART.",
+    "Conheça os 27 serviços da Carvalho Engenharia em Goiânia: regularização de imóveis, despachante imobiliário, laudos e avaliações, projetos e ART.",
   alternates: {
     canonical: "https://www.carvalho-engenharia.com/servicos",
   },
   openGraph: {
     title: "Serviços de Engenharia e Regularização de Imóveis | Carvalho Engenharia",
     description:
-      "Conheça os 14 serviços da Carvalho Engenharia em Goiânia: regularização de imóveis, despachante imobiliário, laudos e avaliações, projetos e ART.",
+      "Conheça os 27 serviços da Carvalho Engenharia em Goiânia: regularização de imóveis, despachante imobiliário, laudos e avaliações, projetos e ART.",
     type: "website",
     url: "https://www.carvalho-engenharia.com/servicos",
   },
@@ -125,7 +150,7 @@ export default function ServicosPage() {
             Soluções completas em engenharia e regularização
           </h1>
           <p className="text-[#5a687c] max-w-2xl mx-auto text-lg">
-            14 serviços organizados em 4 áreas. Escolha a categoria que mais se aproxima da sua necessidade.
+            27 serviços organizados em 5 áreas. Escolha a categoria que mais se aproxima da sua necessidade.
           </p>
         </div>
       </section>
