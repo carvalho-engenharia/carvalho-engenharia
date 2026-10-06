@@ -180,7 +180,7 @@ export function CTASection() {
         )}
 
         <p className="text-sm text-[#5a687c] text-center mt-8">
-          Atendimento em Goiânia, Aparecida de Goiânia e região · Seg–Sex das 8h às 18h (por agendamento)
+          Atendimento em Goiânia, Aparecida de Goiânia e região · Seg–Sex das 8h às 18h · Sáb das 8h às 13h (por agendamento)
         </p>
       </div>
     </section>

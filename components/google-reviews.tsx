@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const reviews = [
+const allReviews = [
   {
     name: "JP Comércio de Embalagens Ltda",
     initials: "JP",
@@ -604,6 +604,9 @@ const reviews = [
     text: "Atendimento de excelência, profissional super competente e comprometido, indico a todos os amigos",
   },
 ];
+
+// Só entram no carrossel as avaliações que têm texto
+const reviews = allReviews.filter((r) => r.text.trim() !== "");
 
 function StarRating({ count = 5 }: { count?: number }) {
   return (

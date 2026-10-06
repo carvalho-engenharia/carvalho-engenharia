@@ -21,7 +21,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: "Atendimento presencial em Goiânia",
-    description: "Suporte técnico presencial em Goiânia, Aparecida de Goiânia e região. Atendemos por agendamento de segunda a sexta das 8h às 18h.",
+    description: "Suporte técnico presencial em Goiânia, Aparecida de Goiânia e região. Atendemos por agendamento de segunda a sexta das 8h às 18h e aos sábados das 8h às 13h.",
   },
 ]
 

@@ -9,7 +9,7 @@ export function SchemaOrg() {
     telephone: "+55-62-99806-2169",
     email: "contato@carvalho-engenharia.com",
     taxID: "69.116.621/0001-31",
-    openingHours: "Mo-Fr 08:00-18:00",
+    openingHours: ["Mo-Fr 08:00-18:00", "Sa 08:00-13:00"],
     address: {
       "@type": "PostalAddress",
       streetAddress: "Av. Dep. Jamel Cecílio, 3310, Sala 301 - Edifício Office Flamboyant, Jardim Goiás",
