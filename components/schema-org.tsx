@@ -19,8 +19,8 @@ export function SchemaOrg() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -16.6997,
-      longitude: -49.2481,
+      latitude: -16.705966,
+      longitude: -49.2379649,
     },
     areaServed: [
       { "@type": "City", name: "Goiânia" },
@@ -31,7 +31,7 @@ export function SchemaOrg() {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5",
-      reviewCount: "64",
+      reviewCount: "71",
       bestRating: "5",
     },
     hasOfferCatalog: {
@@ -61,7 +61,7 @@ export function SchemaOrg() {
     },
     sameAs: [
       "https://www.instagram.com/carvalho.eng",
-      "https://share.google/XiHUDZzpLsAOmXMyd",
+      "https://maps.google.com/?cid=15465752454159730866",
     ],
   }
 
