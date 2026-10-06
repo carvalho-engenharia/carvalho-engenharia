@@ -232,7 +232,7 @@ export function ServiceTemplate({ data }: { data: ServiceData }) {
             Vamos resolver isso juntos?
           </h2>
           <p className="text-[#5a687c] mb-7 leading-relaxed max-w-xl mx-auto">
-            Fale com um engenheiro responsável técnico e entenda os próximos passos para o seu caso — sem compromisso.
+            Fale com um engenheiro responsável técnico e entenda os próximos passos para o seu caso. Escritório particular de engenharia, com CREA.
           </p>
           <a
             href={waLink(data.whatsappMessage)}

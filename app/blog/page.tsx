@@ -109,10 +109,10 @@ export default function BlogPage() {
           <h2 className="text-2xl font-bold mb-3">Sua obra tem pendência?</h2>
           <p className="text-[#5a687c] mb-7">
             A Carvalho Engenharia resolve regularização, alvará e habite-se em
-            Goiânia. Fale com a gente e receba uma avaliação gratuita.
+            Goiânia. Fale com o engenheiro e receba a análise do seu caso.
           </p>
           <a
-            href="https://api.whatsapp.com/send?phone=5562998062169&text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20quero%20uma%20avalia%C3%A7%C3%A3o%20gratuita"
+            href="https://api.whatsapp.com/send?phone=5562998062169&text=Ol%C3%A1!%20Vim%20pelo%20blog%20e%20quero%20uma%20an%C3%A1lise%20do%20meu%20caso"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-3 rounded-full transition-colors"

@@ -9,7 +9,7 @@ const services = [
     icon: ClipboardList,
     title: "Regularização de Imóveis",
     description:
-      "Regularização completa de imóveis irregulares, sem escritura, habite-se ou construção não averbada.",
+      "Regularização completa de imóveis irregulares: sem alvará, sem habite-se ou com construção não averbada.",
   },
   {
     slug: "despachante-imobiliario-goiania",

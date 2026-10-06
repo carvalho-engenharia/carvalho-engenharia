@@ -184,7 +184,7 @@ const modalContent = {
       },
     },
     footer:
-      "A data de corte é diferente em cada município. Fazemos uma avaliação inicial gratuita para confirmar se o seu imóvel se enquadra no Alvará de Aceite de Goiânia ou de Aparecida de Goiânia.",
+      "A data de corte é diferente em cada município. Fazemos uma análise inicial do caso para confirmar se o seu imóvel se enquadra no Alvará de Aceite de Goiânia ou de Aparecida de Goiânia.",
   },
   regularizacao: {
     title: "Alvará de Regularização",
@@ -349,7 +349,7 @@ export function PainPoints() {
           </div>
         </div>
 
-        {/* CTA — Diagnóstico gratuito */}
+        {/* CTA — Análise do caso */}
         <div className="relative rounded-2xl border border-[#066bef]/25 bg-[#ecf4fe] overflow-hidden">
           {/* Glow background */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(6,107,239,0.08)_0%,transparent_70%)] pointer-events-none" />
@@ -359,19 +359,19 @@ export function PainPoints() {
             {/* Left */}
             <div className="text-center lg:text-left max-w-xl">
               <p className="text-[10px] font-mono uppercase tracking-widest text-[#066bef] mb-3">
-                // avaliação gratuita
+                // análise do seu caso
               </p>
               <h3 className="text-2xl md:text-3xl font-bold text-[#1d283a] mb-3 leading-tight">
                 Não sabe se o seu imóvel precisa de regularização?
               </h3>
               <p className="text-[#5a687c] text-base leading-relaxed">
-                Solicite uma <strong className="text-[#1d283a] font-semibold">avaliação gratuita</strong> da situação do seu imóvel.
+                Solicite uma <strong className="text-[#1d283a] font-semibold">análise do seu caso</strong> pelo WhatsApp.
                 Analisamos a documentação e a obra e indicamos o caminho mais rápido para a regularização —{" "}
-                <span className="text-[#066bef]">sem compromisso</span>.
+                <span className="text-[#066bef]">honorários a partir de R$ 2.000</span>.
               </p>
 
               <ul className="mt-5 flex flex-col sm:flex-row gap-3 text-sm text-[#5a687c] justify-center lg:justify-start">
-                {["Avaliação sem custo", "Resposta ágil", "Atendimento presencial em Goiânia"].map((item) => (
+                {["Engenheiro com CREA", "Resposta ágil", "Atendimento presencial em Goiânia"].map((item) => (
                   <li key={item} className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#066bef] flex-shrink-0" />
                     {item}
@@ -383,13 +383,13 @@ export function PainPoints() {
             {/* Right — CTAs */}
             <div className="flex flex-col gap-3 w-full lg:w-auto flex-shrink-0">
               <a
-                href="https://api.whatsapp.com/send?phone=5562998062169&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20gratuita%20da%20situa%C3%A7%C3%A3o%20do%20meu%20im%C3%B3vel"
+                href="https://api.whatsapp.com/send?phone=5562998062169&text=Ol%C3%A1%2C%20quero%20uma%20an%C3%A1lise%20do%20meu%20im%C3%B3vel.%20Ele%20fica%20no%20bairro%3A"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#066bef] text-white font-bold text-sm hover:bg-[#0559c7] transition-all duration-300 shadow-[0_8px_24px_rgba(6,107,239,0.25)] hover:shadow-[0_10px_30px_rgba(6,107,239,0.35)] whitespace-nowrap"
               >
                 <MessageCircle className="w-4 h-4" />
-                Solicitar avaliação gratuita
+                Solicitar análise do caso
               </a>
               <a
                 href="#contato"
@@ -483,7 +483,7 @@ export function PainPoints() {
               onClick={() => setOpenModal(null)}
               className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-[#066bef] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#0559c7]"
             >
-              Solicitar avaliação gratuita
+              Solicitar análise do caso
             </a>
           </div>
         </div>

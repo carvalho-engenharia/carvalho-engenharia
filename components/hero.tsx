@@ -208,7 +208,7 @@ export function Hero() {
             className="bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-colors shadow-[0_4px_14px_rgba(6,107,239,0.18)] gap-2"
           >
             <a href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5">
-              Solicitar Orçamento Grátis →
+              Solicitar Orçamento →
             </a>
           </Button>
           <Button
@@ -224,11 +224,11 @@ export function Hero() {
         <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-[#5a687c] mb-14">
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
-            Orçamento grátis em até 24h
+            Escritório particular de engenharia
           </span>
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
-            A partir de <span className="font-semibold text-[#1d283a]">R$ 500</span>
+            A partir de <span className="font-semibold text-[#1d283a]">R$ 2.000</span>
           </span>
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />

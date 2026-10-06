@@ -50,7 +50,7 @@ export default async function PostPage({ params }: Props) {
   const ctaTitle = post.ctaTitle || "Precisa regularizar sua obra?";
   const ctaText =
     post.ctaText ||
-    "A Carvalho Engenharia resolve de ponta a ponta em Goiânia. Avaliação gratuita, sem compromisso.";
+    "A Carvalho Engenharia resolve de ponta a ponta em Goiânia. Fale com o engenheiro pelo WhatsApp.";
   const whatsappUrl = `https://api.whatsapp.com/send?phone=5562998062169&text=${encodeURIComponent(
     `Olá! Li o artigo "${post.title}" e quero uma avaliação`
   )}`;

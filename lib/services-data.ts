@@ -53,7 +53,7 @@ export const services: ServiceData[] = [
     badge: "Regularização de Imóveis",
     metaTitle: "Regularização de Imóveis em Goiânia",
     metaDescription:
-      "Imóvel sem alvará, sem Habite-se ou sem averbação em Goiânia? Engenheiro com CREA cuida de tudo, da Prefeitura ao Cartório. Avaliação gratuita pelo WhatsApp.",
+      "Imóvel sem alvará, Habite-se ou averbação em Goiânia? Engenheiro com CREA cuida de tudo, da Prefeitura ao Cartório. A partir de R$ 2.000.",
     h1: "Regularização de Imóveis em Goiânia",
     subtitle:
       "Se a construção não corresponde ao que está registrado na Prefeitura ou no Cartório, o imóvel está irregular — e isso trava financiamento, venda e inventário. Cuidamos de todo o processo, do levantamento técnico à averbação final.",
@@ -109,7 +109,7 @@ export const services: ServiceData[] = [
       {
         question: "Regularizar é caro?",
         answer:
-          "O custo varia conforme o porte do imóvel e a complexidade da situação. Em geral, é bem menor do que a valorização e as opções que ele destrava, como financiamento e venda facilitada.",
+          "Somos um escritório particular de engenharia: os honorários partem de R$ 2.000, mais as taxas da Prefeitura e do Cartório, e variam conforme o porte do imóvel e a complexidade da situação. Em geral, o custo é bem menor do que a valorização e as opções que ele destrava, como financiamento e venda facilitada.",
       },
       {
         question: "Preciso de um engenheiro para regularizar meu imóvel?",
@@ -123,7 +123,7 @@ export const services: ServiceData[] = [
       },
     ],
     relatedSlugs: ["averbacao-de-imovel-goiania", "despachante-imobiliario-goiania", "inss-de-obra-goiania"],
-    whatsappMessage: "Olá! Quero regularizar meu imóvel em Goiânia e gostaria de uma avaliação.",
+    whatsappMessage: "Olá! Quero regularizar meu imóvel em Goiânia. Ele fica no bairro:",
   },
   {
     slug: "despachante-imobiliario-goiania",
@@ -131,7 +131,7 @@ export const services: ServiceData[] = [
     badge: "Despachante Imobiliário",
     metaTitle: "Despachante Imobiliário em Goiânia",
     metaDescription:
-      "Despachante imobiliário e engenheiro com CREA em um só serviço: alvarás, Habite-se, averbação e certidões em Goiânia. Avaliação gratuita pelo WhatsApp.",
+      "Despachante imobiliário e engenheiro com CREA em um só serviço: alvarás, Habite-se, averbação e certidões em Goiânia. Fale pelo WhatsApp.",
     h1: "Despachante Imobiliário em Goiânia",
     subtitle:
       "Filas, formulários e exigências que mudam de um atendente para outro consomem tempo e atrasam processos. Cuidamos de toda a tramitação em cartórios e na Prefeitura — e, como somos engenheiros habilitados no CREA, também assinamos a parte técnica quando o processo exige.",
