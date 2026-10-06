@@ -4,6 +4,110 @@ import { useState, useEffect, useCallback } from "react";
 
 const reviews = [
   {
+    name: "JP Comércio de Embalagens Ltda",
+    initials: "JP",
+    color: "#34A853",
+    rating: 5,
+    time: "Há 4 dias",
+    text: "Atendimento rápido e domínio do assunto. Recomendo para quem está com pressa na documentação do seu imóvel!",
+  },
+  {
+    name: "Jonathan Rocha",
+    initials: "JR",
+    color: "#4285F4",
+    rating: 5,
+    time: "Há 4 dias",
+    text: "Profissional sério e muito prestativo. Tirou todas as minhas dúvidas sobre a regularização do imóvel e entregou tudo certinho. Com certeza indico para quem precisa resolver pendências com a prefeitura",
+  },
+  {
+    name: "Bruno Beca",
+    initials: "BB",
+    color: "#EA4335",
+    rating: 5,
+    time: "Há 5 dias",
+    text: "Resolveu a regularização da minha casa e a liberação do alvará na prefeitura de Goiânia bem mais rápido do que eu esperava. Atendimento atencioso e honesto. Recomendo o Caio para quem precisa de despachante imobiliário!",
+  },
+  {
+    name: "Salomão P F",
+    initials: "SP",
+    color: "#FBBC04",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Excelente atendimento da Carvalho Engenharia em Goiânia! Resolveram toda a regularização de imóvel do meu apartamento com muita competência, desde o projeto arquitetônico até a averbação em cartório. Equipe atenciosa, profissional e que realmente entende de alvará de construção e Habite-se. Recomendo para quem precisa de um despachante imobiliário sério e de confiança na região!",
+  },
+  {
+    name: "Sergio Francisco da Silva",
+    initials: "SS",
+    color: "#00ACC1",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "Passei meses tentando resolver a Regularização de Imóveis da minha casa sozinho e não saía do lugar. Foi só quando conheci o trabalho da equipe que tudo começou a andar de verdade. Eles cuidaram de todo o projeto arquitetônico, ajustaram o que estava desatualizado na planta e conduziram a Averbação de Imóvel no cartório sem que eu precisasse correr atrás de nada. Um verdadeiro Despachante Imobiliário de confiança — explicaram cada etapa, foram transparentes com prazos e resolveram uma burocracia que parecia impossível. Recomendo de olhos fechados para quem precisa regularizar um imóvel em Goiânia.",
+  },
+  {
+    name: "Borrachas Anhanguera",
+    initials: "BA",
+    color: "#F4511E",
+    rating: 5,
+    time: "Há 3 semanas",
+    text: "excelente profissional",
+  },
+  {
+    name: "Weverton Oliveira Gomes",
+    initials: "WG",
+    color: "#EA4335",
+    rating: 5,
+    time: "Há 4 semanas",
+    text: "Fiquei muito satisfeito com o atendimento! Precisava resolver a regularização de imóvel e não fazia ideia de por onde começar, mas fui muito bem orientado em cada etapa do processo. O trabalho de despachante foi rápido e eficiente, sem aquela demora de ficar correndo atrás de documento em repartição pública. Recomendo bastante para quem precisa desse tipo de serviço, atendimento nota 10!",
+  },
+  {
+    name: "Mariadocarmo Da Silva",
+    initials: "MS",
+    color: "#9C27B0",
+    rating: 5,
+    time: "Há 5 semanas",
+    text: "Excelente trabalho na regularização da minha casa! Por ser um imóvel antigo e sem o projeto original, achei que o processo seria muito complicado e demorado, mas a equipe da Carvalho Engenharia resolveu tudo com muita maestria. Demonstraram total conhecimento técnico, cuidaram de toda a burocracia e me deram muita segurança. Profissionais honestos e competentes. Recomendo muito!",
+  },
+  {
+    name: "Luandra Lopes",
+    initials: "LL",
+    color: "#4285F4",
+    rating: 5,
+    time: "Há 5 semanas",
+    text: "Empresa séria, comprometida e com profissionais excelentes. Muito sucesso sempre!",
+  },
+  {
+    name: "Jhones Triver",
+    initials: "JT",
+    color: "#34A853",
+    rating: 5,
+    time: "Há 5 semanas",
+    text: "Excelente profissional, dedicado e sempre pronto a apoiar com excelência",
+  },
+  {
+    name: "Karyne Machado",
+    initials: "KM",
+    color: "#FBBC04",
+    rating: 5,
+    time: "Há 5 semanas",
+    text: "Excelente atendimento.",
+  },
+  {
+    name: "Wisley Mesquita",
+    initials: "WM",
+    color: "#00ACC1",
+    rating: 5,
+    time: "Há 5 semanas",
+    text: "Muito positiva, resolveu minha documentação...",
+  },
+  {
+    name: "Delma Ribeiro",
+    initials: "DR",
+    color: "#9C27B0",
+    rating: 5,
+    time: "Há 5 semanas",
+    text: "Excelente profissional.",
+  },
+  {
     name: "Luis Felipe",
     initials: "LF",
     color: "#4285F4",
@@ -532,6 +636,8 @@ export default function GoogleReviews() {
 
   const visibleCount = 3;
   const total = reviews.length;
+  // Total de avaliações no Perfil da Empresa no Google (atualizar manualmente)
+  const googleTotal = 71;
 
   const next = useCallback(() => {
     setCurrent((c) => (c + 1) % total);
@@ -565,7 +671,7 @@ export default function GoogleReviews() {
             <span className="text-5xl font-bold text-[#1d283a]">5,0</span>
             <div className="flex flex-col gap-1">
               <StarRating count={5} />
-              <span className="text-[#5a687c] text-sm">{total} avaliações</span>
+              <span className="text-[#5a687c] text-sm">{googleTotal} avaliações</span>
             </div>
           </div>
         </div>
