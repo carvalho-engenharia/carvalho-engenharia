@@ -15,3 +15,13 @@ node_modules
 .next/
 .DS_Store
 .vercel
+
+# Credenciais (service account do Google e variáveis locais)
+.env
+.env.*
+!.env.example
+*service-account*.json
+*-key.json
+*credentials*.json
+# Nome padrão das chaves baixadas do Google Cloud: <projeto>-<12 hex>.json
+*-[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].json
