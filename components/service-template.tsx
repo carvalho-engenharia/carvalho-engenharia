@@ -26,7 +26,8 @@ import { Button } from "@/components/ui/button"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import type { ServiceData } from "@/lib/services-data"
-import { services } from "@/lib/services-data"
+import { services, paymentFaq } from "@/lib/services-data"
+import { PaymentMethodsLine } from "@/components/payment-methods"
 
 const iconMap = {
   regularizacao: ClipboardList,
@@ -111,6 +112,10 @@ export function ServiceTemplate({ data }: { data: ServiceData }) {
               <a href="tel:+5562998062169">(62) 9 9806-2169</a>
             </Button>
           </div>
+
+          <div className="mt-6">
+            <PaymentMethodsLine />
+          </div>
         </div>
       </section>
 
@@ -194,7 +199,7 @@ export function ServiceTemplate({ data }: { data: ServiceData }) {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-[#1d283a] mb-6">Perguntas frequentes</h2>
           <div className="flex flex-col gap-3">
-            {data.faqs.map((faq, i) => {
+            {[...data.faqs, paymentFaq].map((faq, i) => {
               const isOpen = openFaq === i
               return (
                 <div

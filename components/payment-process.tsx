@@ -1,6 +1,7 @@
 "use client"
 
 import { Ruler, FileStack, BadgeCheck } from "lucide-react"
+import { PaymentMethods } from "@/components/payment-methods"
 
 const steps = [
   {
@@ -101,6 +102,9 @@ export function PaymentProcess() {
             </div>
           ))}
         </div>
+
+        {/* Formas de pagamento */}
+        <PaymentMethods />
 
         {/* CTA */}
         <div className="mt-12 flex justify-center">

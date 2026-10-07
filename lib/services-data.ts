@@ -46,6 +46,13 @@ export type ServiceData = {
   whatsappMessage: string
 }
 
+// Pergunta sobre formas de pagamento, exibida no fim do FAQ de todas as páginas de serviço.
+export const paymentFaq: FAQItem = {
+  question: "Quais são as formas de pagamento?",
+  answer:
+    "Aceitamos boleto bancário e cartão de crédito. No boleto, o valor pode ser parcelado em até 6 vezes, conforme o valor do serviço. As condições de parcelamento vêm detalhadas na proposta, antes da contratação.",
+}
+
 export const services: ServiceData[] = [
   {
     slug: "regularizacao-de-imoveis-goiania",
@@ -1766,7 +1773,7 @@ export function buildServiceSchema(data: ServiceData) {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: data.faqs.map((faq) => ({
+    mainEntity: [...data.faqs, paymentFaq].map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
