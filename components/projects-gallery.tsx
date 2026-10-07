@@ -1,15 +1,51 @@
 import Image from "next/image"
 
 const projects = [
-  { image: "/segmentos/projeto-fachada.jpg", caption: "Fachada" },
-  { image: "/segmentos/projeto-planta-01.jpg", caption: "Planta baixa" },
-  { image: "/segmentos/projeto-planta-02.jpg", caption: "Planta baixa" },
-  { image: "/segmentos/projeto-cortes.jpg", caption: "Cortes" },
-  { image: "/segmentos/projeto-estrutural.jpg", caption: "Projeto estrutural" },
-  { image: "/segmentos/projeto-croqui.jpg", caption: "Croqui" },
-  { image: "/segmentos/projeto-detalhamento.jpg", caption: "Detalhamento" },
-  { image: "/segmentos/projeto-3d-01.jpg", caption: "Perspectiva 3D" },
-  { image: "/segmentos/projeto-3d-02.jpg", caption: "Perspectiva 3D" },
+  {
+    image: "/segmentos/projeto-fachada.jpg",
+    caption: "Projeto comercial de reforma e regularização",
+    description: "Prancha completa com plantas, cortes após a reforma, fachadas, quadro de áreas e situação do lote.",
+  },
+  {
+    image: "/segmentos/projeto-planta-01.jpg",
+    caption: "Planta baixa",
+    description: "Planta residencial cotada, com área e acabamento de cada ambiente e a marcação dos cortes.",
+  },
+  {
+    image: "/segmentos/projeto-planta-02.jpg",
+    caption: "Projeto arquitetônico residencial",
+    description: "Planta baixa, cortes, fachada, cobertura e situação reunidos na prancha de aprovação.",
+  },
+  {
+    image: "/segmentos/projeto-cortes.jpg",
+    caption: "Cortes",
+    description: "Fachada, corte longitudinal e plantas dos dois pavimentos de uma residência.",
+  },
+  {
+    image: "/segmentos/projeto-estrutural.jpg",
+    caption: "Projeto estrutural",
+    description: "Galpão em estrutura metálica sobre blocos e estacas: modelo 3D, treliças, fundações e contraventamentos.",
+  },
+  {
+    image: "/segmentos/projeto-croqui.jpg",
+    caption: "Estudo de fachada e planta humanizada",
+    description: "Estudo da fachada e da distribuição dos ambientes, para o cliente visualizar a casa antes do projeto técnico.",
+  },
+  {
+    image: "/segmentos/projeto-detalhamento.jpg",
+    caption: "Prancha de levantamento arquitetônico",
+    description: "Levantamento impresso com plantas, cortes e locação dos lotes, usado na conferência com o cliente.",
+  },
+  {
+    image: "/segmentos/projeto-3d-01.jpg",
+    caption: "Planta humanizada",
+    description: "Residência térrea com três suítes, área gourmet e garagem para dois carros.",
+  },
+  {
+    image: "/segmentos/projeto-3d-02.jpg",
+    caption: "Planta humanizada cotada",
+    description: "Residência em lote de 10 x 20 m, com recuos, suíte, dormitório e garagem para dois carros.",
+  },
 ]
 
 export function ProjectsGallery() {
@@ -36,22 +72,21 @@ export function ProjectsGallery() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6">
           {projects.map((item) => (
-            <div
-              key={item.image}
-              className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500 bg-white"
-            >
-              <Image
-                src={item.image || "/placeholder.svg"}
-                alt={item.caption}
-                fill
-                className="object-contain p-2 transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <span className="absolute bottom-3 left-3 right-3 text-xs font-medium text-[#fafafa] opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {item.caption}
-              </span>
-            </div>
+            <figure key={item.image} className="flex flex-col gap-3">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500 bg-white">
+                <Image
+                  src={item.image || "/placeholder.svg"}
+                  alt={item.caption}
+                  fill
+                  className="object-contain p-2 transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 33vw"
+                />
+              </div>
+              <figcaption className="text-sm leading-relaxed">
+                <span className="block font-semibold text-[#1d283a]">{item.caption}</span>
+                <span className="text-[#5a687c]">{item.description}</span>
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>
