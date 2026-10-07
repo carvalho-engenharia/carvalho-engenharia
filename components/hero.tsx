@@ -226,7 +226,8 @@ export function Hero() {
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
             <span>
-              <span className="font-semibold text-[#1d283a]">Boleto em até 6x</span> ou cartão de crédito
+              Pague <span className="font-semibold text-[#1d283a]">por etapas</span>, no{" "}
+              <span className="font-semibold text-[#1d283a]">boleto em até 6x</span> ou no cartão
             </span>
           </span>
         </div>

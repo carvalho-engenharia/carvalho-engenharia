@@ -52,7 +52,7 @@ export type ServiceData = {
 export const paymentFaq: FAQItem = {
   question: "Quais são as formas de pagamento?",
   answer:
-    "Aceitamos boleto bancário e cartão de crédito. No boleto, o valor pode ser parcelado em até 6 vezes, conforme o valor do serviço. As condições de parcelamento vêm detalhadas na proposta, antes da contratação.",
+    "São três formas, e você escolhe uma: por etapas, em 3 pagamentos (no levantamento, no protocolo e na conclusão, com a emissão dos documentos); no boleto bancário, em até 6 vezes, conforme o valor do serviço; ou no cartão de crédito. A forma escolhida fica registrada na proposta, antes da contratação.",
 }
 
 export const services: ServiceData[] = [

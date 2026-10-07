@@ -3,11 +3,12 @@
 import { Ruler, FileStack, BadgeCheck } from "lucide-react"
 import { PaymentMethods } from "@/components/payment-methods"
 
+// As etapas do TRABALHO. As formas de pagamento ficam no bloco seguinte,
+// para o cliente não confundir "etapa do processo" com "forma de pagar".
 const steps = [
   {
     number: "01",
     title: "Levantamento e Croqui",
-    payment: "1ª parte do pagamento",
     description:
       "Visitamos o local, fazemos a medição e elaboramos o croqui do projeto. É aqui que tudo começa a sair do papel.",
     icon: Ruler,
@@ -15,17 +16,15 @@ const steps = [
   {
     number: "02",
     title: "Protocolo na Prefeitura",
-    payment: "2ª parte do pagamento",
     description:
       "Organizamos toda a documentação exigida e damos entrada no processo junto à Prefeitura. Você não precisa entender de burocracia — a gente entende por você.",
     icon: FileStack,
   },
   {
     number: "03",
-    title: "Alvará Aprovado",
-    payment: "3ª e última parte — só aqui",
+    title: "Conclusão e Emissão dos Documentos",
     description:
-      "Acompanhamos o processo até a aprovação final. Você só paga essa etapa quando o alvará estiver, de fato, em suas mãos.",
+      "Acompanhamos o processo até a aprovação final e entregamos os documentos emitidos, como o alvará, em suas mãos.",
     icon: BadgeCheck,
   },
 ]
@@ -42,7 +41,7 @@ export function PaymentProcess() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header */}
+        {/* Parte 1 — como o trabalho acontece */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#066bef]/30 bg-[#066bef]/5 backdrop-blur-md mb-6">
             <div className="w-2 h-2 rounded-full bg-[#066bef] animate-pulse" />
@@ -52,30 +51,14 @@ export function PaymentProcess() {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold text-[#1d283a] mb-4 tracking-tight text-balance">
-            Você paga pelo que{" "}
-            <span className="text-[#066bef]">já foi entregue</span>
+            O processo em <span className="text-[#066bef]">3 etapas</span>
           </h2>
           <p className="text-[#5a687c] max-w-2xl mx-auto text-lg text-balance">
-            Dividimos o processo em 3 etapas, com pagamento vinculado a cada entrega. Nada de pagar tudo adiantado e
-            torcer para o alvará sair —{" "}
+            Do levantamento no local à entrega dos documentos, cuidamos de tudo —{" "}
             <span className="text-[#066bef] font-semibold">garantimos a conclusão total do processo</span>.
           </p>
-          <p className="text-[#5a687c] max-w-2xl mx-auto text-sm mt-3">
-            Valores a partir de{" "}
-            <span className="text-[#1d283a] font-semibold">R$ 2.000</span>, variando conforme a
-            complexidade e o tempo do processo.
-          </p>
         </div>
 
-        {/* Highlight badge */}
-        <div className="mx-auto mb-14 flex max-w-xl items-center justify-center gap-2 rounded-full border border-[#066bef]/30 bg-[#066bef]/5 px-5 py-2.5 text-center backdrop-blur-md">
-          <BadgeCheck className="h-4 w-4 shrink-0 text-[#066bef]" />
-          <span className="text-sm font-medium text-[#1d283a]">
-            A última parcela só é cobrada quando o seu alvará é aprovado.
-          </span>
-        </div>
-
-        {/* Steps grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div
@@ -90,31 +73,39 @@ export function PaymentProcess() {
                 </div>
 
                 <span className="font-mono text-xs font-semibold text-[#066bef] mb-2">{step.number}</span>
-                <h3 className="text-lg font-bold text-[#1d283a] mb-3">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-[#5a687c] group-hover:text-[#3d4c5f] transition-colors mb-5">
+                <h3 className="text-lg font-bold text-[#1d283a] mb-3 text-balance">{step.title}</h3>
+                <p className="text-sm leading-relaxed text-[#5a687c] group-hover:text-[#3d4c5f] transition-colors">
                   {step.description}
                 </p>
-
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#066bef]/10 border border-[#066bef]/20 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-[#066bef]">
-                  {step.payment}
-                </span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Formas de pagamento */}
-        <PaymentMethods />
+        {/* Parte 2 — como pagar */}
+        <div id="formas-de-pagamento" className="mt-20 scroll-mt-28">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-[#1d283a] mb-3 tracking-tight text-balance">
+              Escolha <span className="text-[#066bef]">como pagar</span>
+            </h3>
+            <p className="text-[#5a687c] max-w-2xl mx-auto text-balance">
+              Valores a partir de <span className="text-[#1d283a] font-semibold">R$ 2.000</span>, variando conforme a
+              complexidade e o tempo do processo. São três formas de pagamento:
+            </p>
+          </div>
+
+          <PaymentMethods />
+        </div>
 
         {/* CTA */}
         <div className="mt-12 flex justify-center">
           <a
-            href="https://api.whatsapp.com/send?phone=5562998062169&text=Ol%C3%A1%2C%20quero%20entender%20como%20funciona%20o%20pagamento%20por%20etapa%20da%20Carvalho%20Engenharia"
+            href="https://api.whatsapp.com/send?phone=5562998062169&text=Ol%C3%A1%2C%20quero%20entender%20as%20formas%20de%20pagamento%20da%20Carvalho%20Engenharia"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl bg-[#066bef] text-white font-bold text-sm hover:bg-[#0559c7] transition-all duration-300 shadow-[0_8px_24px_rgba(6,107,239,0.25)] hover:shadow-[0_10px_30px_rgba(6,107,239,0.35)]"
           >
-            Quero saber mais sobre esse modelo
+            Tirar dúvidas sobre o pagamento
           </a>
         </div>
       </div>
