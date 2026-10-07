@@ -69,6 +69,9 @@ const CYCLING_RESOLUTIONS = [
   "Fazemos o desmembramento ou remembramento junto à prefeitura e ao cartório.",
 ]
 
+const WHATSAPP_ORCAMENTO =
+  "https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel"
+
 const HERO_STATS = [
   { value: "10+", label: "anos de experiência" },
   { value: "900+", label: "obras regularizadas" },
@@ -152,13 +155,13 @@ export function Hero() {
         </div>
 
         {/* Ícone inline no texto: acompanha a primeira linha mesmo quando o texto quebra no celular */}
-        <p className="text-xs text-[#5a687c] mb-12 max-w-2xl mx-auto text-balance">
+        <p className="text-xs text-[#5a687c] mb-7 sm:mb-12 max-w-2xl mx-auto text-balance">
           <ShieldCheck className="inline-block w-3.5 h-3.5 text-[#066bef] mr-1.5 align-[-2px]" />
           <span className="font-semibold text-[#1d283a]">Caio Maracaípe</span> · Engenheiro Civil responsável pelo processo · CREA 1017786453D-GO
         </p>
 
         {/* H1 estático — fixo para SEO, independente da rotação de texto abaixo */}
-        <h1 className="text-5xl md:text-7xl font-bold text-[#1d283a] mb-5 tracking-tight leading-[1.15] text-balance">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-[#1d283a] mb-5 tracking-tight leading-[1.15] text-balance">
           Imóvel Irregular em Goiânia?{" "}
           <span className="text-[#066bef]">Nós Resolvemos.</span>
         </h1>
@@ -171,6 +174,18 @@ export function Hero() {
               Mais de 900 imóveis regularizados e aprovados na Prefeitura de Goiânia.
             </span>
           </div>
+        </div>
+
+        {/* Botão de orçamento antecipado — só no celular, para aparecer na primeira tela */}
+        <div className="flex justify-center mb-8 sm:hidden">
+          <Button
+            asChild
+            className="bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-colors shadow-[0_4px_14px_rgba(6,107,239,0.18)] gap-2"
+          >
+            <a href={WHATSAPP_ORCAMENTO} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5">
+              Solicitar Orçamento →
+            </a>
+          </Button>
         </div>
 
         {/* Frase rotativa — mantém a animação existente, agora como apoio (não é mais o H1) */}
@@ -204,9 +219,9 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <Button
             asChild
-            className="bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-colors shadow-[0_4px_14px_rgba(6,107,239,0.18)] gap-2"
+            className="hidden sm:inline-flex bg-[#066bef] hover:bg-[#0559c7] text-white font-bold px-8 py-6 rounded-xl transition-colors shadow-[0_4px_14px_rgba(6,107,239,0.18)] gap-2"
           >
-            <a href="https://api.whatsapp.com/send?phone=5562998062169&text=Olá,+Caio!+Acessei+o+site+da+Carvalho+Engenharia+e+preciso+de+ajuda+com+a+regularização+do+meu+imóvel" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5">
+            <a href={WHATSAPP_ORCAMENTO} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5">
               Solicitar Orçamento →
             </a>
           </Button>

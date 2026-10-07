@@ -18,6 +18,10 @@ const methods = [
 
 const FOOTNOTE = "*Parcelamento no boleto sujeito ao valor do serviço contratado."
 
+// Explica a relação entre o parcelamento e o pagamento em 3 etapas.
+const STAGES_NOTE =
+  "A forma de combinar o parcelamento com as 3 etapas de pagamento varia conforme o serviço e fica definida na sua proposta, antes da contratação."
+
 /** Bloco completo, usado na home dentro da seção "como funciona". */
 export function PaymentMethods() {
   return (
@@ -40,7 +44,11 @@ export function PaymentMethods() {
         ))}
       </div>
 
-      <p className="text-xs text-[#5a687c] mt-6 text-center">{FOOTNOTE}</p>
+      <p className="text-sm leading-relaxed text-[#3d4c5f] mt-6 pt-6 border-t border-[#e0e5eb] text-center max-w-2xl mx-auto">
+        {STAGES_NOTE}
+      </p>
+
+      <p className="text-xs text-[#5a687c] mt-3 text-center">{FOOTNOTE}</p>
     </div>
   )
 }

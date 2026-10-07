@@ -705,7 +705,6 @@ export default function GoogleReviews() {
                   <p className="text-[#1d283a] font-medium text-sm leading-tight truncate">
                     {review.name}
                   </p>
-                  <span className="text-[#5a687c] text-xs">{review.time}</span>
                 </div>
               </div>
 
