@@ -44,6 +44,8 @@ export type ServiceData = {
   faqs: FAQItem[]
   relatedSlugs: string[]
   whatsappMessage: string
+  // Preço inicial exibido no topo da página (opcional; só onde o valor é divulgado)
+  priceFrom?: string
 }
 
 // Pergunta sobre formas de pagamento, exibida no fim do FAQ de todas as páginas de serviço.
@@ -57,6 +59,7 @@ export const services: ServiceData[] = [
   {
     slug: "regularizacao-de-imoveis-goiania",
     icon: "regularizacao",
+    priceFrom: "R$ 2.000",
     badge: "Regularização de Imóveis",
     metaTitle: "Regularização de Imóveis em Goiânia",
     metaDescription:
@@ -88,6 +91,7 @@ export const services: ServiceData[] = [
         bullets: [
           "Construção feita sem alvará de construção",
           "Ampliação ou reforma não aprovada pela Prefeitura",
+          "Obra notificada ou embargada pela Prefeitura por ampliação sem licença",
           "Imóvel sem Habite-se (certidão de conclusão de obra)",
           "Construção não averbada na matrícula do cartório",
           "Divergência entre a área construída real e a documentada",
