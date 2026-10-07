@@ -35,7 +35,7 @@ const services = [
   {
     slug: "alvara-de-construcao-e-habite-se-goiania",
     icon: FileText,
-    title: "Alvará de Construção e Habite-se",
+    title: "Alvará de Construção e Habite‑se",
     description:
       "Aprovação do projeto e emissão do alvará antes da obra, e do Habite-se ao final. Cuidamos do processo na Prefeitura do início ao fim.",
   },
