@@ -31,7 +31,8 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = getAllPosts();
   const featured = posts.find((p) => p.featured);
-  const rest = posts.filter((p) => !p.featured);
+  // Só o post em destaque sai da lista; outros marcados como "featured" continuam aparecendo.
+  const rest = posts.filter((p) => p !== featured);
 
   return (
     <main className="min-h-screen bg-[#f9fafb] text-[#1d283a]">
