@@ -54,19 +54,16 @@ export function WhyUs() {
         {/* Benefícios da regularização — lista destacada */}
         <div className="mb-12 bg-white border border-[#e0e5eb] rounded-2xl p-8 sm:p-10">
           <h3 className="text-lg font-semibold text-[#1d283a] mb-6">
-            Benefícios da regularização imobiliária
+            O que muda com o imóvel regularizado
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              "Despachante imobiliário: cuidamos de toda a burocracia em cartórios e prefeituras",
-              "Possibilidade de financiamento junto à Caixa e bancos",
-              "Averbação da construção na escritura, valorizando o imóvel",
-              "Laudo de avaliação de imóvel para financiamento, inventário ou partilha",
-              "Gerenciamento completo de projetos e obras, do início à entrega",
-              "Regularização do INSS de obra (CNO, SERO e CND)",
-              "Obtenção da Carta de Ocupação e Habite-se",
-              "Desmembramento (desdobro) e retificação de áreas",
-              "Acompanhamento completo junto à prefeitura",
+              "Vender sem a documentação travar o negócio",
+              "Financiar ou refinanciar pela Caixa e por outros bancos",
+              "Fazer inventário e partilha sem pendências no imóvel",
+              "Evitar multas, embargo e notificações da Prefeitura",
+              "Ter a construção averbada na matrícula, com a área correta",
+              "Liberar o alvará de funcionamento do comércio instalado no imóvel",
             ].map((item) => (
               <div key={item} className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#066bef] mt-2 flex-shrink-0" />

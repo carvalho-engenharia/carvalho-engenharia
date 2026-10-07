@@ -1,7 +1,8 @@
 'use client'
 
 import { useState, useEffect } from "react"
-import { ClipboardList, FileCheck2, Ruler, PencilRuler, CheckCircle2, ShieldCheck, Landmark } from "lucide-react"
+import Link from "next/link"
+import { ClipboardList, FileCheck2, Briefcase, CheckCircle2, ShieldCheck, Landmark } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import dynamic from "next/dynamic"
 
@@ -10,61 +11,35 @@ const BlueprintBackground = dynamic(
   { ssr: false }
 )
 
-// Ordem alinhada à prioridade de busca confirmada no Google Keyword Planner:
-// Alto (5.000/mês): 1) Regularização de Imóveis, 2) Despachante Imobiliário, 3) INSS de Obra,
-// 4) Avaliador de Imóvel, 5) Gerenciamento de Projetos, 6) Averbação de Imóvel,
-// 7) Projeto Estrutural, 8) Projeto Arquitetônico
-// Médio (500/mês): 9) Gerenciamento de Obra, 10) Consultoria em Engenharia Civil, 11) Emissão de ART
-// Baixo (50/mês): 12) Vistoria Técnica de Imóvel, 13) Alvará de Construção e Habite-se,
-// 14) Desmembramento e Remembramento
+// Frases rotativas do topo: só situações ligadas à regularização de imóveis,
+// que é o tema da home e dos anúncios. Os demais serviços têm páginas próprias.
 
 const CYCLING_PREFIXES = [
   "Seu imóvel está",
+  "Recebeu notificação de",
   "Cansado de burocracia em",
   "Receita Federal cobrando o",
-  "Precisa de um",
-  "Quer o",
   "Quer vender ou financiar mas falta a",
-  "Precisa de um",
-  "Quer construir e ainda não tem o",
-  "Sua obra está",
-  "Tem dúvida técnica sobre a",
-  "Precisa de",
-  "Vai receber as chaves e quer uma",
   "Construiu sem",
   "Precisa dividir ou unificar um",
 ]
 
 const CYCLING_SUBTITLES = [
   "irregular na prefeitura?",
+  "embargo por ter ampliado?",
   "cartório e prefeitura?",
   "INSS da obra?",
-  "Laudo de Avaliação de Imóvel?",
-  "projeto todo compatibilizado e no prazo?",
   "averbação do imóvel?",
-  "projeto estrutural seguro e econômico?",
-  "projeto arquitetônico?",
-  "sem controle de cronograma e custo?",
-  "viabilidade da sua obra?",
-  "ART com urgência?",
-  "vistoria técnica antes?",
   "alvará de construção?",
   "terreno ou lote?",
 ]
 
 const CYCLING_RESOLUTIONS = [
   "Regularizamos a documentação e iniciamos em 1 dia útil após o contrato.",
+  "Regularizamos a ampliação na Prefeitura e pedimos a liberação da obra.",
   "Cuidamos de toda a tramitação para você — início em 1 dia útil.",
   "Emitimos CNO, CND e SERO — início em 1 dia útil após o contrato.",
-  "Emitimos o laudo assinado por engenheiro CREA para banco, inventário ou partilha.",
-  "Gerenciamos cada etapa do projeto até a aprovação final.",
   "Atualizamos a matrícula no cartório para liberar a venda ou o financiamento.",
-  "Elaboramos o cálculo estrutural completo, pronto para aprovação.",
-  "Criamos o projeto completo, do croqui à planta aprovada.",
-  "Assumimos a gestão técnica e a fiscalização até a entrega.",
-  "Damos o parecer técnico que você precisa para decidir com segurança.",
-  "Emitimos a ART em até 1 dia útil, com responsabilidade técnica CREA.",
-  "Fazemos a inspeção completa e o laudo de patologias em poucos dias.",
   "Regularizamos com alvará retroativo — início em 1 dia útil após assinar.",
   "Fazemos o desmembramento ou remembramento junto à prefeitura e ao cartório.",
 ]
@@ -271,17 +246,21 @@ export function Hero() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 max-w-4xl mx-auto">
           {[
-            { icon: ClipboardList, label: "Gerenciamento de Projetos" },
-            { icon: FileCheck2, label: "Averbação de Imóvel" },
-            { icon: Ruler, label: "Projeto Estrutural" },
-            { icon: PencilRuler, label: "Projeto Arquitetônico" },
-          ].map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center gap-2.5">
-              <item.icon className="w-6 h-6 text-[#8a94a3]" strokeWidth={1.5} />
-              <span className="text-xs font-medium text-[#8a94a3] text-center leading-tight">
+            { icon: ClipboardList, label: "Regularização de Imóveis", href: "/regularizacao-de-imoveis-goiania" },
+            { icon: Briefcase, label: "Despachante Imobiliário", href: "/despachante-imobiliario-goiania" },
+            { icon: Landmark, label: "INSS de Obra", href: "/inss-de-obra-goiania" },
+            { icon: FileCheck2, label: "Averbação de Imóvel", href: "/averbacao-de-imovel-goiania" },
+          ].map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex flex-col items-center gap-2.5 rounded-lg py-2 focus-visible:outline-2 focus-visible:outline-[#066bef]"
+            >
+              <item.icon className="w-6 h-6 text-[#8a94a3] group-hover:text-[#066bef] transition-colors" strokeWidth={1.5} />
+              <span className="text-xs font-medium text-[#5a687c] group-hover:text-[#066bef] transition-colors text-center leading-tight">
                 {item.label}
               </span>
-            </div>
+            </Link>
           ))}
         </div>
 

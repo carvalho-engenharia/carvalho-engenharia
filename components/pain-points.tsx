@@ -31,6 +31,14 @@ const problems = [
     keywords: "obra sem alvará Goiânia, regularização de obra, alvará de construção",
   },
   {
+    icon: AlertTriangle,
+    shortLabel: "Obra embargada",
+    question: "Recebeu notificação de embargo por ter ampliado o imóvel?",
+    description:
+      "Com o embargo, a obra precisa parar, e continuar construindo aumenta a multa. Analisamos a notificação, fazemos o levantamento e o projeto da ampliação e protocolamos a regularização na Prefeitura dentro do prazo, para pedir a liberação da obra.",
+    keywords: "embargo de obra Goiânia, notificação de embargo, regularização de ampliação",
+  },
+  {
     icon: Building2,
     shortLabel: "Reforma sem projeto",
     question: "Fez ampliação ou reforma sem projeto aprovado?",
