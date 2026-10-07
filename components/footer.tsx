@@ -45,7 +45,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-3 text-sm text-[#5b9dff] hover:text-[#5b9dff]/80 transition-colors"
             >
-              <img src="/whatsapp.svg" alt="" aria-hidden="true" className="h-4 w-4 flex-shrink-0" />
+              <img src="/WhatsApp.svg" alt="" aria-hidden="true" className="h-4 w-4 flex-shrink-0" />
               (62) 99806-2169
             </a>
           </div>

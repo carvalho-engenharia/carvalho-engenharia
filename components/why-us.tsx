@@ -75,11 +75,10 @@ export function WhyUs() {
 
         {/* Bento grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <div
               key={feature.title}
-              className={`group relative p-8 rounded-2xl bg-white border border-[#e0e5eb] hover:border-[#066bef]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,107,239,0.08)] ${index === 0 ? "md:row-span-2 flex flex-col justify-center" : ""
-                }`}
+              className={`group relative p-8 rounded-2xl bg-white border border-[#e0e5eb] hover:border-[#066bef]/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(6,107,239,0.08)]`}
             >
               <div className="w-16 h-16 rounded-2xl bg-[#e0e5eb] flex items-center justify-center mb-6 group-hover:bg-[#066bef]/10 group-hover:shadow-[0_0_20px_rgba(6,107,239,0.2)] transition-all duration-300">
                 <feature.icon className="w-8 h-8 text-[#066bef]" />

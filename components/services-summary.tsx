@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ClipboardList, Briefcase, Landmark, FileCheck2, PencilRuler, ArrowRight } from "lucide-react"
+import { ClipboardList, Briefcase, Landmark, FileCheck2, FileText, PencilRuler, ArrowRight } from "lucide-react"
 
 const services = [
   {
@@ -31,6 +31,13 @@ const services = [
     title: "Averbação de Imóvel",
     description:
       "Averbação de construção junto ao Cartório de Registro de Imóveis, atualizando a área construída e o habite-se na matrícula. Essencial para vender, financiar ou regularizar o patrimônio.",
+  },
+  {
+    slug: "alvara-de-construcao-e-habite-se-goiania",
+    icon: FileText,
+    title: "Alvará de Construção e Habite-se",
+    description:
+      "Aprovação do projeto e emissão do alvará antes da obra, e do Habite-se ao final. Cuidamos do processo na Prefeitura do início ao fim.",
   },
   {
     slug: "projeto-arquitetonico-goiania",
@@ -88,6 +95,15 @@ export function ServicesSummary() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/servicos"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#e0e5eb] bg-white text-sm font-semibold text-[#1d283a] hover:border-[#066bef] hover:text-[#066bef] transition-colors"
+          >
+            Ver todos os serviços <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </div>
     </section>
