@@ -4,14 +4,20 @@ const gallery = [
   {
     image: "/levantamento-campo.jpg",
     caption: "Levantamento em Campo",
+    description:
+      "Medição da construção existente no local, base para o levantamento arquitetônico usado em regularizações e projetos.",
   },
   {
     image: "/torre-fachada-residencial.jpg",
     caption: "Alvará de Acréscimo em Condomínio Residencial",
+    description:
+      "Aprovação de acréscimo de área em condomínio residencial, com projeto de modificação e acompanhamento na Prefeitura.",
   },
   {
     image: "/centro-administrativo-municipal.jpg",
     caption: "Acompanhamento junto à Prefeitura de Goiânia",
+    description:
+      "Protocolo, cumprimento de exigências e acompanhamento dos processos até a emissão do alvará ou certidão.",
   },
 ]
 
@@ -45,22 +51,22 @@ export function Gallery() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {gallery.map((item) => (
-            <div
-              key={item.caption}
-              className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500"
-            >
-              <Image
-                src={item.image || "/placeholder.svg"}
-                alt={item.caption}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
-              <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
-                {item.caption}
-              </span>
-            </div>
+            <figure key={item.caption} className="flex flex-col gap-3">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500">
+                <Image
+                  src={item.image || "/placeholder.svg"}
+                  alt={item.caption}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
+                <span className="absolute bottom-5 left-5 right-5 text-sm font-medium text-[#fafafa]">
+                  {item.caption}
+                </span>
+              </div>
+              <figcaption className="text-sm text-[#5a687c] leading-relaxed">{item.description}</figcaption>
+            </figure>
           ))}
         </div>
       </div>

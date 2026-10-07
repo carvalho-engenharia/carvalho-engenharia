@@ -87,6 +87,9 @@ export function Segments() {
                 </button>
               ))}
             </div>
+            <p className="text-sm text-[#5a687c] leading-relaxed">
+              Casas e sobrados: projeto arquitetônico, alvará de construção, regularização de ampliações e averbação da construção na matrícula.
+            </p>
           </div>
 
           {/* Comercial / Clínicas - com mini galeria (Clínica MedPrime).
@@ -128,6 +131,9 @@ export function Segments() {
                 ),
               )}
             </div>
+            <p className="text-sm text-[#5a687c] leading-relaxed">
+              Clínicas, consultórios e comércios: adequação do imóvel, alvará de funcionamento, alvará sanitário e regularização do espaço para a atividade.
+            </p>
           </div>
 
           {/* Industrial - com mini galeria */}
@@ -167,6 +173,9 @@ export function Segments() {
                 </button>
               ))}
             </div>
+            <p className="text-sm text-[#5a687c] leading-relaxed">
+              Galpões e indústrias: levantamento, projetos técnicos e regularização da edificação junto à Prefeitura e ao Corpo de Bombeiros.
+            </p>
           </div>
         </div>
       </div>

@@ -63,9 +63,11 @@ export type RelatedPost = { slug: string; title: string; readTime: string }
 
 export function ServiceTemplateClient({
   data,
+  guidePost,
   relatedPosts = [],
 }: {
   data: ServiceData
+  guidePost?: RelatedPost
   relatedPosts?: RelatedPost[]
 }) {
   const Icon = iconMap[data.icon]
@@ -171,6 +173,21 @@ export function ServiceTemplateClient({
           {data.intro.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
+          {guidePost && (
+            <Link
+              href={`/blog/${guidePost.slug}`}
+              className="group flex items-start gap-3 bg-white border border-[#066bef]/25 rounded-xl p-4 hover:border-[#066bef]/60 transition-colors"
+            >
+              <FileText className="w-4 h-4 mt-1 shrink-0 text-[#066bef]" />
+              <span className="text-sm leading-relaxed">
+                <span className="font-semibold text-[#066bef]">Leia o guia completo:</span>{" "}
+                <span className="font-semibold text-[#1d283a] group-hover:text-[#066bef] transition-colors">
+                  {guidePost.title}
+                </span>
+                {guidePost.readTime && <span className="text-[#5a687c]"> · {guidePost.readTime} de leitura</span>}
+              </span>
+            </Link>
+          )}
         </div>
       </section>
 
@@ -240,7 +257,7 @@ export function ServiceTemplateClient({
         </section>
       )}
 
-      {/* Artigos do blog ligados a este serviço */}
+      {/* Demais artigos do blog ligados a este serviço (o guia principal fica logo após a introdução) */}
       {relatedPosts.length > 0 && (
         <section className="px-4 sm:px-6 lg:px-8 py-8">
           <div className="max-w-3xl mx-auto">
@@ -274,6 +291,7 @@ export function ServiceTemplateClient({
           <div className="flex flex-col gap-3">
             {[...data.faqs, paymentFaq].map((faq, i) => {
               const isOpen = openFaq === i
+              const answerId = `faq-resposta-${i}`
               return (
                 <div
                   key={i}
@@ -284,6 +302,8 @@ export function ServiceTemplateClient({
                   <button
                     type="button"
                     onClick={() => setOpenFaq(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                    aria-controls={answerId}
                     className="flex w-full items-center justify-between gap-4 p-5 text-left"
                   >
                     <span className="text-sm font-semibold text-[#1d283a]">{faq.question}</span>
@@ -293,9 +313,10 @@ export function ServiceTemplateClient({
                       }`}
                     />
                   </button>
-                  {isOpen && (
-                    <p className="px-5 pb-5 text-sm text-[#5a687c] leading-relaxed">{faq.answer}</p>
-                  )}
+                  {/* Resposta sempre presente no HTML (indexável); fechada fica só oculta na tela. */}
+                  <p id={answerId} hidden={!isOpen} className="px-5 pb-5 text-sm text-[#5a687c] leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
               )
             })}

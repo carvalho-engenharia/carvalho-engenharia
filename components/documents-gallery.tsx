@@ -18,10 +18,10 @@ export function DocumentsGallery() {
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#1d283a] mb-4 text-balance">
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#1d283a] mb-4 text-balance">
             Alvarás e certidões{" "}
             <span className="text-[#066bef]">aprovados junto à prefeitura</span>
-          </h2>
+          </h1>
 
           <p className="text-[#5a687c] text-lg max-w-xl mx-auto">
             Exemplos de documentação obtida para clientes. Dados pessoais e do imóvel foram ocultados por

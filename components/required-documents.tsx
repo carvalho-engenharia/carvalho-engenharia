@@ -117,10 +117,10 @@ export function RequiredDocuments() {
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-[#1d283a] mb-4 tracking-tight text-balance">
-            O que a Prefeitura de Goiânia{" "}
+          <h1 className="text-3xl md:text-4xl font-bold text-[#1d283a] mb-4 tracking-tight text-balance">
+            Documentação necessária: o que a Prefeitura de Goiânia{" "}
             <span className="text-[#066bef]">exige em cada processo</span>
-          </h2>
+          </h1>
           <p className="text-[#5a687c] max-w-2xl mx-auto text-lg text-balance">
             Reunimos os documentos exigidos pela Prefeitura de Goiânia para os processos mais comuns.
             Nós cuidamos de levantar, organizar e protocolar tudo por você.
@@ -130,6 +130,7 @@ export function RequiredDocuments() {
         <div className="flex flex-col gap-4">
           {documentSets.map((set) => {
             const isOpen = openKey === set.key
+            const panelId = `documentos-${set.key}`
             return (
               <div
                 key={set.key}
@@ -140,6 +141,8 @@ export function RequiredDocuments() {
                 <button
                   type="button"
                   onClick={() => setOpenKey(isOpen ? null : set.key)}
+                  aria-expanded={isOpen}
+                  aria-controls={panelId}
                   className="flex w-full items-center gap-4 p-6 text-left"
                 >
                   <div className="w-11 h-11 shrink-0 rounded-lg bg-[#edeff3] border border-[#e0e5eb] flex items-center justify-center">
@@ -158,23 +161,22 @@ export function RequiredDocuments() {
                   />
                 </button>
 
-                {isOpen && (
-                  <div className="px-6 pb-6">
-                    <div className="mb-4 flex items-start gap-2 rounded-xl border border-[#066bef]/20 bg-[#066bef]/5 p-3">
-                      <FileText className="w-4 h-4 mt-0.5 shrink-0 text-[#066bef]" />
-                      <p className="text-xs leading-relaxed text-[#5a687c]">{set.lei}</p>
-                    </div>
-
-                    <ul className="flex flex-col gap-2.5">
-                      {set.documents.map((doc) => (
-                        <li key={doc} className="flex items-start gap-2.5 text-sm text-[#3d4c5f] leading-relaxed">
-                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#066bef] shrink-0" />
-                          {doc}
-                        </li>
-                      ))}
-                    </ul>
+                {/* Conteúdo sempre presente no HTML (indexável); fechado fica só oculto na tela. */}
+                <div id={panelId} hidden={!isOpen} className="px-6 pb-6">
+                  <div className="mb-4 flex items-start gap-2 rounded-xl border border-[#066bef]/20 bg-[#066bef]/5 p-3">
+                    <FileText className="w-4 h-4 mt-0.5 shrink-0 text-[#066bef]" />
+                    <p className="text-xs leading-relaxed text-[#5a687c]">{set.lei}</p>
                   </div>
-                )}
+
+                  <ul className="flex flex-col gap-2.5">
+                    {set.documents.map((doc) => (
+                      <li key={doc} className="flex items-start gap-2.5 text-sm text-[#3d4c5f] leading-relaxed">
+                        <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#066bef] shrink-0" />
+                        {doc}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             )
           })}

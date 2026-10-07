@@ -7,6 +7,8 @@ const quickLinks = [
   { href: "/servicos", label: "Serviços" },
   { href: "/portfolio", label: "Portfólio" },
   { href: "/documentacao-necessaria", label: "Documentação" },
+  { href: "/alvaras-emitidos", label: "Alvarás Emitidos" },
+  { href: "/blog", label: "Blog" },
   { href: "/sobre", label: "Empresa" },
   { href: "/#vantagens", label: "Vantagens" },
   { href: "/#contato", label: "Contato" },

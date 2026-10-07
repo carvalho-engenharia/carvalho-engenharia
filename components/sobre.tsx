@@ -32,10 +32,10 @@ export function Sobre() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
           <div>
             <p className="text-[#066bef] text-sm font-mono uppercase tracking-widest mb-3">sobre</p>
-            <h2 className="text-4xl font-bold text-[#1d283a] leading-tight max-w-xl">
+            <h1 className="text-4xl font-bold text-[#1d283a] leading-tight max-w-xl">
               Engenharia especializada em{" "}
               <span className="text-[#066bef]">regularização de imóveis há mais de 10 anos</span>
-            </h2>
+            </h1>
           </div>
 
           {/* Foto — destaque no topo */}
