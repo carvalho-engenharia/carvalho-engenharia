@@ -27,16 +27,6 @@ const projects = [
     description: "Galpão em estrutura metálica sobre blocos e estacas: modelo 3D, treliças, fundações e contraventamentos.",
   },
   {
-    image: "/segmentos/projeto-croqui.jpg",
-    caption: "Estudo de fachada e planta humanizada",
-    description: "Estudo da fachada e da distribuição dos ambientes, para o cliente visualizar a casa antes do projeto técnico.",
-  },
-  {
-    image: "/segmentos/projeto-detalhamento.jpg",
-    caption: "Prancha de levantamento arquitetônico",
-    description: "Levantamento impresso com plantas, cortes e locação dos lotes, usado na conferência com o cliente.",
-  },
-  {
     image: "/segmentos/projeto-3d-01.jpg",
     caption: "Planta humanizada",
     description: "Residência térrea com três suítes, área gourmet e garagem para dois carros.",
