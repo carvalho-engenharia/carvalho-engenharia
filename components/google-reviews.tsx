@@ -722,6 +722,7 @@ export default function GoogleReviews() {
         <div className="flex items-center justify-center gap-4">
           <button
             onClick={prev}
+            aria-label="Avaliação anterior"
             className="w-9 h-9 rounded-full border border-[#e0e5eb] flex items-center justify-center text-[#5a687c] hover:text-[#1d283a] hover:border-[#066bef]/40 transition-all"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -729,22 +730,15 @@ export default function GoogleReviews() {
             </svg>
           </button>
 
-          <div className="flex gap-2">
-            {reviews.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === current
-                    ? "w-6 bg-[#066bef]"
-                    : "w-1.5 bg-[#e0e5eb] hover:bg-[#c7cfd9]"
-                }`}
-              />
-            ))}
-          </div>
+          {/* Contador no lugar dos pontos: com dezenas de avaliações, a fileira de pontos
+              ficava mais larga que a tela do celular e fazia a página rolar para o lado */}
+          <span className="min-w-[5rem] text-center text-sm text-[#5a687c] tabular-nums" aria-live="polite">
+            {current + 1} de {total}
+          </span>
 
           <button
             onClick={next}
+            aria-label="Próxima avaliação"
             className="w-9 h-9 rounded-full border border-[#e0e5eb] flex items-center justify-center text-[#5a687c] hover:text-[#1d283a] hover:border-[#066bef]/40 transition-all"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
