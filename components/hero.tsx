@@ -151,12 +151,11 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="flex items-center justify-center gap-2 mb-12">
-          <ShieldCheck className="w-3.5 h-3.5 text-[#066bef]" />
-          <span className="text-xs text-[#5a687c]">
-            <span className="font-semibold text-[#1d283a]">Caio Maracaípe</span> · Engenheiro Civil responsável pelo processo · CREA 1017786453D-GO
-          </span>
-        </div>
+        {/* Ícone inline no texto: acompanha a primeira linha mesmo quando o texto quebra no celular */}
+        <p className="text-xs text-[#5a687c] mb-12 max-w-2xl mx-auto text-balance">
+          <ShieldCheck className="inline-block w-3.5 h-3.5 text-[#066bef] mr-1.5 align-[-2px]" />
+          <span className="font-semibold text-[#1d283a]">Caio Maracaípe</span> · Engenheiro Civil responsável pelo processo · CREA 1017786453D-GO
+        </p>
 
         {/* H1 estático — fixo para SEO, independente da rotação de texto abaixo */}
         <h1 className="text-5xl md:text-7xl font-bold text-[#1d283a] mb-5 tracking-tight leading-[1.15] text-balance">
@@ -233,6 +232,12 @@ export function Hero() {
           <span className="flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
             Início em <span className="font-semibold text-[#1d283a]">1 dia útil</span>
+          </span>
+          <span className="flex items-center gap-1.5">
+            <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
+            <span>
+              <span className="font-semibold text-[#1d283a]">Boleto em até 6x</span> ou cartão de crédito
+            </span>
           </span>
         </div>
 
