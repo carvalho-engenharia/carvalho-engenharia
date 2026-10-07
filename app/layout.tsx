@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | Carvalho Engenharia",
   },
   description:
-    "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
+    "Imóvel irregular em Goiânia? Engenheiro civil com CREA resolve da Prefeitura ao Cartório. Mais de 900 imóveis regularizados. Boleto em até 6x ou cartão.",
   keywords: [
     // Alto volume (1 mil–10 mil buscas/mês)
     "regularização de imóveis Goiânia",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "Carvalho Engenharia",
     title: "Carvalho Engenharia | Regularização de Imóveis em Goiânia",
     description:
-      "Regularização de imóveis, despachante imobiliário, INSS de obra, avaliação e gerenciamento de projetos em Goiânia. +10 anos de experiência. CREA 1017786453D-GO.",
+      "Imóvel irregular em Goiânia? Engenheiro civil com CREA resolve da Prefeitura ao Cartório. Mais de 900 imóveis regularizados. Boleto em até 6x ou cartão.",
     images: [
       {
         url: "/og-image.jpg",

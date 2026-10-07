@@ -60,7 +60,7 @@ export const services: ServiceData[] = [
     badge: "Regularização de Imóveis",
     metaTitle: "Regularização de Imóveis em Goiânia",
     metaDescription:
-      "Imóvel sem alvará, Habite-se ou averbação em Goiânia? Engenheiro com CREA cuida de tudo, da Prefeitura ao Cartório. A partir de R$ 2.000.",
+      "Imóvel sem alvará, Habite-se ou averbação em Goiânia? Engenheiro com CREA resolve da Prefeitura ao Cartório. A partir de R$ 2.000, boleto em até 6x.",
     h1: "Regularização de Imóveis em Goiânia",
     subtitle:
       "Se a construção não corresponde ao que está registrado na Prefeitura ou no Cartório, o imóvel está irregular — e isso trava financiamento, venda e inventário. Cuidamos de todo o processo, do levantamento técnico à averbação final.",
