@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: "https://www.carvalho-engenharia.com/blog",
   },
   openGraph: {
-    title: "Blog: Regularização de Imóveis e Alvarás em Goiânia",
+    title: "Blog: Regularização de Imóveis e Alvarás em Goiânia | Carvalho Engenharia",
     description:
       "Artigos sobre regularização de obras, alvarás de construção e habite-se em Goiânia. Tire suas dúvidas com a Carvalho Engenharia.",
     type: "website",
