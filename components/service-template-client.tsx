@@ -94,20 +94,22 @@ export function ServiceTemplateClient({
       </div>
 
       {/* Hero */}
-      <section className="px-4 sm:px-6 lg:px-8 pt-8 pb-16">
+      <section className="px-4 sm:px-6 lg:px-8 pt-6 md:pt-8 pb-16">
         <div className="max-w-5xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-4 md:mb-6">
             <div className="w-11 h-11 shrink-0 rounded-lg bg-[#ecf4fe] border border-[#066bef]/25 flex items-center justify-center">
               <Icon className="w-5 h-5 text-[#066bef]" />
             </div>
             <p className="text-[#066bef] text-sm font-mono uppercase tracking-widest">{data.badge}</p>
           </div>
 
-          <h1 className="text-3xl md:text-5xl font-bold text-[#1d283a] leading-tight max-w-3xl mb-6 text-balance">
+          <h1 className="text-3xl md:text-5xl font-bold text-[#1d283a] leading-tight max-w-3xl mb-4 md:mb-6 text-balance">
             {data.h1}
           </h1>
 
-          <p className="text-lg text-[#5a687c] max-w-2xl leading-relaxed mb-8 text-balance">{data.subtitle}</p>
+          <p className="text-base md:text-lg text-[#5a687c] max-w-2xl leading-relaxed mb-6 md:mb-8 text-balance">
+            {data.subtitle}
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
@@ -117,7 +119,7 @@ export function ServiceTemplateClient({
             >
               <a href={waLink(data.whatsappMessage)} target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="mr-2 h-5 w-5" />
-                Solicitar orçamento
+                Pedir orçamento no WhatsApp
               </a>
             </Button>
             <Button

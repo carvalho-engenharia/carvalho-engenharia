@@ -66,8 +66,9 @@ export const services: ServiceData[] = [
       "Imóvel sem alvará, Habite-se ou averbação em Goiânia? Engenheiro com CREA resolve da Prefeitura ao Cartório. A partir de R$ 2.000, boleto em até 6x.",
     h1: "Regularização de Imóveis em Goiânia",
     subtitle:
-      "Se a construção não corresponde ao que está registrado na Prefeitura ou no Cartório, o imóvel está irregular — e isso trava financiamento, venda e inventário. Cuidamos de todo o processo, do levantamento técnico à averbação final.",
+      "Imóvel sem alvará, Habite-se ou averbação? Fazemos a regularização por você, da Prefeitura ao Cartório, com engenheiro civil com CREA.",
     intro: [
+      "Se a construção não corresponde ao que está registrado na Prefeitura ou no Cartório, o imóvel está irregular — e isso trava financiamento, venda e inventário. Cuidamos de todo o processo, do levantamento técnico à averbação final.",
       "É uma das situações mais comuns entre proprietários em Goiânia: comprar, herdar ou construir um imóvel e só depois descobrir que ele está irregular perante a Prefeitura. Na maioria dos casos, tem solução — e conduzida por um responsável técnico, sem retrabalho.",
     ],
     steps: [
@@ -145,8 +146,9 @@ export const services: ServiceData[] = [
       "Despachante imobiliário e engenheiro com CREA em um só serviço: alvarás, Habite-se, averbação e certidões em Goiânia. Fale pelo WhatsApp.",
     h1: "Despachante Imobiliário em Goiânia",
     subtitle:
-      "Filas, formulários e exigências que mudam de um atendente para outro consomem tempo e atrasam processos. Cuidamos de toda a tramitação em cartórios e na Prefeitura — e, como somos engenheiros habilitados no CREA, também assinamos a parte técnica quando o processo exige.",
+      "Cuidamos por você de toda a papelada do imóvel na Prefeitura e nos Cartórios de Goiânia, com engenheiro civil com CREA para a parte técnica.",
     intro: [
+      "Filas, formulários e exigências que mudam de um atendente para outro consomem tempo e atrasam processos. Cuidamos de toda a tramitação em cartórios e na Prefeitura — e, como somos engenheiros habilitados no CREA, também assinamos a parte técnica quando o processo exige.",
       "O despachante imobiliário é o profissional responsável por conduzir toda a parte burocrática de processos ligados a imóveis, atuando como intermediário entre o proprietário e órgãos como a Prefeitura, o Cartório de Registro de Imóveis e a Receita Federal.",
     ],
     sections: [
@@ -215,8 +217,9 @@ export const services: ServiceData[] = [
       "Averbação de construção na matrícula do imóvel em Goiânia. Entenda a diferença entre alvará, Habite-se e averbação, e o que fazer para desbloquear financiamento e venda.",
     h1: "Averbação de Imóvel em Goiânia",
     subtitle:
-      "É comum ver imóveis com alvará e Habite-se em ordem, mas ainda assim recusados por bancos na hora do financiamento. Na maioria das vezes falta um passo final: a averbação da construção na matrícula do imóvel.",
+      "Fazemos a averbação da construção na matrícula por você, do levantamento ao registro no Cartório, para liberar venda e financiamento.",
     intro: [
+      "É comum ver imóveis com alvará e Habite-se em ordem, mas ainda assim recusados por bancos na hora do financiamento. Na maioria das vezes falta um passo final: a averbação da construção na matrícula do imóvel.",
       "Averbação de construção é o registro da construção na matrícula do imóvel, feito no Cartório de Registro de Imóveis. Enquanto o alvará e o Habite-se são emitidos pela Prefeitura, a averbação é o que efetivamente atualiza a matrícula — o documento que legalmente descreve o que existe no terreno. Sem ela, a matrícula pode continuar descrevendo um terreno vazio, mesmo com uma casa ou prédio construído há anos.",
     ],
     documents: [
@@ -831,8 +834,9 @@ export const services: ServiceData[] = [
       "Aprovação de projeto, alvará de construção e habite-se em Goiânia junto à SEPLANH. Passo a passo, documentos exigidos e regularização de obras sem alvará.",
     h1: "Alvará de Construção e Habite-se em Goiânia",
     subtitle:
-      "Nenhuma obra pode começar sem alvará, nem ser ocupada sem Habite-se. Cuidamos da aprovação de projeto, do alvará e do Habite-se junto à SEPLANH — e também da regularização de obras já executadas sem licença.",
+      "Tiramos o alvará de construção e o Habite-se por você: projeto, aprovação na Prefeitura e vistoria, com engenheiro civil com CREA.",
     intro: [
+      "Nenhuma obra pode começar sem alvará, nem ser ocupada sem Habite-se. Cuidamos da aprovação de projeto, do alvará e do Habite-se junto à SEPLANH — e também da regularização de obras já executadas sem licença.",
       "O alvará de construção é a licença emitida pela Prefeitura que autoriza a execução de uma obra, avaliando se o projeto está em conformidade com o Plano Diretor, a Lei de Uso e Ocupação do Solo e o Código de Obras de Goiânia. O Habite-se — o Auto de Conclusão de Obra — é o documento que atesta, depois de vistoria, que a edificação foi construída conforme o aprovado e está apta para uso. Sem os dois, a construção é considerada irregular desde o início.",
     ],
     steps: [
