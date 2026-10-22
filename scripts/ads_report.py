@@ -76,6 +76,10 @@ CONSULTAS_FIXAS = {
                conversion_action.type, conversion_action.category, conversion_action.origin,
                conversion_action.primary_for_goal, conversion_action.counting_type
         FROM conversion_action WHERE conversion_action.status != 'REMOVED'""",
+    "agendamento": """
+        SELECT campaign.name, campaign_criterion.ad_schedule.day_of_week,
+               campaign_criterion.ad_schedule.start_hour, campaign_criterion.ad_schedule.end_hour
+        FROM campaign_criterion WHERE campaign_criterion.type = 'AD_SCHEDULE'""",
     "negativas_campanha": """
         SELECT campaign.name, campaign_criterion.keyword.text, campaign_criterion.keyword.match_type
         FROM campaign_criterion
@@ -128,6 +132,8 @@ def executar(client, gaql, destino):
             nome = c.replace(".", "_")
             if c.endswith("_micros"):
                 nome, v = nome.replace("_micros", ""), round(v / 1e6, 2)
+            elif c in ("metrics.average_cpc", "metrics.cost_per_conversion"):
+                v = round(v / 1e6, 2)  # a API devolve em micros
             linha[nome] = v
         linhas.append(linha)
     cab = list(linhas[0].keys()) if linhas else [
@@ -140,6 +146,7 @@ def executar(client, gaql, destino):
 
 
 def main():
+    sys.stdout.reconfigure(encoding="utf-8")
     cfg = RAIZ / "google-ads.yaml"
     if not cfg.exists():
         sys.exit("google-ads.yaml não existe. Rode: python scripts/ads_auth.py")

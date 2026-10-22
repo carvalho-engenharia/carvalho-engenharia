@@ -36,3 +36,9 @@ dados-ads/
 __pycache__/
 *.pyc
 .venv/
+
+# Planilha de leads (dados de clientes)
+relatorios/leads-google-ads.xlsx
+
+# Relatórios e dados do Google Ads (dados da conta; nunca versionar)
+relatorios/

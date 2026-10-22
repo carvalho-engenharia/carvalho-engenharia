@@ -12,7 +12,10 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 
 RAIZ = Path(__file__).resolve().parent.parent
 SCOPE = ["https://www.googleapis.com/auth/adwords"]
-LOGIN_CUSTOMER_ID = "6045044742"
+# A conta 655-393-4709 é acessada direto pelo login (não é filha da MCC 604-504-4742),
+# então login_customer_id fica fora do yaml.
+# Se a conta passar a ficar sob a MCC, coloque o ID da MCC aqui.
+LOGIN_CUSTOMER_ID = ""
 
 
 def ler_env():
@@ -27,12 +30,12 @@ def ler_env():
 
 
 def main():
-    segredo = RAIZ / "client_secret.json"
-    if not segredo.exists():
-        sys.exit("client_secret.json não encontrado na raiz do projeto.")
+    candidatos = sorted(RAIZ.glob("client_secret*.json"))
+    if not candidatos:
+        sys.exit("client_secret*.json não encontrado na raiz do projeto.")
+    segredo = candidatos[0]
+    # Developer token é opcional: o acesso vem do nível do projeto no Google Cloud.
     token_dev = ler_env().get("GOOGLE_ADS_DEVELOPER_TOKEN", "")
-    if not token_dev:
-        sys.exit("Defina GOOGLE_ADS_DEVELOPER_TOKEN no .env antes de continuar.")
 
     flow = InstalledAppFlow.from_client_secrets_file(str(segredo), SCOPE)
     cred = flow.run_local_server(port=0, prompt="consent", access_type="offline")
@@ -42,8 +45,8 @@ def main():
     info = json.loads(segredo.read_text(encoding="utf-8"))
     info = info.get("installed") or info.get("web")
     yaml = (
-        f'developer_token: "{token_dev}"\n'
-        f'client_id: "{info["client_id"]}"\n'
+        (f'developer_token: "{token_dev}"\n' if token_dev else "")
+        + f'client_id: "{info["client_id"]}"\n'
         f'client_secret: "{info["client_secret"]}"\n'
         f'refresh_token: "{cred.refresh_token}"\n'
         f'login_customer_id: "{LOGIN_CUSTOMER_ID}"\n'
