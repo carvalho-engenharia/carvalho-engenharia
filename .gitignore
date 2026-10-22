@@ -28,3 +28,11 @@ node_modules
 
 # Histórico local do npm run indexar
 .indexacao/
+
+# Google Ads API (OAuth, refresh token, dados exportados)
+client_secret*.json
+google-ads.yaml
+dados-ads/
+__pycache__/
+*.pyc
+.venv/
