@@ -6,7 +6,7 @@ import { ServiceTemplateClient } from "@/components/service-template-client"
 // (campo serviceUrl do artigo) e repassa para o template da página.
 // O "guia completo" é o artigo em destaque (featured) ou, sem destaque, o mais recente;
 // os demais aparecem em "Leia também".
-export function ServiceTemplate({ data }: { data: ServiceData }) {
+export function ServiceTemplate({ data, children }: { data: ServiceData; children?: React.ReactNode }) {
   const posts = getAllPosts()
     .filter((post) => post.serviceUrl === `/${data.slug}`)
     .sort((a, b) => Number(b.featured) - Number(a.featured))
@@ -14,5 +14,9 @@ export function ServiceTemplate({ data }: { data: ServiceData }) {
 
   const [guidePost, ...relatedPosts] = posts
 
-  return <ServiceTemplateClient data={data} guidePost={guidePost} relatedPosts={relatedPosts} />
+  return (
+    <ServiceTemplateClient data={data} guidePost={guidePost} relatedPosts={relatedPosts}>
+      {children}
+    </ServiceTemplateClient>
+  )
 }

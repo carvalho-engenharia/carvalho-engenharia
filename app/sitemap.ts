@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 import fs from "fs"
 import path from "path"
 import { services } from "@/lib/services-data"
+import { veSubpages, veHref } from "@/lib/vistoria-entrega-data"
 
 const BASE_URL = "https://www.carvalho-engenharia.com"
 
@@ -91,5 +92,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  return [...staticRoutes, ...serviceRoutes, ...blogRoutes]
+  // Subpáginas da vistoria de entrega (a principal já entra em serviceRoutes)
+  const vistoriaEntregaRoutes: MetadataRoute.Sitemap = veSubpages
+    .filter((p) => p.slug)
+    .map((p) => ({
+      url: `${BASE_URL}${veHref(p.slug)}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    }))
+
+  return [...staticRoutes, ...serviceRoutes, ...vistoriaEntregaRoutes, ...blogRoutes]
 }

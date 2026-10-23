@@ -65,10 +65,13 @@ export function ServiceTemplateClient({
   data,
   guidePost,
   relatedPosts = [],
+  children,
 }: {
   data: ServiceData
   guidePost?: RelatedPost
   relatedPosts?: RelatedPost[]
+  // Conteúdo extra específico da página, exibido logo após as seções de texto
+  children?: React.ReactNode
 }) {
   const Icon = iconMap[data.icon]
   const related = services.filter((s) => data.relatedSlugs.includes(s.slug))
@@ -216,6 +219,8 @@ export function ServiceTemplateClient({
           </div>
         </section>
       ))}
+
+      {children}
 
       {/* Steps */}
       {data.steps && (

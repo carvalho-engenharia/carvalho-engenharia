@@ -90,6 +90,7 @@ const categories = [
     slugs: [
       "avaliador-de-imovel-goiania",
       "vistoria-tecnica-de-imovel-goiania",
+      "vistoria-de-entrega-de-apartamento-goiania",
       "consultoria-engenharia-civil-goiania",
       "laudo-de-rachaduras-e-infiltracoes-goiania",
       "laudo-de-reforma-nbr-16280-goiania",

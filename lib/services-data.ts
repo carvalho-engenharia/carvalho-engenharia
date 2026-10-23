@@ -966,8 +966,60 @@ export const services: ServiceData[] = [
           "É especialmente recomendada nesses casos — muitos problemas construtivos não são visíveis a olho leigo, e documentar o estado do imóvel evita disputas futuras sobre responsabilidade por danos.",
       },
     ],
-    relatedSlugs: ["consultoria-engenharia-civil-goiania", "avaliador-de-imovel-goiania", "regularizacao-de-imoveis-goiania"],
+    relatedSlugs: ["vistoria-de-entrega-de-apartamento-goiania", "laudo-de-rachaduras-e-infiltracoes-goiania", "avaliador-de-imovel-goiania"],
     whatsappMessage: "Olá! Preciso de uma vistoria técnica de imóvel em Goiânia.",
+  },
+  {
+    slug: "vistoria-de-entrega-de-apartamento-goiania",
+    icon: "vistoria",
+    badge: "Vistoria de Entrega de Apartamento",
+    metaTitle: "Vistoria de Entrega de Apartamento em Goiânia",
+    metaDescription:
+      "Vistoria de entrega de chaves de apartamento novo em Goiânia, feita por engenheiro civil com equipamentos de medição. Laudo com fotos e ART para cobrar a construtora.",
+    h1: "Vistoria de Entrega de Apartamento em Goiânia",
+    subtitle:
+      "Antes de assinar o recebimento das chaves, um engenheiro civil testa o seu apartamento com equipamentos de medição — tomadas, umidade, pisos, caimentos, prumo e esquadrias — e entrega um laudo com fotos e ART para você cobrar os reparos da construtora.",
+    intro: [
+      "Muitos defeitos de um apartamento novo não aparecem numa olhada: piso oco, tomada sem aterramento, box com caimento invertido, vazamento dentro da parede. Eles só aparecem meses depois, quando a garantia já virou discussão. A vistoria de entrega encontra esses problemas no dia do recebimento, com medição, e registra tudo num laudo técnico.",
+      "A vistoria é feita pessoalmente pelo engenheiro civil responsável, especialista em patologia das construções, com checklist por ambiente e equipamentos próprios. Você pode acompanhar e ver cada problema no momento em que ele é encontrado.",
+    ],
+    sections: [
+      {
+        heading: "O que você recebe",
+        bullets: [
+          "Vistoria completa de todos os ambientes, com equipamentos de medição",
+          "Marcação de cada problema no local",
+          "Laudo técnico com fotos, localização e descrição de cada não conformidade",
+          "ART do engenheiro civil responsável (CREA 1017786453D-GO)",
+          "Orientação sobre como pedir os reparos à construtora",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "Quando devo fazer a vistoria de entrega?",
+        answer:
+          "Antes de assinar o termo de recebimento das chaves. Depois de assinado, fica mais difícil provar que um defeito já existia na entrega.",
+      },
+      {
+        question: "Posso acompanhar a vistoria?",
+        answer:
+          "Sim, e recomendamos. Você vê cada problema no momento em que ele é encontrado e entende o que será pedido à construtora.",
+      },
+      {
+        question: "O laudo tem validade para cobrar a construtora?",
+        answer:
+          "Sim. O laudo é assinado por engenheiro civil com registro no CREA e acompanha ART, o que dá a ele valor técnico para exigir os reparos.",
+      },
+      {
+        question: "E se a construtora já fez a vistoria dela?",
+        answer:
+          "A vistoria da construtora é feita por quem construiu. A vistoria independente é feita por um engenheiro que trabalha para você, com equipamentos e checklist próprios.",
+      },
+    ],
+    relatedSlugs: ["vistoria-tecnica-de-imovel-goiania", "laudo-de-rachaduras-e-infiltracoes-goiania", "laudo-de-reforma-nbr-16280-goiania"],
+    whatsappMessage:
+      "Olá! Vou receber as chaves de um apartamento em Goiânia e quero agendar uma vistoria de entrega.",
   },
   {
     slug: "alvara-de-funcionamento-goiania",

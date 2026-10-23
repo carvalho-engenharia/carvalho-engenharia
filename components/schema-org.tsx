@@ -50,6 +50,7 @@ export function SchemaOrg() {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Consultoria em Engenharia Civil", url: "https://www.carvalho-engenharia.com/consultoria-engenharia-civil-goiania" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Emissão de ART", url: "https://www.carvalho-engenharia.com/emissao-de-art-goiania" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vistoria Técnica de Imóvel", url: "https://www.carvalho-engenharia.com/vistoria-tecnica-de-imovel-goiania" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vistoria de Entrega de Apartamento", url: "https://www.carvalho-engenharia.com/vistoria-de-entrega-de-apartamento-goiania" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Alvará de Construção e Habite-se", url: "https://www.carvalho-engenharia.com/alvara-de-construcao-e-habite-se-goiania" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Desmembramento e Remembramento", url: "https://www.carvalho-engenharia.com/desmembramento-remembramento-goiania" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Alvará de Funcionamento", url: "https://www.carvalho-engenharia.com/alvara-de-funcionamento-goiania" } },
