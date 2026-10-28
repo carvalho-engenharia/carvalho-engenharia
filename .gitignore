@@ -42,3 +42,8 @@ relatorios/leads-google-ads.xlsx
 
 # Relatórios e dados do Google Ads (dados da conta; nunca versionar)
 relatorios/
+
+# Material de trabalho local (análises do Ads, listas de candidatos, fotos pendentes)
+ads/
+candidatos_*.csv
+fotos-novas/
