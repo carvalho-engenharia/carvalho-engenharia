@@ -39,7 +39,7 @@ export default function Page() {
       <figure className="mb-10 grid grid-cols-1 md:grid-cols-[minmax(0,320px)_1fr] gap-6 items-center">
         <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-[#e0e5eb] bg-[#f3f5f8]">
           <Image
-            src={`${VE_IMG}/kit-equipamentos.webp`}
+            src="/images/vistoria/equipamentos-vistoria-entrega-apartamento-goiania.webp"
             alt="Kit de equipamentos da vistoria: trena a laser, medidor de umidade, detector de tensão, multímetro, martelo de borracha, nível e nível a laser"
             fill
             sizes="(max-width: 768px) 100vw, 320px"

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { HardHat, Award, Users, FileCheck } from "lucide-react"
 
 const stats = [
@@ -97,6 +98,7 @@ export function Sobre() {
             </p>
           </div>
 
+          <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
             {stats.map((stat) => (
               <div
@@ -110,6 +112,19 @@ export function Sobre() {
                 <p className="text-[#5a687c] text-sm">{stat.label}</p>
               </div>
             ))}
+          </div>
+          <figure className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 overflow-hidden rounded-xl border border-[#e0e5eb]">
+            <Image
+              src="/images/vistoria/engenheiro-civil-carvalho-engenharia-goiania.webp"
+              alt="Engenheiro civil da Carvalho Engenharia realizando vistoria de imóvel em Goiânia"
+              width={1200}
+              height={1600}
+              className="h-full w-full object-cover"
+              style={{ objectPosition: "center 0%" }}
+              sizes="(max-width: 1024px) 100vw, 560px"
+              loading="lazy"
+            />
+          </figure>
           </div>
         </div>
 

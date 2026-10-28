@@ -188,9 +188,117 @@ export function MoreLink({ href, children }: { href: string; children: React.Rea
 }
 
 // Blocos extras exibidos na página principal (dentro do template de serviço).
+const PHOTO_DIR = "/images/vistoria"
+
+function VEPhoto({
+  src,
+  alt,
+  width,
+  height,
+  sizes,
+  className = "",
+  position,
+  priority = false,
+}: {
+  src: string
+  alt: string
+  width: number
+  height: number
+  sizes: string
+  className?: string
+  position?: string
+  priority?: boolean
+}) {
+  return (
+    <Image
+      src={`${PHOTO_DIR}/${src}.webp`}
+      alt={alt}
+      width={width}
+      height={height}
+      sizes={sizes}
+      priority={priority}
+      loading={priority ? undefined : "lazy"}
+      className={`w-full h-auto rounded-2xl border border-[#e0e5eb] ${className}`}
+      style={position ? { objectPosition: position } : undefined}
+    />
+  )
+}
+
 export function VEOverviewBlocks() {
   return (
     <>
+      <section className="px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="max-w-5xl mx-auto">
+          <VEPhoto
+            src="vistoria-entrega-apartamento-laser-varanda-goiania"
+            alt="Engenheiro civil com capacete e nível a laser em tripé na varanda de um apartamento novo, durante vistoria de entrega em Goiânia"
+            width={1600}
+            height={1200}
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            priority
+            className="aspect-[16/9] object-cover"
+            position="center 0%"
+          />
+        </div>
+      </section>
+
+      <section className="px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <VEPhoto
+            src="vistoria-entrega-apartamento-medidor-umidade-parede-goiania"
+            alt="Engenheiro civil medindo a umidade da parede de um apartamento novo com medidor digital em Goiânia"
+            width={1600}
+            height={1200}
+            sizes="(max-width: 768px) 100vw, 512px"
+          />
+          <div>
+            <h2 className="text-2xl font-bold text-[#1d283a] mb-3">Detecção de umidade e infiltração</h2>
+            <p className="text-[#5a687c] leading-relaxed">
+              O medidor digital lê a umidade dentro da parede sem quebrar nada. Passamos por torneiras, registros,
+              box e paredes de divisa com áreas molhadas para achar vazamentos antes de aparecerem como mancha.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold text-[#1d283a] mb-2">Hidráulica, acabamentos e pisos</h2>
+          <p className="text-[#5a687c] leading-relaxed mb-6 max-w-3xl">
+            Olhamos onde o morador não alcança: sob a bancada e na superfície do piso contra a luz natural.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <figure>
+              <VEPhoto
+                src="vistoria-entrega-apartamento-inspecao-bancada-banheiro-goiania"
+                alt="Engenheiro civil inspecionando a parte de baixo da bancada do banheiro em vistoria de entrega de apartamento em Goiânia"
+                width={1200}
+                height={1600}
+                sizes="(max-width: 640px) 100vw, 512px"
+                className="aspect-[4/5] object-cover"
+                position="center 35%"
+              />
+              <figcaption className="mt-2">
+                <h3 className="text-sm font-semibold text-[#1d283a]">Sifão, fixação e vedação sob a bancada</h3>
+              </figcaption>
+            </figure>
+            <figure>
+              <VEPhoto
+                src="vistoria-entrega-apartamento-piso-porcelanato-goiania"
+                alt="Engenheiro civil verificando o piso porcelanato de uma sala com luz natural em vistoria de entrega de apartamento em Goiânia"
+                width={1600}
+                height={1200}
+                sizes="(max-width: 640px) 100vw, 512px"
+                className="sm:aspect-[4/5] object-cover"
+                position="60% center"
+              />
+              <figcaption className="mt-2">
+                <h3 className="text-sm font-semibold text-[#1d283a]">Piso e acabamentos com luz natural</h3>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
       <section className="py-8">
         <VENav active="" />
       </section>

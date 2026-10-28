@@ -2,8 +2,14 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
-const highlights = [
-  { image: "/levantamento-campo.jpg", caption: "Levantamento em Campo" },
+const highlights: { image: string; caption: string; alt?: string; href?: string; position?: string }[] = [
+  {
+    image: "/images/vistoria/vistoria-entrega-apartamento-nivel-laser-goiania.webp",
+    caption: "Vistoria de Entrega de Imóvel",
+    alt: "Engenheiro civil realizando vistoria de entrega de apartamento com nível a laser em Goiânia",
+    href: "/vistoria-de-entrega-de-apartamento-goiania",
+    position: "center 8%",
+  },
   { image: "/torre-fachada-residencial.jpg", caption: "Alvará de Acréscimo em Condomínio Residencial" },
   { image: "/segmentos/fachada-clinica-comercial-01.jpg", caption: "Projeto Comercial — Clínica" },
   { image: "/segmentos/galpao-industrial-01.jpg", caption: "Galpão Industrial" },
@@ -38,24 +44,35 @@ export function PortfolioSummary() {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-10">
-          {highlights.map((item) => (
-            <div
-              key={item.image}
-              className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500"
-            >
-              <Image
-                src={item.image}
-                alt={item.caption}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
-              <span className="absolute bottom-4 left-4 right-4 text-xs sm:text-sm font-medium text-[#fafafa]">
-                {item.caption}
-              </span>
-            </div>
-          ))}
+          {highlights.map((item) => {
+            const className =
+              "group relative aspect-[4/3] overflow-hidden rounded-2xl border border-[#e0e5eb] hover:border-[#066bef]/40 transition-all duration-500"
+            const content = (
+              <>
+                <Image
+                  src={item.image}
+                  alt={item.alt ?? item.caption}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  style={item.position ? { objectPosition: item.position } : undefined}
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/20 to-transparent" />
+                <span className="absolute bottom-4 left-4 right-4 text-xs sm:text-sm font-medium text-[#fafafa]">
+                  {item.caption}
+                </span>
+              </>
+            )
+            return item.href ? (
+              <Link key={item.image} href={item.href} className={className}>
+                {content}
+              </Link>
+            ) : (
+              <div key={item.image} className={className}>
+                {content}
+              </div>
+            )
+          })}
         </div>
 
         <div className="flex justify-center">
