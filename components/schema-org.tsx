@@ -65,7 +65,6 @@ export function SchemaOrg() {
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Análise Documental para Compra de Imóvel", url: "https://www.carvalho-engenharia.com/analise-documental-compra-de-imovel-goiania" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Instituição de Condomínio", url: "https://www.carvalho-engenharia.com/instituicao-de-condominio-goiania" } },
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Retificação de Área", url: "https://www.carvalho-engenharia.com/retificacao-de-area-goiania" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "CERCON — Corpo de Bombeiros", url: "https://www.carvalho-engenharia.com/cercon-corpo-de-bombeiros-goiania" } },
       ],
     },
     founder: {

@@ -73,7 +73,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  const serviceRoutes: MetadataRoute.Sitemap = services.map((service) => ({
+  const serviceRoutes: MetadataRoute.Sitemap = services
+    .filter((service) => service.slug !== "cercon-corpo-de-bombeiros-goiania")
+    .map((service) => ({
     url: `${BASE_URL}/${service.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",

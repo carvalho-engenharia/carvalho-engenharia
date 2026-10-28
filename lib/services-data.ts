@@ -134,7 +134,7 @@ export const services: ServiceData[] = [
           "Varia conforme a complexidade do imóvel e o volume de processos na Prefeitura, mas em geral fica entre 3 e 12 meses do levantamento técnico até a averbação final em cartório.",
       },
     ],
-    relatedSlugs: ["averbacao-de-imovel-goiania", "despachante-imobiliario-goiania", "inss-de-obra-goiania"],
+    relatedSlugs: ["averbacao-de-imovel-goiania", "despachante-imobiliario-goiania", "inss-de-obra-goiania", "levantamento-arquitetonico-goiania", "carta-de-ocupacao-goiania", "desmembramento-remembramento-goiania"],
     whatsappMessage: "Olá! Quero regularizar meu imóvel em Goiânia. Ele fica no bairro:",
   },
   {
@@ -205,7 +205,7 @@ export const services: ServiceData[] = [
           "Varia por tipo de processo, mas a principal economia não é só de tempo — é de retrabalho, já que erros de documentação costumam gerar exigências que atrasam meses o andamento.",
       },
     ],
-    relatedSlugs: ["regularizacao-de-imoveis-goiania", "averbacao-de-imovel-goiania", "inss-de-obra-goiania"],
+    relatedSlugs: ["regularizacao-de-imoveis-goiania", "averbacao-de-imovel-goiania", "inss-de-obra-goiania", "analise-documental-compra-de-imovel-goiania"],
     whatsappMessage: "Olá! Preciso de um despachante imobiliário em Goiânia para agilizar um processo.",
   },
   {
@@ -214,7 +214,7 @@ export const services: ServiceData[] = [
     badge: "Averbação de Imóvel",
     metaTitle: "Averbação de Imóvel em Goiânia",
     metaDescription:
-      "Averbação de construção na matrícula do imóvel em Goiânia. Entenda a diferença entre alvará, Habite-se e averbação, e o que fazer para desbloquear financiamento e venda.",
+      "Averbação de construção na matrícula do imóvel em Goiânia. Diferença entre alvará, Habite-se e averbação, e como liberar financiamento e venda.",
     h1: "Averbação de Imóvel em Goiânia",
     subtitle:
       "Fazemos a averbação da construção na matrícula por você, do levantamento ao registro no Cartório, para liberar venda e financiamento.",
@@ -274,7 +274,7 @@ export const services: ServiceData[] = [
           "Não — normalmente é necessário ter o Habite-se (ou processo equivalente de regularização) antes de conseguir averbar a construção no cartório.",
       },
     ],
-    relatedSlugs: ["regularizacao-de-imoveis-goiania", "inss-de-obra-goiania", "despachante-imobiliario-goiania"],
+    relatedSlugs: ["regularizacao-de-imoveis-goiania", "inss-de-obra-goiania", "despachante-imobiliario-goiania", "analise-documental-compra-de-imovel-goiania", "retificacao-de-area-goiania", "instituicao-de-condominio-goiania"],
     whatsappMessage: "Olá! Preciso averbar a construção do meu imóvel em Goiânia.",
   },
   {
@@ -399,7 +399,7 @@ export const services: ServiceData[] = [
           "Não — são projetos complementares desenvolvidos por profissionais diferentes, que precisam estar compatibilizados entre si.",
       },
     ],
-    relatedSlugs: ["projeto-estrutural-goiania", "regularizacao-de-imoveis-goiania", "inss-de-obra-goiania"],
+    relatedSlugs: ["projeto-estrutural-goiania", "regularizacao-de-imoveis-goiania", "inss-de-obra-goiania", "levantamento-arquitetonico-goiania", "desmembramento-remembramento-goiania"],
     whatsappMessage: "Olá! Quero um orçamento para um projeto arquitetônico em Goiânia.",
   },
   {
@@ -772,11 +772,12 @@ export const services: ServiceData[] = [
   },
   {
     slug: "desmembramento-remembramento-goiania",
+    priceFrom: "R$ 600",
     icon: "desmembramento",
     badge: "Desmembramento e Remembramento",
-    metaTitle: "Desmembramento e Remembramento de Terreno em Goiânia",
+    metaTitle: "Desmembramento e Remembramento Goiânia",
     metaDescription:
-      "Divisão (desmembramento) ou unificação (remembramento) de lotes em Goiânia, com aprovação na Prefeitura e registro em cartório. Serviço técnico completo.",
+      "Desmembramento e remembramento de lotes em Goiânia, a partir de R$ 600: aprovação na Prefeitura e registro em cartório por engenheiro civil.",
     h1: "Desmembramento e Remembramento em Goiânia",
     subtitle:
       "Quer dividir um terreno grande em lotes menores, ou unificar dois lotes vizinhos? Cuidamos do projeto, da aprovação na Prefeitura e do registro em cartório.",
@@ -822,14 +823,14 @@ export const services: ServiceData[] = [
           "Normalmente não diretamente — antes é necessário que os lotes pertençam ao mesmo proprietário, para depois seguir com o remembramento.",
       },
     ],
-    relatedSlugs: ["regularizacao-de-imoveis-goiania", "projeto-arquitetonico-goiania", "averbacao-de-imovel-goiania"],
+    relatedSlugs: ["regularizacao-de-imoveis-goiania", "projeto-arquitetonico-goiania", "averbacao-de-imovel-goiania", "instituicao-de-condominio-goiania", "certidao-de-uso-do-solo-goiania"],
     whatsappMessage: "Olá! Preciso de desmembramento ou remembramento de um terreno em Goiânia.",
   },
   {
     slug: "alvara-de-construcao-e-habite-se-goiania",
     icon: "alvara",
     badge: "Alvará de Construção e Habite-se",
-    metaTitle: "Alvará de Construção e Habite-se em Goiânia",
+    metaTitle: "Alvará e Habite-se em Goiânia",
     metaDescription:
       "Aprovação de projeto, alvará de construção e habite-se em Goiânia junto à SEPLANH. Passo a passo, documentos exigidos e regularização de obras sem alvará.",
     h1: "Alvará de Construção e Habite-se em Goiânia",
@@ -905,7 +906,7 @@ export const services: ServiceData[] = [
           "Cumprem a mesma função — atestar que o imóvel está apto para uso — mas o Habite-se é para imóveis residenciais e a Carta de Ocupação para imóveis comerciais, industriais e de serviços.",
       },
     ],
-    relatedSlugs: ["regularizacao-de-imoveis-goiania", "averbacao-de-imovel-goiania", "inss-de-obra-goiania"],
+    relatedSlugs: ["regularizacao-de-imoveis-goiania", "averbacao-de-imovel-goiania", "inss-de-obra-goiania", "alvara-de-demolicao-goiania", "carta-de-ocupacao-goiania"],
     whatsappMessage: "Olá! Preciso de ajuda com alvará de construção ou Habite-se em Goiânia.",
   },
   {
@@ -966,16 +967,17 @@ export const services: ServiceData[] = [
           "É especialmente recomendada nesses casos — muitos problemas construtivos não são visíveis a olho leigo, e documentar o estado do imóvel evita disputas futuras sobre responsabilidade por danos.",
       },
     ],
-    relatedSlugs: ["vistoria-de-entrega-de-apartamento-goiania", "laudo-de-rachaduras-e-infiltracoes-goiania", "avaliador-de-imovel-goiania"],
+    relatedSlugs: ["vistoria-de-entrega-de-apartamento-goiania", "laudo-de-rachaduras-e-infiltracoes-goiania", "avaliador-de-imovel-goiania", "laudo-de-reforma-nbr-16280-goiania"],
     whatsappMessage: "Olá! Preciso de uma vistoria técnica de imóvel em Goiânia.",
   },
   {
     slug: "vistoria-de-entrega-de-apartamento-goiania",
+    priceFrom: "R$ 500, com laudo e ART",
     icon: "vistoria",
     badge: "Vistoria de Entrega de Apartamento",
-    metaTitle: "Vistoria de Entrega de Apartamento em Goiânia",
+    metaTitle: "Vistoria de Entrega de Apartamento",
     metaDescription:
-      "Vistoria de entrega de chaves de apartamento novo em Goiânia, feita por engenheiro civil com equipamentos de medição. Laudo com fotos e ART para cobrar a construtora.",
+      "Vistoria de entrega de apartamento novo em Goiânia por engenheiro civil, com equipamentos de medição. Laudo com fotos e ART a partir de R$ 500.",
     h1: "Vistoria de Entrega de Apartamento em Goiânia",
     subtitle:
       "Antes de assinar o recebimento das chaves, um engenheiro civil testa o seu apartamento com equipamentos de medição — tomadas, umidade, pisos, caimentos, prumo e esquadrias — e entrega um laudo com fotos e ART para você cobrar os reparos da construtora.",
@@ -1152,16 +1154,17 @@ export const services: ServiceData[] = [
           "Sim, ele precisa ser renovado periodicamente. Também precisa ser atualizado se houver mudança de endereço, de atividade ou reforma no espaço.",
       },
     ],
-    relatedSlugs: ["alvara-de-funcionamento-goiania", "projeto-arquitetonico-goiania", "cercon-corpo-de-bombeiros-goiania"],
+    relatedSlugs: ["alvara-de-funcionamento-goiania", "projeto-arquitetonico-goiania"],
     whatsappMessage: "Olá! Preciso de alvará sanitário em Goiânia. Meu estabelecimento é:",
   },
   {
     slug: "certidao-de-uso-do-solo-goiania",
+    priceFrom: "R$ 350 (certidão de uso do solo)",
     icon: "despachante",
     badge: "Certidão de Uso do Solo",
-    metaTitle: "Certidão de Uso do Solo e Numeração Predial em Goiânia",
+    metaTitle: "Uso do Solo e Numeração Predial",
     metaDescription:
-      "Certidão de Uso do Solo e Certidão de Numeração Predial em Goiânia para abrir empresa, construir, financiar ou vender. Emissão e análise por engenheiro civil.",
+      "Certidão de Uso do Solo (a partir de R$ 350) e de Numeração Predial em Goiânia, para abrir empresa, construir, financiar ou vender.",
     h1: "Certidão de Uso do Solo e Numeração Predial em Goiânia",
     subtitle:
       "Antes de construir, abrir uma empresa ou financiar um imóvel, a Prefeitura e os bancos pedem certidões que mostram o que pode ser feito no terreno e qual é o endereço oficial dele. Emitimos e explicamos o que cada certidão significa para o seu caso.",
@@ -1210,7 +1213,7 @@ export const services: ServiceData[] = [
     slug: "alvara-de-reforma-goiania",
     icon: "alvara",
     badge: "Alvará de Reforma",
-    metaTitle: "Alvará de Reforma em Goiânia (com ou sem acréscimo de área)",
+    metaTitle: "Alvará de Reforma em Goiânia",
     metaDescription:
       "Alvará de reforma em Goiânia, com ou sem acréscimo de área. Projeto de modificação, ART e aprovação na Prefeitura por engenheiro civil com CREA.",
     h1: "Alvará de Reforma em Goiânia",
@@ -1259,7 +1262,7 @@ export const services: ServiceData[] = [
           "Sim. Quando há acréscimo de área, é preciso emitir o Habite-se (ou Carta de Ocupação) da parte nova e averbá-la na matrícula do imóvel.",
       },
     ],
-    relatedSlugs: ["alvara-de-construcao-e-habite-se-goiania", "laudo-de-reforma-nbr-16280-goiania", "averbacao-de-imovel-goiania"],
+    relatedSlugs: ["alvara-de-construcao-e-habite-se-goiania", "laudo-de-reforma-nbr-16280-goiania", "averbacao-de-imovel-goiania", "alvara-de-demolicao-goiania"],
     whatsappMessage: "Olá! Preciso de alvará de reforma em Goiânia. A reforma é:",
   },
   {

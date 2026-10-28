@@ -12,6 +12,8 @@ export function generateMetadata(): Metadata {
   return {
     title: data.metaTitle,
     description: data.metaDescription,
+    // Serviço não oferecido: página fora do índice do Google (continua acessível por link direto).
+    robots: { index: false, follow: true },
     alternates: {
       canonical: `https://www.carvalho-engenharia.com/${SLUG}`,
     },

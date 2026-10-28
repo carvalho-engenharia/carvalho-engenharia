@@ -114,6 +114,15 @@ export function ServiceTemplateClient({
             {data.subtitle}
           </p>
 
+          {data.priceFrom && (
+            <p className="mb-5 flex items-center gap-2 text-base md:text-lg text-[#5a687c]">
+              <CheckCircle2 className="w-5 h-5 shrink-0 text-[#16a34a]" />
+              <span>
+                A partir de <span className="font-bold text-[#1d283a]">{data.priceFrom}</span>
+              </span>
+            </p>
+          )}
+
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               asChild
@@ -156,14 +165,6 @@ export function ServiceTemplateClient({
                 Mais de <span className="font-semibold text-[#1d283a]">900 imóveis</span> regularizados
               </span>
             </li>
-            {data.priceFrom && (
-              <li className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-4 h-4 text-[#16a34a]" />
-                <span>
-                  A partir de <span className="font-semibold text-[#1d283a]">{data.priceFrom}</span>
-                </span>
-              </li>
-            )}
           </ul>
 
           <div className="mt-3">

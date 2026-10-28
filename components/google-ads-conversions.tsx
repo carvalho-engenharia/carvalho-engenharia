@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
-import { PHONE_CONVERSION, WHATSAPP_CONVERSION } from "@/lib/google-ads"
+import { EMAIL_EVENT, PHONE_CONVERSION, PHONE_EVENT, WHATSAPP_CONVERSION, trackEvent } from "@/lib/google-ads"
 
 const WHATSAPP_PATTERNS = ["wa.me", "api.whatsapp.com", "whatsapp.com/send"]
 
@@ -44,7 +44,8 @@ export function detectOrigin(search: string, referrer: string) {
   ) {
     return "A"
   }
-  if (params.get("utm_source")?.toLowerCase() === "gbp") return "P"
+  // O link do Perfil da Empresa foi indexado com utm_source=google&utm_campaign=gbp: aceita os dois formatos.
+  if (params.get("utm_source")?.toLowerCase() === "gbp" || params.get("utm_campaign")?.toLowerCase() === "gbp") return "P"
 
   let hostname = ""
   try {
@@ -103,6 +104,10 @@ export function GoogleAdsConversions() {
         if (origin) tagWhatsAppLink(link, origin)
       } else if (href.startsWith("tel:")) {
         sendConversion(PHONE_CONVERSION)
+        // Evento para o GA4 (marcar como evento principal no painel). O WhatsApp continua vindo da regra do painel.
+        trackEvent(PHONE_EVENT)
+      } else if (href.startsWith("mailto:")) {
+        trackEvent(EMAIL_EVENT)
       }
     }
 

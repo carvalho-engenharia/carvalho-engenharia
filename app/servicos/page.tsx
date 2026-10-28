@@ -65,7 +65,6 @@ const categories = [
     slugs: [
       "alvara-de-funcionamento-goiania",
       "alvara-sanitario-goiania",
-      "cercon-corpo-de-bombeiros-goiania",
       "certidao-de-uso-do-solo-goiania",
     ],
   },

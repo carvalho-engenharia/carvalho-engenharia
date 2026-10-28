@@ -1,14 +1,22 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useForm, ValidationError } from "@formspree/react"
 import { Button } from "@/components/ui/button"
 import { Mail, Send, CheckCircle, Loader2 } from "lucide-react"
+import { FORM_CONVERSION, FORM_EVENT, trackConversion, trackEvent } from "@/lib/google-ads"
 
 
 export function CTASection() {
   const [state, handleSubmit] = useForm("mojyrkgg")
   const [activeTab, setActiveTab] = useState<"quick" | "form">("quick")
+
+  // Envio confirmado pelo Formspree: evento para o GA4 e, quando FORM_CONVERSION estiver preenchido, conversão no Ads.
+  useEffect(() => {
+    if (!state.succeeded) return
+    trackEvent(FORM_EVENT)
+    trackConversion(FORM_CONVERSION)
+  }, [state.succeeded])
 
   return (
     <section id="contato" className="py-24 sm:py-32 bg-[#f9fafb] relative overflow-hidden">
