@@ -20,9 +20,9 @@ export function Navbar() {
   const navLinks = [
     { href: "/#como-funciona", label: "Como Funciona" },
     { href: "/servicos", label: "Serviços" },
+    { href: "/vistoria-de-entrega-de-apartamento-goiania", label: "Vistoria" },
     { href: "/portfolio", label: "Portfólio" },
     { href: "/documentacao-necessaria", label: "Documentos" },
-    { href: "/#vantagens", label: "Vantagens" },
     { href: "/sobre", label: "Quem Somos" },
     { href: "/blog", label: "Blog" },
     { href: "/#contato", label: "Contato" },
@@ -84,12 +84,12 @@ export function Navbar() {
             </a>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-3 xl:gap-5">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-[#5a687c] hover:text-[#1d283a] transition-colors duration-200"
+                  className="text-sm whitespace-nowrap text-[#5a687c] hover:text-[#1d283a] transition-colors duration-200"
                 >
                   {link.label}
                 </a>
@@ -97,7 +97,7 @@ export function Navbar() {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:block lg:ml-3">
               <Button
                 asChild
                 className="bg-[#066bef] text-white hover:bg-[#0559c7] font-semibold shadow-[0_4px_20px_rgba(6,107,239,0.35)] hover:shadow-[0_6px_28px_rgba(6,107,239,0.45)] transition-all duration-300"

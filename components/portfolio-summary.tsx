@@ -14,7 +14,13 @@ const highlights: { image: string; caption: string; alt?: string; href?: string;
   { image: "/segmentos/fachada-clinica-comercial-01.jpg", caption: "Projeto Comercial — Clínica" },
   { image: "/segmentos/galpao-industrial-01.jpg", caption: "Galpão Industrial" },
   { image: "/segmentos/piscina-deck-residencial-01.jpg", caption: "Projeto Residencial" },
-  { image: "/segmentos/projeto-3d-01.jpg", caption: "Perspectiva 3D — Projeto Autoral" },
+  {
+    image: "/images/vistoria/vistoria-entrega-apartamento-medidor-umidade-parede-goiania.webp",
+    caption: "Vistoria Técnica — Umidade e Infiltração",
+    alt: "Engenheiro civil medindo a umidade da parede com medidor digital em vistoria técnica de imóvel em Goiânia",
+    href: "/vistoria-tecnica-de-imovel-goiania",
+    position: "center",
+  },
 ]
 
 export function PortfolioSummary() {

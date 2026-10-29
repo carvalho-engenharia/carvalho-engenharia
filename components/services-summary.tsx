@@ -97,7 +97,13 @@ export function ServicesSummary() {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Link
+            href="/vistoria-de-entrega-de-apartamento-goiania"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#066bef] text-white text-sm font-semibold hover:bg-[#0559c7] transition-colors"
+          >
+            Vistoria de entrega de apartamento <ArrowRight className="w-4 h-4" />
+          </Link>
           <Link
             href="/servicos"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[#e0e5eb] bg-white text-sm font-semibold text-[#1d283a] hover:border-[#066bef] hover:text-[#066bef] transition-colors"
