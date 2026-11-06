@@ -142,6 +142,11 @@ export function RoomChecklist() {
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
       {checklistByRoom.map((r) => (
         <div key={r.room} className="bg-white border border-[#e0e5eb] rounded-2xl p-6">
+          {r.photo && (
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[#e0e5eb] bg-[#f3f5f8] mb-4">
+              <Image src={r.photo.src} alt={r.photo.alt} fill sizes="(max-width: 768px) 100vw, 480px" className="object-cover" />
+            </div>
+          )}
           <h3 className="text-lg font-bold text-[#1d283a] mb-4">{r.room}</h3>
           <ul className="flex flex-col gap-2.5">
             {r.items.map((it) => (

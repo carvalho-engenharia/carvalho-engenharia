@@ -251,9 +251,10 @@ export const equipments: Equipment[] = [
 // O que verificamos (por ambiente)
 // ---------------------------------------------------------------------------
 
-export const checklistByRoom: { room: string; items: string[] }[] = [
+export const checklistByRoom: { room: string; photo?: { src: string; alt: string }; items: string[] }[] = [
   {
     room: "Banheiros",
+    photo: { src: `${VE_IMG}/room-banheiro.webp`, alt: "Engenheiro verificando o nível da bancada do banheiro com nível de bolha" },
     items: [
       "Caimento do piso do box e funcionamento do ralo",
       "Vazão e pressão de chuveiro, torneiras e descarga",
@@ -265,6 +266,7 @@ export const checklistByRoom: { room: string; items: string[] }[] = [
   },
   {
     room: "Cozinha e área de serviço",
+    photo: { src: `${VE_IMG}/room-area-servico.webp`, alt: "Medidor de umidade encostado na parede da área de serviço, ao lado da torneira" },
     items: [
       "Nível da bancada e da cuba",
       "Pontos de água, esgoto e gás",
@@ -275,6 +277,7 @@ export const checklistByRoom: { room: string; items: string[] }[] = [
   },
   {
     room: "Salas, quartos e varanda",
+    photo: { src: `${VE_IMG}/room-sala-percussao.webp`, alt: "Teste de percussão com martelo de borracha no porcelanato da sala" },
     items: [
       "Porcelanato oco, trincado, lascado ou com dente entre peças",
       "Prumo e planicidade de paredes e qualidade da pintura",
@@ -285,6 +288,7 @@ export const checklistByRoom: { room: string; items: string[] }[] = [
   },
   {
     room: "Portas e esquadrias",
+    photo: { src: `${VE_IMG}/room-fechadura.webp`, alt: "Fechadura digital da porta de entrada com marcação de defeito" },
     items: [
       "Abertura, fechamento e folgas de portas",
       "Fechaduras (inclusive digitais), dobradiças e batentes",
@@ -294,6 +298,7 @@ export const checklistByRoom: { room: string; items: string[] }[] = [
   },
   {
     room: "Instalações elétricas",
+    photo: { src: `${VE_IMG}/room-tomada.webp`, alt: "Testador de tomadas conectado, mostrando tensão e teste de DR" },
     items: [
       "Tensão, polaridade e aterramento de todas as tomadas",
       "Funcionamento do DR e identificação dos circuitos no quadro",
@@ -371,6 +376,10 @@ export const veFaqs: { question: string; answer: string }[] = [
 // ---------------------------------------------------------------------------
 
 export const veGallery: { src: string; alt: string; caption: string }[] = [
+  { src: `${VE_IMG}/gal-umidade-engenheiro.webp`, alt: "Engenheiro medindo a umidade da parede da área de serviço com medidor digital", caption: "Medição de umidade junto ao tanque e à torneira" },
+  { src: `${VE_IMG}/gal-percussao-engenheiro.webp`, alt: "Engenheiro batendo com martelo de borracha no piso para achar porcelanato oco", caption: "Teste de percussão no piso: procura de peça oca" },
+  { src: `${VE_IMG}/gal-nivel-bancada.webp`, alt: "Engenheiro conferindo o nível da bancada do banheiro", caption: "Nível da bancada do banheiro" },
+  { src: `${VE_IMG}/gal-nivel-laser-em-uso.webp`, alt: "Engenheiro com nível a laser sobre tripé na varanda de um apartamento novo", caption: "Nível a laser sobre tripé: prumo e alinhamento" },
   { src: `${VE_IMG}/capa-vistoria.webp`, alt: "Engenheiro com prancheta em apartamento novo no Setor Marista", caption: "Vistoria de entrega em apartamento no Setor Marista" },
   { src: `${VE_IMG}/uso-esferas-box.webp`, alt: "Teste de caimento do box com esferas", caption: "Teste de caimento do box com esferas" },
   { src: `${VE_IMG}/uso-lanterna.webp`, alt: "Inspeção com lanterna sob a bancada do banheiro", caption: "Inspeção de sifões e ligações sob a bancada" },
@@ -386,4 +395,8 @@ export const veGallery: { src: string; alt: string; caption: string }[] = [
   { src: `${VE_IMG}/uso-martelo-sala.webp`, alt: "Teste de percussão no piso da sala", caption: "Percussão no piso da sala" },
   { src: `${VE_IMG}/uso-piso-sala-vista.webp`, alt: "Inspeção do piso próximo à varanda", caption: "Inspeção do piso junto à varanda" },
   { src: `${VE_IMG}/uso-regua-checklist.webp`, alt: "Régua, nível e checklist sobre a bancada", caption: "Checklist técnico e ferramentas" },
+  { src: `${VE_IMG}/gal-umidade-torneira.webp`, alt: "Medidor de umidade encostado na parede ao lado da torneira", caption: "Leitura de umidade ao redor da torneira" },
+  { src: `${VE_IMG}/gal-esquadria-marcacao.webp`, alt: "Marcação de defeito com fita laranja na esquadria da varanda", caption: "Marcação de defeito na esquadria da varanda" },
+  { src: `${VE_IMG}/gal-sifao-marcacao.webp`, alt: "Marcação de defeito em sifão cromado sob a bancada", caption: "Marcação de defeito no sifão" },
+  { src: `${VE_IMG}/gal-kit-ferramentas.webp`, alt: "Equipamentos de vistoria sobre a bancada: nível a laser, medidor de umidade, testador de tomadas e trena", caption: "Parte do kit de vistoria" },
 ]
