@@ -251,7 +251,7 @@ export const equipments: Equipment[] = [
 // O que verificamos (por ambiente)
 // ---------------------------------------------------------------------------
 
-export const checklistByRoom: { room: string; photo?: { src: string; alt: string }; items: string[] }[] = [
+export const checklistByRoom: { room: string; photo?: { src: string; alt: string; position?: string }; items: string[] }[] = [
   {
     room: "Banheiros",
     photo: { src: `${VE_IMG}/room-banheiro.webp`, alt: "Engenheiro verificando o nível da bancada do banheiro com nível de bolha" },
@@ -288,7 +288,7 @@ export const checklistByRoom: { room: string; photo?: { src: string; alt: string
   },
   {
     room: "Portas e esquadrias",
-    photo: { src: `${VE_IMG}/room-fechadura.webp`, alt: "Fechadura digital da porta de entrada com marcação de defeito" },
+    photo: { src: `${VE_IMG}/room-fechadura.webp`, alt: "Fechadura digital da porta de entrada com marcação de defeito", position: "50% 35%" },
     items: [
       "Abertura, fechamento e folgas de portas",
       "Fechaduras (inclusive digitais), dobradiças e batentes",
@@ -398,5 +398,4 @@ export const veGallery: { src: string; alt: string; caption: string }[] = [
   { src: `${VE_IMG}/gal-umidade-torneira.webp`, alt: "Medidor de umidade encostado na parede ao lado da torneira", caption: "Leitura de umidade ao redor da torneira" },
   { src: `${VE_IMG}/gal-esquadria-marcacao.webp`, alt: "Marcação de defeito com fita laranja na esquadria da varanda", caption: "Marcação de defeito na esquadria da varanda" },
   { src: `${VE_IMG}/gal-sifao-marcacao.webp`, alt: "Marcação de defeito em sifão cromado sob a bancada", caption: "Marcação de defeito no sifão" },
-  { src: `${VE_IMG}/gal-kit-ferramentas.webp`, alt: "Equipamentos de vistoria sobre a bancada: nível a laser, medidor de umidade, testador de tomadas e trena", caption: "Parte do kit de vistoria" },
 ]
